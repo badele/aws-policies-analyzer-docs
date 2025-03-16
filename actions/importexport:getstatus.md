@@ -1,0 +1,13 @@
+# Action: importexport:GetStatus
+
+## Attached Roles
+
+## Attached Policies
+
+| Policy ARN | Policy Name |
+|------------|-------------|
+| `arn:aws:iam::aws:policy/AWSImportExportReadOnlyAccess` | [AWSImportExportReadOnlyAccess](../policies.md#awsimportexportreadonlyaccess) |
+| `arn:aws:iam::aws:policy/job-function/SupportUser` | [SupportUser](../policies.md#supportuser) |
+
+## Associated Services
+

@@ -1,0 +1,15 @@
+# Action: dataexchange:GetDataSet
+
+## Attached Roles
+
+## Attached Policies
+
+| Policy ARN | Policy Name |
+|------------|-------------|
+| `arn:aws:iam::aws:policy/AWSDataExchangeReadOnly` | [AWSDataExchangeReadOnly](../policies.md#awsdataexchangereadonly) |
+| `arn:aws:iam::aws:policy/AWSEntityResolutionConsoleFullAccess` | [AWSEntityResolutionConsoleFullAccess](../policies.md#awsentityresolutionconsolefullaccess) |
+| `arn:aws:iam::aws:policy/AWSDataExchangeDataGrantOwnerFullAccess` | [AWSDataExchangeDataGrantOwnerFullAccess](../policies.md#awsdataexchangedatagrantownerfullaccess) |
+| `arn:aws:iam::aws:policy/AWSDataExchangeDataGrantReceiverFullAccess` | [AWSDataExchangeDataGrantReceiverFullAccess](../policies.md#awsdataexchangedatagrantreceiverfullaccess) |
+
+## Associated Services
+

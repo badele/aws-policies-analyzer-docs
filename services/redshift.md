@@ -1,0 +1,156 @@
+# Service: redshift
+
+## Attached roles
+
+| Policy ARN | Policy Name |
+|------------|-------------|
+## Attached Policies
+
+| Policy ARN | Policy Name |
+|------------|-------------|
+| `arn:aws:iam::aws:policy/ReadOnlyAccess` | [ReadOnlyAccess](../policies.md#readonlyaccess) |
+| `arn:aws:iam::aws:policy/AmazonRedshiftFullAccess` | [AmazonRedshiftFullAccess](../policies.md#amazonredshiftfullaccess) |
+| `arn:aws:iam::aws:policy/AmazonRedshiftReadOnlyAccess` | [AmazonRedshiftReadOnlyAccess](../policies.md#amazonredshiftreadonlyaccess) |
+| `arn:aws:iam::aws:policy/SecurityAudit` | [SecurityAudit](../policies.md#securityaudit) |
+| `arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforDataPipelineRole` | [AmazonEC2RoleforDataPipelineRole](../policies.md#amazonec2rolefordatapipelinerole) |
+| `arn:aws:iam::aws:policy/service-role/AWSQuickSightDescribeRedshift` | [AWSQuickSightDescribeRedshift](../policies.md#awsquicksightdescriberedshift) |
+| `arn:aws:iam::aws:policy/job-function/ViewOnlyAccess` | [ViewOnlyAccess](../policies.md#viewonlyaccess) |
+| `arn:aws:iam::aws:policy/job-function/SupportUser` | [SupportUser](../policies.md#supportuser) |
+| `arn:aws:iam::aws:policy/job-function/DatabaseAdministrator` | [DatabaseAdministrator](../policies.md#databaseadministrator) |
+| `arn:aws:iam::aws:policy/job-function/DataScientist` | [DataScientist](../policies.md#datascientist) |
+| `arn:aws:iam::aws:policy/AWSDataPipeline_FullAccess` | [AWSDataPipeline_FullAccess](../policies.md#awsdatapipeline_fullaccess) |
+| `arn:aws:iam::aws:policy/AWSDataPipeline_PowerUser` | [AWSDataPipeline_PowerUser](../policies.md#awsdatapipeline_poweruser) |
+| `arn:aws:iam::aws:policy/AWSGlueConsoleFullAccess` | [AWSGlueConsoleFullAccess](../policies.md#awsglueconsolefullaccess) |
+| `arn:aws:iam::aws:policy/AmazonSageMakerFullAccess` | [AmazonSageMakerFullAccess](../policies.md#amazonsagemakerfullaccess) |
+| `arn:aws:iam::aws:policy/aws-service-role/AWSTrustedAdvisorServiceRolePolicy` | [AWSTrustedAdvisorServiceRolePolicy](../policies.md#awstrustedadvisorservicerolepolicy) |
+| `arn:aws:iam::aws:policy/AWSResourceGroupsReadOnlyAccess` | [AWSResourceGroupsReadOnlyAccess](../policies.md#awsresourcegroupsreadonlyaccess) |
+| `arn:aws:iam::aws:policy/SecretsManagerReadWrite` | [SecretsManagerReadWrite](../policies.md#secretsmanagerreadwrite) |
+| `arn:aws:iam::aws:policy/aws-service-role/AWSConfigServiceRolePolicy` | [AWSConfigServiceRolePolicy](../policies.md#awsconfigservicerolepolicy) |
+| `arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor` | [AmazonRedshiftQueryEditor](../policies.md#amazonredshiftqueryeditor) |
+| `arn:aws:iam::aws:policy/AWSGlueConsoleSageMakerNotebookFullAccess` | [AWSGlueConsoleSageMakerNotebookFullAccess](../policies.md#awsglueconsolesagemakernotebookfullaccess) |
+| `arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup` | [AWSBackupServiceRolePolicyForBackup](../policies.md#awsbackupservicerolepolicyforbackup) |
+| `arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForRestores` | [AWSBackupServiceRolePolicyForRestores](../policies.md#awsbackupservicerolepolicyforrestores) |
+| `arn:aws:iam::aws:policy/AWSDataExchangeProviderFullAccess` | [AWSDataExchangeProviderFullAccess](../policies.md#awsdataexchangeproviderfullaccess) |
+| `arn:aws:iam::aws:policy/AWSDataExchangeFullAccess` | [AWSDataExchangeFullAccess](../policies.md#awsdataexchangefullaccess) |
+| `arn:aws:iam::aws:policy/AWSBackupFullAccess` | [AWSBackupFullAccess](../policies.md#awsbackupfullaccess) |
+| `arn:aws:iam::aws:policy/AWSBackupOperatorAccess` | [AWSBackupOperatorAccess](../policies.md#awsbackupoperatoraccess) |
+| `arn:aws:iam::aws:policy/aws-service-role/AWSBackupServiceLinkedRolePolicyForBackup` | [AWSBackupServiceLinkedRolePolicyForBackup](../policies.md#awsbackupservicelinkedrolepolicyforbackup) |
+| `arn:aws:iam::aws:policy/service-role/AmazonMachineLearningRoleforRedshiftDataSourceV3` | [AmazonMachineLearningRoleforRedshiftDataSourceV3](../policies.md#amazonmachinelearningroleforredshiftdatasourcev3) |
+| `arn:aws:iam::aws:policy/AmazonRedshiftDataFullAccess` | [AmazonRedshiftDataFullAccess](../policies.md#amazonredshiftdatafullaccess) |
+| `arn:aws:iam::aws:policy/service-role/AWS_ConfigRole` | [AWS_ConfigRole](../policies.md#aws_configrole) |
+| `arn:aws:iam::aws:policy/aws-service-role/AWSSupportServiceRolePolicy` | [AWSSupportServiceRolePolicy](../policies.md#awssupportservicerolepolicy) |
+| `arn:aws:iam::aws:policy/AwsGlueDataBrewFullAccessPolicy` | [AwsGlueDataBrewFullAccessPolicy](../policies.md#awsgluedatabrewfullaccesspolicy) |
+| `arn:aws:iam::aws:policy/aws-service-role/AWSAuditManagerServiceRolePolicy` | [AWSAuditManagerServiceRolePolicy](../policies.md#awsauditmanagerservicerolepolicy) |
+| `arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess` | [AmazonRedshiftQueryEditorV2FullAccess](../policies.md#amazonredshiftqueryeditorv2fullaccess) |
+| `arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2NoSharing` | [AmazonRedshiftQueryEditorV2NoSharing](../policies.md#amazonredshiftqueryeditorv2nosharing) |
+| `arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2ReadSharing` | [AmazonRedshiftQueryEditorV2ReadSharing](../policies.md#amazonredshiftqueryeditorv2readsharing) |
+| `arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2ReadWriteSharing` | [AmazonRedshiftQueryEditorV2ReadWriteSharing](../policies.md#amazonredshiftqueryeditorv2readwritesharing) |
+| `arn:aws:iam::aws:policy/service-role/AmazonGrafanaRedshiftAccess` | [AmazonGrafanaRedshiftAccess](../policies.md#amazongrafanaredshiftaccess) |
+| `arn:aws:iam::aws:policy/AmazonSageMakerCanvasFullAccess` | [AmazonSageMakerCanvasFullAccess](../policies.md#amazonsagemakercanvasfullaccess) |
+| `arn:aws:iam::aws:policy/aws-service-role/AWSResourceExplorerServiceRolePolicy` | [AWSResourceExplorerServiceRolePolicy](../policies.md#awsresourceexplorerservicerolepolicy) |
+| `arn:aws:iam::aws:policy/AmazonDataZoneEnvironmentRolePermissionsBoundary` | [AmazonDataZoneEnvironmentRolePermissionsBoundary](../policies.md#amazondatazoneenvironmentrolepermissionsboundary) |
+| `arn:aws:iam::aws:policy/AmazonDataZoneFullAccess` | [AmazonDataZoneFullAccess](../policies.md#amazondatazonefullaccess) |
+| `arn:aws:iam::aws:policy/service-role/AmazonDataZoneRedshiftManageAccessRolePolicy` | [AmazonDataZoneRedshiftManageAccessRolePolicy](../policies.md#amazondatazoneredshiftmanageaccessrolepolicy) |
+| `arn:aws:iam::aws:policy/AmazonDataZoneRedshiftGlueProvisioningPolicy` | [AmazonDataZoneRedshiftGlueProvisioningPolicy](../policies.md#amazondatazoneredshiftglueprovisioningpolicy) |
+| `arn:aws:iam::aws:policy/AmazonSageMakerCanvasDataPrepFullAccess` | [AmazonSageMakerCanvasDataPrepFullAccess](../policies.md#amazonsagemakercanvasdataprepfullaccess) |
+| `arn:aws:iam::aws:policy/aws-service-role/AWSServiceRolePolicyForBackupRestoreTesting` | [AWSServiceRolePolicyForBackupRestoreTesting](../policies.md#awsservicerolepolicyforbackuprestoretesting) |
+| `arn:aws:iam::aws:policy/AmazonDataZoneSageMakerEnvironmentRolePermissionsBoundary` | [AmazonDataZoneSageMakerEnvironmentRolePermissionsBoundary](../policies.md#amazondatazonesagemakerenvironmentrolepermissionsboundary) |
+| `arn:aws:iam::aws:policy/ResourceGroupsTaggingAPITagUntagSupportedResources` | [ResourceGroupsTaggingAPITagUntagSupportedResources](../policies.md#resourcegroupstaggingapitaguntagsupportedresources) |
+| `arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePermissionsBoundary` | [SageMakerStudioProjectUserRolePermissionsBoundary](../policies.md#sagemakerstudioprojectuserrolepermissionsboundary) |
+| `arn:aws:iam::aws:policy/service-role/SageMakerStudioProjectProvisioningRolePolicy` | [SageMakerStudioProjectProvisioningRolePolicy](../policies.md#sagemakerstudioprojectprovisioningrolepolicy) |
+| `arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy` | [SageMakerStudioProjectUserRolePolicy](../policies.md#sagemakerstudioprojectuserrolepolicy) |
+| `arn:aws:iam::aws:policy/AWSPartnerLedSupportReadOnlyAccess` | [AWSPartnerLedSupportReadOnlyAccess](../policies.md#awspartnerledsupportreadonlyaccess) |
+| `arn:aws:iam::aws:policy/SageMakerStudioFullAccess` | [SageMakerStudioFullAccess](../policies.md#sagemakerstudiofullaccess) |
+| `arn:aws:iam::aws:policy/AIOpsAssistantPolicy` | [AIOpsAssistantPolicy](../policies.md#aiopsassistantpolicy) |
+
+## Allowed Actions
+
+| Action | Service |
+|--------|---------|
+| [redshift:*](../actions.md#redshift:all) | redshift |
+| [redshift:AssociateDataShareConsumer](../actions.md#redshift:associatedatashareconsumer) | redshift |
+| [redshift:AuthorizeClusterSecurityGroupIngress](../actions.md#redshift:authorizeclustersecuritygroupingress) | redshift |
+| [redshift:AuthorizeDataShare](../actions.md#redshift:authorizedatashare) | redshift |
+| [redshift:CancelQuery](../actions.md#redshift:cancelquery) | redshift |
+| [redshift:CreateClusterSecurityGroup](../actions.md#redshift:createclustersecuritygroup) | redshift |
+| [redshift:CreateClusterSnapshot](../actions.md#redshift:createclustersnapshot) | redshift |
+| [redshift:CreateClusterUser](../actions.md#redshift:createclusteruser) | redshift |
+| [redshift:CreateSavedQuery](../actions.md#redshift:createsavedquery) | redshift |
+| [redshift:CreateTags](../actions.md#redshift:createtags) | redshift |
+| [redshift:DeleteCluster](../actions.md#redshift:deletecluster) | redshift |
+| [redshift:DeleteClusterSnapshot](../actions.md#redshift:deleteclustersnapshot) | redshift |
+| [redshift:DeleteSavedQueries](../actions.md#redshift:deletesavedqueries) | redshift |
+| [redshift:DeleteTags](../actions.md#redshift:deletetags) | redshift |
+| [redshift:Describe*](../actions.md#redshift:describeall) | redshift |
+| [redshift:DescribeClusterParameterGroups](../actions.md#redshift:describeclusterparametergroups) | redshift |
+| [redshift:DescribeClusterParameters](../actions.md#redshift:describeclusterparameters) | redshift |
+| [redshift:DescribeClusterSecurityGroups](../actions.md#redshift:describeclustersecuritygroups) | redshift |
+| [redshift:DescribeClusterSnapshots](../actions.md#redshift:describeclustersnapshots) | redshift |
+| [redshift:DescribeClusterSubnetGroups](../actions.md#redshift:describeclustersubnetgroups) | redshift |
+| [redshift:DescribeClusterTracks](../actions.md#redshift:describeclustertracks) | redshift |
+| [redshift:DescribeClusters](../actions.md#redshift:describeclusters) | redshift |
+| [redshift:DescribeDataShares](../actions.md#redshift:describedatashares) | redshift |
+| [redshift:DescribeDataSharesForConsumer](../actions.md#redshift:describedatasharesforconsumer) | redshift |
+| [redshift:DescribeDataSharesForProducer](../actions.md#redshift:describedatasharesforproducer) | redshift |
+| [redshift:DescribeEndpointAccess](../actions.md#redshift:describeendpointaccess) | redshift |
+| [redshift:DescribeEndpointAuthorization](../actions.md#redshift:describeendpointauthorization) | redshift |
+| [redshift:DescribeEventSubscriptions](../actions.md#redshift:describeeventsubscriptions) | redshift |
+| [redshift:DescribeEvents](../actions.md#redshift:describeevents) | redshift |
+| [redshift:DescribeLoggingStatus](../actions.md#redshift:describeloggingstatus) | redshift |
+| [redshift:DescribeNodeConfigurationOptions](../actions.md#redshift:describenodeconfigurationoptions) | redshift |
+| [redshift:DescribeOrderableClusterOptions](../actions.md#redshift:describeorderableclusteroptions) | redshift |
+| [redshift:DescribeQuery](../actions.md#redshift:describequery) | redshift |
+| [redshift:DescribeReservedNodeOfferings](../actions.md#redshift:describereservednodeofferings) | redshift |
+| [redshift:DescribeReservedNodes](../actions.md#redshift:describereservednodes) | redshift |
+| [redshift:DescribeSavedQueries](../actions.md#redshift:describesavedqueries) | redshift |
+| [redshift:DescribeScheduledActions](../actions.md#redshift:describescheduledactions) | redshift |
+| [redshift:DescribeSnapshotCopyGrants](../actions.md#redshift:describesnapshotcopygrants) | redshift |
+| [redshift:DescribeSnapshotSchedules](../actions.md#redshift:describesnapshotschedules) | redshift |
+| [redshift:DescribeTable](../actions.md#redshift:describetable) | redshift |
+| [redshift:DescribeTableRestoreStatus](../actions.md#redshift:describetablerestorestatus) | redshift |
+| [redshift:DescribeTags](../actions.md#redshift:describetags) | redshift |
+| [redshift:DescribeUsageLimits](../actions.md#redshift:describeusagelimits) | redshift |
+| [redshift:ExecuteQuery](../actions.md#redshift:executequery) | redshift |
+| [redshift:FetchResults](../actions.md#redshift:fetchresults) | redshift |
+| [redshift:GetClusterCredentials](../actions.md#redshift:getclustercredentials) | redshift |
+| [redshift:GetClusterCredentialsWithIAM](../actions.md#redshift:getclustercredentialswithiam) | redshift |
+| [redshift:GetReservedNodeExchangeOfferings](../actions.md#redshift:getreservednodeexchangeofferings) | redshift |
+| [redshift:GetResourcePolicy](../actions.md#redshift:getresourcepolicy) | redshift |
+| [redshift:JoinGroup](../actions.md#redshift:joingroup) | redshift |
+| [redshift:ListDatabases](../actions.md#redshift:listdatabases) | redshift |
+| [redshift:ListRecommendations](../actions.md#redshift:listrecommendations) | redshift |
+| [redshift:ListSchemas](../actions.md#redshift:listschemas) | redshift |
+| [redshift:ListTables](../actions.md#redshift:listtables) | redshift |
+| [redshift:ModifyCluster](../actions.md#redshift:modifycluster) | redshift |
+| [redshift:ModifySavedQuery](../actions.md#redshift:modifysavedquery) | redshift |
+| [redshift:RestoreFromClusterSnapshot](../actions.md#redshift:restorefromclustersnapshot) | redshift |
+| [redshift:RestoreTableFromClusterSnapshot](../actions.md#redshift:restoretablefromclustersnapshot) | redshift |
+| [redshift:RevokeClusterSecurityGroupIngress](../actions.md#redshift:revokeclustersecuritygroupingress) | redshift |
+| [redshift:View*](../actions.md#redshift:viewall) | redshift |
+| [redshift:ViewQueriesFromConsole](../actions.md#redshift:viewqueriesfromconsole) | redshift |
+| [redshift:ViewQueriesInConsole](../actions.md#redshift:viewqueriesinconsole) | redshift |
+| [redshift:describeClusterParameterGroups](../actions.md#redshift:describeclusterparametergroups) | redshift |
+| [redshift:describeClusterParameters](../actions.md#redshift:describeclusterparameters) | redshift |
+| [redshift:describeClusterSecurityGroups](../actions.md#redshift:describeclustersecuritygroups) | redshift |
+| [redshift:describeClusterSnapshots](../actions.md#redshift:describeclustersnapshots) | redshift |
+| [redshift:describeClusterSubnetGroups](../actions.md#redshift:describeclustersubnetgroups) | redshift |
+| [redshift:describeClusterVersions](../actions.md#redshift:describeclusterversions) | redshift |
+| [redshift:describeClusters](../actions.md#redshift:describeclusters) | redshift |
+| [redshift:describeDataShares](../actions.md#redshift:describedatashares) | redshift |
+| [redshift:describeDataSharesForConsumer](../actions.md#redshift:describedatasharesforconsumer) | redshift |
+| [redshift:describeDataSharesForProducer](../actions.md#redshift:describedatasharesforproducer) | redshift |
+| [redshift:describeDefaultClusterParameters](../actions.md#redshift:describedefaultclusterparameters) | redshift |
+| [redshift:describeEventCategories](../actions.md#redshift:describeeventcategories) | redshift |
+| [redshift:describeEventSubscriptions](../actions.md#redshift:describeeventsubscriptions) | redshift |
+| [redshift:describeEvents](../actions.md#redshift:describeevents) | redshift |
+| [redshift:describeHsmClientCertificates](../actions.md#redshift:describehsmclientcertificates) | redshift |
+| [redshift:describeHsmConfigurations](../actions.md#redshift:describehsmconfigurations) | redshift |
+| [redshift:describeLoggingStatus](../actions.md#redshift:describeloggingstatus) | redshift |
+| [redshift:describeOrderableClusterOptions](../actions.md#redshift:describeorderableclusteroptions) | redshift |
+| [redshift:describeReservedNodeOfferings](../actions.md#redshift:describereservednodeofferings) | redshift |
+| [redshift:describeReservedNodes](../actions.md#redshift:describereservednodes) | redshift |
+| [redshift:describeResize](../actions.md#redshift:describeresize) | redshift |
+| [redshift:describeSnapshotCopyGrants](../actions.md#redshift:describesnapshotcopygrants) | redshift |
+| [redshift:describeStorage](../actions.md#redshift:describestorage) | redshift |
+| [redshift:describeTableRestoreStatus](../actions.md#redshift:describetablerestorestatus) | redshift |
+| [redshift:describeTags](../actions.md#redshift:describetags) | redshift |

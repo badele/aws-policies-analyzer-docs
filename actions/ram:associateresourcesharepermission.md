@@ -1,0 +1,14 @@
+# Action: ram:AssociateResourceSharePermission
+
+## Attached Roles
+
+## Attached Policies
+
+| Policy ARN | Policy Name |
+|------------|-------------|
+| `arn:aws:iam::aws:policy/AWSLakeFormationCrossAccountManager` | [AWSLakeFormationCrossAccountManager](../policies.md#awslakeformationcrossaccountmanager) |
+| `arn:aws:iam::aws:policy/service-role/AmazonDataZoneGlueManageAccessRolePolicy` | [AmazonDataZoneGlueManageAccessRolePolicy](../policies.md#amazondatazonegluemanageaccessrolepolicy) |
+| `arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy` | [SageMakerStudioProjectUserRolePolicy](../policies.md#sagemakerstudioprojectuserrolepolicy) |
+
+## Associated Services
+

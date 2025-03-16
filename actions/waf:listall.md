@@ -1,0 +1,18 @@
+# Action: waf:List*
+
+## Attached Roles
+
+## Attached Policies
+
+| Policy ARN | Policy Name |
+|------------|-------------|
+| `arn:aws:iam::aws:policy/ReadOnlyAccess` | [ReadOnlyAccess](../policies.md#readonlyaccess) |
+| `arn:aws:iam::aws:policy/AWSWAFReadOnlyAccess` | [AWSWAFReadOnlyAccess](../policies.md#awswafreadonlyaccess) |
+| `arn:aws:iam::aws:policy/job-function/ViewOnlyAccess` | [ViewOnlyAccess](../policies.md#viewonlyaccess) |
+| `arn:aws:iam::aws:policy/job-function/SupportUser` | [SupportUser](../policies.md#supportuser) |
+| `arn:aws:iam::aws:policy/AWSFMAdminReadOnlyAccess` | [AWSFMAdminReadOnlyAccess](../policies.md#awsfmadminreadonlyaccess) |
+| `arn:aws:iam::aws:policy/AWSFMMemberReadOnlyAccess` | [AWSFMMemberReadOnlyAccess](../policies.md#awsfmmemberreadonlyaccess) |
+| `arn:aws:iam::aws:policy/AWSWAFConsoleReadOnlyAccess` | [AWSWAFConsoleReadOnlyAccess](../policies.md#awswafconsolereadonlyaccess) |
+
+## Associated Services
+

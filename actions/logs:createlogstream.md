@@ -1,0 +1,124 @@
+# Action: logs:CreateLogStream
+
+## Attached Roles
+
+## Attached Policies
+
+| Policy ARN | Policy Name |
+|------------|-------------|
+| `arn:aws:iam::aws:policy/service-role/AmazonSNSRole` | [AmazonSNSRole](../policies.md#amazonsnsrole) |
+| `arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role` | [AmazonEC2ContainerServiceforEC2Role](../policies.md#amazonec2containerserviceforec2role) |
+| `arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole` | [AWSLambdaBasicExecutionRole](../policies.md#awslambdabasicexecutionrole) |
+| `arn:aws:iam::aws:policy/service-role/AWSLambdaDynamoDBExecutionRole` | [AWSLambdaDynamoDBExecutionRole](../policies.md#awslambdadynamodbexecutionrole) |
+| `arn:aws:iam::aws:policy/service-role/AWSLambdaKinesisExecutionRole` | [AWSLambdaKinesisExecutionRole](../policies.md#awslambdakinesisexecutionrole) |
+| `arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM` | [AmazonEC2RoleforSSM](../policies.md#amazonec2roleforssm) |
+| `arn:aws:iam::aws:policy/service-role/AWSIoTLogging` | [AWSIoTLogging](../policies.md#awsiotlogging) |
+| `arn:aws:iam::aws:policy/service-role/AmazonRDSEnhancedMonitoringRole` | [AmazonRDSEnhancedMonitoringRole](../policies.md#amazonrdsenhancedmonitoringrole) |
+| `arn:aws:iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs` | [AmazonAPIGatewayPushToCloudWatchLogs](../policies.md#amazonapigatewaypushtocloudwatchlogs) |
+| `arn:aws:iam::aws:policy/service-role/AmazonDMSCloudWatchLogsRole` | [AmazonDMSCloudWatchLogsRole](../policies.md#amazondmscloudwatchlogsrole) |
+| `arn:aws:iam::aws:policy/AWSElasticBeanstalkWebTier` | [AWSElasticBeanstalkWebTier](../policies.md#awselasticbeanstalkwebtier) |
+| `arn:aws:iam::aws:policy/AWSElasticBeanstalkWorkerTier` | [AWSElasticBeanstalkWorkerTier](../policies.md#awselasticbeanstalkworkertier) |
+| `arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkEnhancedHealth` | [AWSElasticBeanstalkEnhancedHealth](../policies.md#awselasticbeanstalkenhancedhealth) |
+| `arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole` | [AWSLambdaVPCAccessExecutionRole](../policies.md#awslambdavpcaccessexecutionrole) |
+| `arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole` | [AWSBatchServiceRole](../policies.md#awsbatchservicerole) |
+| `arn:aws:iam::aws:policy/AWSElasticBeanstalkCustomPlatformforEC2Role` | [AWSElasticBeanstalkCustomPlatformforEC2Role](../policies.md#awselasticbeanstalkcustomplatformforec2role) |
+| `arn:aws:iam::aws:policy/AWSOpsWorksCloudWatchLogs` | [AWSOpsWorksCloudWatchLogs](../policies.md#awsopsworkscloudwatchlogs) |
+| `arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole` | [AWSGlueServiceRole](../policies.md#awsglueservicerole) |
+| `arn:aws:iam::aws:policy/aws-service-role/AWSElasticBeanstalkServiceRolePolicy` | [AWSElasticBeanstalkServiceRolePolicy](../policies.md#awselasticbeanstalkservicerolepolicy) |
+| `arn:aws:iam::aws:policy/aws-service-role/AmazonRedshiftServiceLinkedRolePolicy` | [AmazonRedshiftServiceLinkedRolePolicy](../policies.md#amazonredshiftservicelinkedrolepolicy) |
+| `arn:aws:iam::aws:policy/aws-service-role/AmazonECSServiceRolePolicy` | [AmazonECSServiceRolePolicy](../policies.md#amazonecsservicerolepolicy) |
+| `arn:aws:iam::aws:policy/aws-service-role/CloudHSMServiceRolePolicy` | [CloudHSMServiceRolePolicy](../policies.md#cloudhsmservicerolepolicy) |
+| `arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy` | [AmazonECSTaskExecutionRolePolicy](../policies.md#amazonecstaskexecutionrolepolicy) |
+| `arn:aws:iam::aws:policy/AmazonSageMakerFullAccess` | [AmazonSageMakerFullAccess](../policies.md#amazonsagemakerfullaccess) |
+| `arn:aws:iam::aws:policy/AWSDeepLensLambdaFunctionAccessPolicy` | [AWSDeepLensLambdaFunctionAccessPolicy](../policies.md#awsdeeplenslambdafunctionaccesspolicy) |
+| `arn:aws:iam::aws:policy/AlexaForBusinessGatewayExecution` | [AlexaForBusinessGatewayExecution](../policies.md#alexaforbusinessgatewayexecution) |
+| `arn:aws:iam::aws:policy/aws-service-role/AmazonRDSServiceRolePolicy` | [AmazonRDSServiceRolePolicy](../policies.md#amazonrdsservicerolepolicy) |
+| `arn:aws:iam::aws:policy/CloudWatchAgentAdminPolicy` | [CloudWatchAgentAdminPolicy](../policies.md#cloudwatchagentadminpolicy) |
+| `arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy` | [CloudWatchAgentServerPolicy](../policies.md#cloudwatchagentserverpolicy) |
+| `arn:aws:iam::aws:policy/service-role/AWSAppSyncPushToCloudWatchLogs` | [AWSAppSyncPushToCloudWatchLogs](../policies.md#awsappsyncpushtocloudwatchlogs) |
+| `arn:aws:iam::aws:policy/aws-service-role/AmazonRDSBetaServiceRolePolicy` | [AmazonRDSBetaServiceRolePolicy](../policies.md#amazonrdsbetaservicerolepolicy) |
+| `arn:aws:iam::aws:policy/AmazonEKSServicePolicy` | [AmazonEKSServicePolicy](../policies.md#amazoneksservicepolicy) |
+| `arn:aws:iam::aws:policy/aws-service-role/AWSConfigServiceRolePolicy` | [AWSConfigServiceRolePolicy](../policies.md#awsconfigservicerolepolicy) |
+| `arn:aws:iam::aws:policy/aws-service-role/AmazonRDSPreviewServiceRolePolicy` | [AmazonRDSPreviewServiceRolePolicy](../policies.md#amazonrdspreviewservicerolepolicy) |
+| `arn:aws:iam::aws:policy/aws-service-role/AWSCloudFrontLogger` | [AWSCloudFrontLogger](../policies.md#awscloudfrontlogger) |
+| `arn:aws:iam::aws:policy/service-role/AWSLambdaSQSQueueExecutionRole` | [AWSLambdaSQSQueueExecutionRole](../policies.md#awslambdasqsqueueexecutionrole) |
+| `arn:aws:iam::aws:policy/aws-service-role/AmazonMacieServiceRolePolicy` | [AmazonMacieServiceRolePolicy](../policies.md#amazonmacieservicerolepolicy) |
+| `arn:aws:iam::aws:policy/aws-service-role/ApplicationDiscoveryServiceContinuousExportServiceRolePolicy` | [ApplicationDiscoveryServiceContinuousExportServiceRolePolicy](../policies.md#applicationdiscoveryservicecontinuousexportservicerolepolicy) |
+| `arn:aws:iam::aws:policy/aws-service-role/AmazonConnectServiceLinkedRolePolicy` | [AmazonConnectServiceLinkedRolePolicy](../policies.md#amazonconnectservicelinkedrolepolicy) |
+| `arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForIoTSiteWise` | [AWSServiceRoleForIoTSiteWise](../policies.md#awsserviceroleforiotsitewise) |
+| `arn:aws:iam::aws:policy/AmazonFSxFullAccess` | [AmazonFSxFullAccess](../policies.md#amazonfsxfullaccess) |
+| `arn:aws:iam::aws:policy/aws-service-role/ClientVPNServiceRolePolicy` | [ClientVPNServiceRolePolicy](../policies.md#clientvpnservicerolepolicy) |
+| `arn:aws:iam::aws:policy/service-role/AWSTransferLoggingAccess` | [AWSTransferLoggingAccess](../policies.md#awstransferloggingaccess) |
+| `arn:aws:iam::aws:policy/service-role/AWSDeepRacerServiceRolePolicy` | [AWSDeepRacerServiceRolePolicy](../policies.md#awsdeepracerservicerolepolicy) |
+| `arn:aws:iam::aws:policy/AWSDeepRacerRoboMakerAccessPolicy` | [AWSDeepRacerRoboMakerAccessPolicy](../policies.md#awsdeepracerrobomakeraccesspolicy) |
+| `arn:aws:iam::aws:policy/aws-service-role/AmazonWorkMailEventsServiceRolePolicy` | [AmazonWorkMailEventsServiceRolePolicy](../policies.md#amazonworkmaileventsservicerolepolicy) |
+| `arn:aws:iam::aws:policy/service-role/AWSControlTowerServiceRolePolicy` | [AWSControlTowerServiceRolePolicy](../policies.md#awscontroltowerservicerolepolicy) |
+| `arn:aws:iam::aws:policy/aws-service-role/AWSChatbotServiceLinkedRolePolicy` | [AWSChatbotServiceLinkedRolePolicy](../policies.md#awschatbotservicelinkedrolepolicy) |
+| `arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForImageBuilder` | [AWSServiceRoleForImageBuilder](../policies.md#awsserviceroleforimagebuilder) |
+| `arn:aws:iam::aws:policy/EC2InstanceProfileForImageBuilder` | [EC2InstanceProfileForImageBuilder](../policies.md#ec2instanceprofileforimagebuilder) |
+| `arn:aws:iam::aws:policy/aws-service-role/AmazonManagedBlockchainServiceRolePolicy` | [AmazonManagedBlockchainServiceRolePolicy](../policies.md#amazonmanagedblockchainservicerolepolicy) |
+| `arn:aws:iam::aws:policy/aws-service-role/AmazonEKSServiceRolePolicy` | [AmazonEKSServiceRolePolicy](../policies.md#amazoneksservicerolepolicy) |
+| `arn:aws:iam::aws:policy/AWSThinkboxAWSPortalGatewayPolicy` | [AWSThinkboxAWSPortalGatewayPolicy](../policies.md#awsthinkboxawsportalgatewaypolicy) |
+| `arn:aws:iam::aws:policy/AWSThinkboxAWSPortalWorkerPolicy` | [AWSThinkboxAWSPortalWorkerPolicy](../policies.md#awsthinkboxawsportalworkerpolicy) |
+| `arn:aws:iam::aws:policy/AWSThinkboxDeadlineResourceTrackerAccessPolicy` | [AWSThinkboxDeadlineResourceTrackerAccessPolicy](../policies.md#awsthinkboxdeadlineresourcetrackeraccesspolicy) |
+| `arn:aws:iam::aws:policy/AmazonSageMakerGroundTruthExecution` | [AmazonSageMakerGroundTruthExecution](../policies.md#amazonsagemakergroundtruthexecution) |
+| `arn:aws:iam::aws:policy/aws-service-role/AmazonBraketServiceRolePolicy` | [AmazonBraketServiceRolePolicy](../policies.md#amazonbraketservicerolepolicy) |
+| `arn:aws:iam::aws:policy/AmazonBraketFullAccess` | [AmazonBraketFullAccess](../policies.md#amazonbraketfullaccess) |
+| `arn:aws:iam::aws:policy/service-role/AWSLambdaMSKExecutionRole` | [AWSLambdaMSKExecutionRole](../policies.md#awslambdamskexecutionrole) |
+| `arn:aws:iam::aws:policy/service-role/AWS_ConfigRole` | [AWS_ConfigRole](../policies.md#aws_configrole) |
+| `arn:aws:iam::aws:policy/aws-service-role/MediaPackageServiceRolePolicy` | [MediaPackageServiceRolePolicy](../policies.md#mediapackageservicerolepolicy) |
+| `arn:aws:iam::aws:policy/AmazonElasticFileSystemsUtils` | [AmazonElasticFileSystemsUtils](../policies.md#amazonelasticfilesystemsutils) |
+| `arn:aws:iam::aws:policy/CloudWatchLambdaInsightsExecutionRolePolicy` | [CloudWatchLambdaInsightsExecutionRolePolicy](../policies.md#cloudwatchlambdainsightsexecutionrolepolicy) |
+| `arn:aws:iam::aws:policy/aws-service-role/AmazonMQServiceRolePolicy` | [AmazonMQServiceRolePolicy](../policies.md#amazonmqservicerolepolicy) |
+| `arn:aws:iam::aws:policy/aws-service-role/AmazonMWAAServiceRolePolicy` | [AmazonMWAAServiceRolePolicy](../policies.md#amazonmwaaservicerolepolicy) |
+| `arn:aws:iam::aws:policy/AmazonSageMakerAdmin-ServiceCatalogProductsServiceRolePolicy` | [AmazonSageMakerAdmin-ServiceCatalogProductsServiceRolePolicy](../policies.md#amazonsagemakeradmin-servicecatalogproductsservicerolepolicy) |
+| `arn:aws:iam::aws:policy/service-role/AWSPanoramaGreengrassGroupRolePolicy` | [AWSPanoramaGreengrassGroupRolePolicy](../policies.md#awspanoramagreengrassgrouprolepolicy) |
+| `arn:aws:iam::aws:policy/service-role/AWSPanoramaApplianceRolePolicy` | [AWSPanoramaApplianceRolePolicy](../policies.md#awspanoramaappliancerolepolicy) |
+| `arn:aws:iam::aws:policy/AdministratorAccess-Amplify` | [AdministratorAccess-Amplify](../policies.md#administratoraccess-amplify) |
+| `arn:aws:iam::aws:policy/service-role/AWSGlueDataBrewServiceRole` | [AWSGlueDataBrewServiceRole](../policies.md#awsgluedatabrewservicerole) |
+| `arn:aws:iam::aws:policy/EC2InstanceProfileForImageBuilderECRContainerBuilds` | [EC2InstanceProfileForImageBuilderECRContainerBuilds](../policies.md#ec2instanceprofileforimagebuilderecrcontainerbuilds) |
+| `arn:aws:iam::aws:policy/AWSIoTWirelessLogging` | [AWSIoTWirelessLogging](../policies.md#awsiotwirelesslogging) |
+| `arn:aws:iam::aws:policy/aws-service-role/BatchServiceRolePolicy` | [BatchServiceRolePolicy](../policies.md#batchservicerolepolicy) |
+| `arn:aws:iam::aws:policy/aws-service-role/AppRunnerServiceRolePolicy` | [AppRunnerServiceRolePolicy](../policies.md#apprunnerservicerolepolicy) |
+| `arn:aws:iam::aws:policy/service-role/AmazonS3ObjectLambdaExecutionRolePolicy` | [AmazonS3ObjectLambdaExecutionRolePolicy](../policies.md#amazons3objectlambdaexecutionrolepolicy) |
+| `arn:aws:iam::aws:policy/aws-service-role/AWSMediaTailorServiceRolePolicy` | [AWSMediaTailorServiceRolePolicy](../policies.md#awsmediatailorservicerolepolicy) |
+| `arn:aws:iam::aws:policy/service-role/AWSPanoramaApplianceServiceRolePolicy` | [AWSPanoramaApplianceServiceRolePolicy](../policies.md#awspanoramaapplianceservicerolepolicy) |
+| `arn:aws:iam::aws:policy/AmazonRedshiftAllCommandsFullAccess` | [AmazonRedshiftAllCommandsFullAccess](../policies.md#amazonredshiftallcommandsfullaccess) |
+| `arn:aws:iam::aws:policy/AmazonBraketJobsExecutionPolicy` | [AmazonBraketJobsExecutionPolicy](../policies.md#amazonbraketjobsexecutionpolicy) |
+| `arn:aws:iam::aws:policy/AmazonCloudWatchRUMFullAccess` | [AmazonCloudWatchRUMFullAccess](../policies.md#amazoncloudwatchrumfullaccess) |
+| `arn:aws:iam::aws:policy/service-role/AmazonSageMakerServiceCatalogProductsGlueServiceRolePolicy` | [AmazonSageMakerServiceCatalogProductsGlueServiceRolePolicy](../policies.md#amazonsagemakerservicecatalogproductsglueservicerolepolicy) |
+| `arn:aws:iam::aws:policy/service-role/AmazonSageMakerServiceCatalogProductsApiGatewayServiceRolePolicy` | [AmazonSageMakerServiceCatalogProductsApiGatewayServiceRolePolicy](../policies.md#amazonsagemakerservicecatalogproductsapigatewayservicerolepolicy) |
+| `arn:aws:iam::aws:policy/AmazonSageMakerServiceCatalogProductsCodeBuildServiceRolePolicy` | [AmazonSageMakerServiceCatalogProductsCodeBuildServiceRolePolicy](../policies.md#amazonsagemakerservicecatalogproductscodebuildservicerolepolicy) |
+| `arn:aws:iam::aws:policy/service-role/AmazonSageMakerServiceCatalogProductsLambdaServiceRolePolicy` | [AmazonSageMakerServiceCatalogProductsLambdaServiceRolePolicy](../policies.md#amazonsagemakerservicecatalogproductslambdaservicerolepolicy) |
+| `arn:aws:iam::aws:policy/service-role/AwsGlueSessionUserRestrictedServiceRole` | [AwsGlueSessionUserRestrictedServiceRole](../policies.md#awsgluesessionuserrestrictedservicerole) |
+| `arn:aws:iam::aws:policy/service-role/AwsGlueSessionUserRestrictedNotebookServiceRole` | [AwsGlueSessionUserRestrictedNotebookServiceRole](../policies.md#awsgluesessionuserrestrictednotebookservicerole) |
+| `arn:aws:iam::aws:policy/aws-service-role/MonitronServiceRolePolicy` | [MonitronServiceRolePolicy](../policies.md#monitronservicerolepolicy) |
+| `arn:aws:iam::aws:policy/aws-service-role/AmazonGuardDutyMalwareProtectionServiceRolePolicy` | [AmazonGuardDutyMalwareProtectionServiceRolePolicy](../policies.md#amazonguarddutymalwareprotectionservicerolepolicy) |
+| `arn:aws:iam::aws:policy/AmazonEKSLocalOutpostClusterPolicy` | [AmazonEKSLocalOutpostClusterPolicy](../policies.md#amazonekslocaloutpostclusterpolicy) |
+| `arn:aws:iam::aws:policy/AmazonSageMakerCanvasFullAccess` | [AmazonSageMakerCanvasFullAccess](../policies.md#amazonsagemakercanvasfullaccess) |
+| `arn:aws:iam::aws:policy/AWSProtonCodeBuildProvisioningBasicAccess` | [AWSProtonCodeBuildProvisioningBasicAccess](../policies.md#awsprotoncodebuildprovisioningbasicaccess) |
+| `arn:aws:iam::aws:policy/aws-service-role/CloudWatchInternetMonitorServiceRolePolicy` | [CloudWatchInternetMonitorServiceRolePolicy](../policies.md#cloudwatchinternetmonitorservicerolepolicy) |
+| `arn:aws:iam::aws:policy/aws-service-role/AWSDataSyncDiscoveryServiceRolePolicy` | [AWSDataSyncDiscoveryServiceRolePolicy](../policies.md#awsdatasyncdiscoveryservicerolepolicy) |
+| `arn:aws:iam::aws:policy/AmazonLaunchWizardFullAccessV2` | [AmazonLaunchWizardFullAccessV2](../policies.md#amazonlaunchwizardfullaccessv2) |
+| `arn:aws:iam::aws:policy/AmazonDataZoneEnvironmentRolePermissionsBoundary` | [AmazonDataZoneEnvironmentRolePermissionsBoundary](../policies.md#amazondatazoneenvironmentrolepermissionsboundary) |
+| `arn:aws:iam::aws:policy/AmazonSageMakerCanvasDataPrepFullAccess` | [AmazonSageMakerCanvasDataPrepFullAccess](../policies.md#amazonsagemakercanvasdataprepfullaccess) |
+| `arn:aws:iam::aws:policy/aws-service-role/AWSServiceRoleForNeptuneGraphPolicy` | [AWSServiceRoleForNeptuneGraphPolicy](../policies.md#awsserviceroleforneptunegraphpolicy) |
+| `arn:aws:iam::aws:policy/AmazonSageMakerClusterInstanceRolePolicy` | [AmazonSageMakerClusterInstanceRolePolicy](../policies.md#amazonsagemakerclusterinstancerolepolicy) |
+| `arn:aws:iam::aws:policy/service-role/AmazonSecurityLakeMetastoreManager` | [AmazonSecurityLakeMetastoreManager](../policies.md#amazonsecuritylakemetastoremanager) |
+| `arn:aws:iam::aws:policy/AmazonRDSCustomInstanceProfileRolePolicy` | [AmazonRDSCustomInstanceProfileRolePolicy](../policies.md#amazonrdscustominstanceprofilerolepolicy) |
+| `arn:aws:iam::aws:policy/AmazonDataZoneSageMakerEnvironmentRolePermissionsBoundary` | [AmazonDataZoneSageMakerEnvironmentRolePermissionsBoundary](../policies.md#amazondatazonesagemakerenvironmentrolepermissionsboundary) |
+| `arn:aws:iam::aws:policy/aws-service-role/QBusinessServiceRolePolicy` | [QBusinessServiceRolePolicy](../policies.md#qbusinessservicerolepolicy) |
+| `arn:aws:iam::aws:policy/AWSQuickSetupPatchPolicyPermissionsBoundary` | [AWSQuickSetupPatchPolicyPermissionsBoundary](../policies.md#awsquicksetuppatchpolicypermissionsboundary) |
+| `arn:aws:iam::aws:policy/aws-service-role/AppStudioServiceRolePolicy` | [AppStudioServiceRolePolicy](../policies.md#appstudioservicerolepolicy) |
+| `arn:aws:iam::aws:policy/AmazonBedrockStudioPermissionsBoundary` | [AmazonBedrockStudioPermissionsBoundary](../policies.md#amazonbedrockstudiopermissionsboundary) |
+| `arn:aws:iam::aws:policy/aws-service-role/AmazonSageMakerHyperPodServiceRolePolicy` | [AmazonSageMakerHyperPodServiceRolePolicy](../policies.md#amazonsagemakerhyperpodservicerolepolicy) |
+| `arn:aws:iam::aws:policy/aws-service-role/AWSDataSyncServiceRolePolicy` | [AWSDataSyncServiceRolePolicy](../policies.md#awsdatasyncservicerolepolicy) |
+| `arn:aws:iam::aws:policy/CloudWatchLambdaApplicationSignalsExecutionRolePolicy` | [CloudWatchLambdaApplicationSignalsExecutionRolePolicy](../policies.md#cloudwatchlambdaapplicationsignalsexecutionrolepolicy) |
+| `arn:aws:iam::aws:policy/GameLiftContainerFleetPolicy` | [GameLiftContainerFleetPolicy](../policies.md#gameliftcontainerfleetpolicy) |
+| `arn:aws:iam::aws:policy/SageMakerStudioProjectRoleMachineLearningPolicy` | [SageMakerStudioProjectRoleMachineLearningPolicy](../policies.md#sagemakerstudioprojectrolemachinelearningpolicy) |
+| `arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePermissionsBoundary` | [SageMakerStudioProjectUserRolePermissionsBoundary](../policies.md#sagemakerstudioprojectuserrolepermissionsboundary) |
+| `arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy` | [SageMakerStudioProjectUserRolePolicy](../policies.md#sagemakerstudioprojectuserrolepolicy) |
+| `arn:aws:iam::aws:policy/aws-service-role/AWSIoTManagedIntegrationsRolePolicy` | [AWSIoTManagedIntegrationsRolePolicy](../policies.md#awsiotmanagedintegrationsrolepolicy) |
+
+## Associated Services
+

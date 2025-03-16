@@ -1,0 +1,14 @@
+# Action: elasticloadbalancing:SetSecurityGroups
+
+## Attached Roles
+
+## Attached Policies
+
+| Policy ARN | Policy Name |
+|------------|-------------|
+| `arn:aws:iam::aws:policy/aws-service-role/FMSServiceRolePolicy` | [FMSServiceRolePolicy](../policies.md#fmsservicerolepolicy) |
+| `arn:aws:iam::aws:policy/AdministratorAccess-AWSElasticBeanstalk` | [AdministratorAccess-AWSElasticBeanstalk](../policies.md#administratoraccess-awselasticbeanstalk) |
+| `arn:aws:iam::aws:policy/AmazonEKSLoadBalancingPolicy` | [AmazonEKSLoadBalancingPolicy](../policies.md#amazoneksloadbalancingpolicy) |
+
+## Associated Services
+

@@ -1,0 +1,152 @@
+# Service: chime
+
+## Attached roles
+
+| Policy ARN | Policy Name |
+|------------|-------------|
+## Attached Policies
+
+| Policy ARN | Policy Name |
+|------------|-------------|
+| `arn:aws:iam::aws:policy/ReadOnlyAccess` | [ReadOnlyAccess](../policies.md#readonlyaccess) |
+| `arn:aws:iam::aws:policy/SecurityAudit` | [SecurityAudit](../policies.md#securityaudit) |
+| `arn:aws:iam::aws:policy/AmazonChimeReadOnly` | [AmazonChimeReadOnly](../policies.md#amazonchimereadonly) |
+| `arn:aws:iam::aws:policy/AmazonChimeFullAccess` | [AmazonChimeFullAccess](../policies.md#amazonchimefullaccess) |
+| `arn:aws:iam::aws:policy/AmazonChimeUserManagement` | [AmazonChimeUserManagement](../policies.md#amazonchimeusermanagement) |
+| `arn:aws:iam::aws:policy/aws-service-role/AmazonConnectServiceLinkedRolePolicy` | [AmazonConnectServiceLinkedRolePolicy](../policies.md#amazonconnectservicelinkedrolepolicy) |
+| `arn:aws:iam::aws:policy/aws-service-role/AmazonChimeVoiceConnectorServiceLinkedRolePolicy` | [AmazonChimeVoiceConnectorServiceLinkedRolePolicy](../policies.md#amazonchimevoiceconnectorservicelinkedrolepolicy) |
+| `arn:aws:iam::aws:policy/AmazonChimeSDK` | [AmazonChimeSDK](../policies.md#amazonchimesdk) |
+| `arn:aws:iam::aws:policy/aws-service-role/AWSSupportServiceRolePolicy` | [AWSSupportServiceRolePolicy](../policies.md#awssupportservicerolepolicy) |
+| `arn:aws:iam::aws:policy/aws-service-role/AmazonChimeSDKMediaPipelinesServiceLinkedRolePolicy` | [AmazonChimeSDKMediaPipelinesServiceLinkedRolePolicy](../policies.md#amazonchimesdkmediapipelinesservicelinkedrolepolicy) |
+| `arn:aws:iam::aws:policy/service-role/AWSSupplyChainFederationAdminAccess` | [AWSSupplyChainFederationAdminAccess](../policies.md#awssupplychainfederationadminaccess) |
+| `arn:aws:iam::aws:policy/ResourceGroupsTaggingAPITagUntagSupportedResources` | [ResourceGroupsTaggingAPITagUntagSupportedResources](../policies.md#resourcegroupstaggingapitaguntagsupportedresources) |
+
+## Allowed Actions
+
+| Action | Service |
+|--------|---------|
+| [chime:*](../actions.md#chime:all) | chime |
+| [chime:ActivateUsers](../actions.md#chime:activateusers) | chime |
+| [chime:AssociatePhoneNumberWithUser](../actions.md#chime:associatephonenumberwithuser) | chime |
+| [chime:AssociateSigninDelegateGroupsWithAccount](../actions.md#chime:associatesignindelegategroupswithaccount) | chime |
+| [chime:BatchCreateAttendee](../actions.md#chime:batchcreateattendee) | chime |
+| [chime:BatchCreateChannelMembership](../actions.md#chime:batchcreatechannelmembership) | chime |
+| [chime:BatchSuspendUser](../actions.md#chime:batchsuspenduser) | chime |
+| [chime:BatchUnsuspendUser](../actions.md#chime:batchunsuspenduser) | chime |
+| [chime:BatchUpdateUser](../actions.md#chime:batchupdateuser) | chime |
+| [chime:Connect](../actions.md#chime:connect) | chime |
+| [chime:CreateAppInstanceUser](../actions.md#chime:createappinstanceuser) | chime |
+| [chime:CreateAttendee](../actions.md#chime:createattendee) | chime |
+| [chime:CreateChannel](../actions.md#chime:createchannel) | chime |
+| [chime:CreateChannelMembership](../actions.md#chime:createchannelmembership) | chime |
+| [chime:CreateChannelModerator](../actions.md#chime:createchannelmoderator) | chime |
+| [chime:CreateMediaCapturePipeline](../actions.md#chime:createmediacapturepipeline) | chime |
+| [chime:CreateMediaConcatenationPipeline](../actions.md#chime:createmediaconcatenationpipeline) | chime |
+| [chime:CreateMediaInsightsPipeline](../actions.md#chime:createmediainsightspipeline) | chime |
+| [chime:CreateMediaLiveConnectorPipeline](../actions.md#chime:createmedialiveconnectorpipeline) | chime |
+| [chime:CreateMeeting](../actions.md#chime:createmeeting) | chime |
+| [chime:CreateMeetingWithAttendees](../actions.md#chime:createmeetingwithattendees) | chime |
+| [chime:CreateUser](../actions.md#chime:createuser) | chime |
+| [chime:DeleteAttendee](../actions.md#chime:deleteattendee) | chime |
+| [chime:DeleteChannelMembership](../actions.md#chime:deletechannelmembership) | chime |
+| [chime:DeleteChannelModerator](../actions.md#chime:deletechannelmoderator) | chime |
+| [chime:DeleteMediaCapturePipeline](../actions.md#chime:deletemediacapturepipeline) | chime |
+| [chime:DeleteMediaPipeline](../actions.md#chime:deletemediapipeline) | chime |
+| [chime:DeleteMeeting](../actions.md#chime:deletemeeting) | chime |
+| [chime:Describe*](../actions.md#chime:describeall) | chime |
+| [chime:DescribeChannel](../actions.md#chime:describechannel) | chime |
+| [chime:DescribeChannelMembershipForAppInstanceUser](../actions.md#chime:describechannelmembershipforappinstanceuser) | chime |
+| [chime:DisassociatePhoneNumberFromUser](../actions.md#chime:disassociatephonenumberfromuser) | chime |
+| [chime:DisassociateSigninDelegateGroupsFromAccount](../actions.md#chime:disassociatesignindelegategroupsfromaccount) | chime |
+| [chime:Get*](../actions.md#chime:getall) | chime |
+| [chime:GetAccount](../actions.md#chime:getaccount) | chime |
+| [chime:GetAccountSettings](../actions.md#chime:getaccountsettings) | chime |
+| [chime:GetAttendee](../actions.md#chime:getattendee) | chime |
+| [chime:GetChannelMembershipPreferences](../actions.md#chime:getchannelmembershippreferences) | chime |
+| [chime:GetDomain](../actions.md#chime:getdomain) | chime |
+| [chime:GetMediaCapturePipeline](../actions.md#chime:getmediacapturepipeline) | chime |
+| [chime:GetMediaInsightsPipelineConfiguration](../actions.md#chime:getmediainsightspipelineconfiguration) | chime |
+| [chime:GetMediaPipeline](../actions.md#chime:getmediapipeline) | chime |
+| [chime:GetMeeting](../actions.md#chime:getmeeting) | chime |
+| [chime:GetMeetingDetail](../actions.md#chime:getmeetingdetail) | chime |
+| [chime:GetMessagingSessionEndpoint](../actions.md#chime:getmessagingsessionendpoint) | chime |
+| [chime:GetPhoneNumber](../actions.md#chime:getphonenumber) | chime |
+| [chime:GetUser](../actions.md#chime:getuser) | chime |
+| [chime:GetUserActivityReportData](../actions.md#chime:getuseractivityreportdata) | chime |
+| [chime:GetUserByEmail](../actions.md#chime:getuserbyemail) | chime |
+| [chime:GetUserSettings](../actions.md#chime:getusersettings) | chime |
+| [chime:GetVoiceConnector](../actions.md#chime:getvoiceconnector) | chime |
+| [chime:GetVoiceConnector*](../actions.md#chime:getvoiceconnectorall) | chime |
+| [chime:InviteUsers](../actions.md#chime:inviteusers) | chime |
+| [chime:InviteUsersFromProvider](../actions.md#chime:inviteusersfromprovider) | chime |
+| [chime:List*](../actions.md#chime:listall) | chime |
+| [chime:ListAccountUsageReportData](../actions.md#chime:listaccountusagereportdata) | chime |
+| [chime:ListAccounts](../actions.md#chime:listaccounts) | chime |
+| [chime:ListAttendeeTags](../actions.md#chime:listattendeetags) | chime |
+| [chime:ListAttendees](../actions.md#chime:listattendees) | chime |
+| [chime:ListChannelMemberships](../actions.md#chime:listchannelmemberships) | chime |
+| [chime:ListChannelMembershipsForAppInstanceUser](../actions.md#chime:listchannelmembershipsforappinstanceuser) | chime |
+| [chime:ListChannelMessages](../actions.md#chime:listchannelmessages) | chime |
+| [chime:ListChannelModerators](../actions.md#chime:listchannelmoderators) | chime |
+| [chime:ListDelegates](../actions.md#chime:listdelegates) | chime |
+| [chime:ListDirectories](../actions.md#chime:listdirectories) | chime |
+| [chime:ListDomains](../actions.md#chime:listdomains) | chime |
+| [chime:ListGroups](../actions.md#chime:listgroups) | chime |
+| [chime:ListMediaCapturePipelines](../actions.md#chime:listmediacapturepipelines) | chime |
+| [chime:ListMediaPipelines](../actions.md#chime:listmediapipelines) | chime |
+| [chime:ListMeetingEvents](../actions.md#chime:listmeetingevents) | chime |
+| [chime:ListMeetingTags](../actions.md#chime:listmeetingtags) | chime |
+| [chime:ListMeetings](../actions.md#chime:listmeetings) | chime |
+| [chime:ListMeetingsReportData](../actions.md#chime:listmeetingsreportdata) | chime |
+| [chime:ListPhoneNumbers](../actions.md#chime:listphonenumbers) | chime |
+| [chime:ListTagsForResource](../actions.md#chime:listtagsforresource) | chime |
+| [chime:ListUsers](../actions.md#chime:listusers) | chime |
+| [chime:ListVoiceConnectors](../actions.md#chime:listvoiceconnectors) | chime |
+| [chime:LogoutUser](../actions.md#chime:logoutuser) | chime |
+| [chime:PutChannelMembershipPreferences](../actions.md#chime:putchannelmembershippreferences) | chime |
+| [chime:ResetPersonalPIN](../actions.md#chime:resetpersonalpin) | chime |
+| [chime:Retrieve*](../actions.md#chime:retrieveall) | chime |
+| [chime:Search*](../actions.md#chime:searchall) | chime |
+| [chime:SearchAvailablePhoneNumbers](../actions.md#chime:searchavailablephonenumbers) | chime |
+| [chime:SendChannelMessage](../actions.md#chime:sendchannelmessage) | chime |
+| [chime:StartMeetingTranscription](../actions.md#chime:startmeetingtranscription) | chime |
+| [chime:StopMeetingTranscription](../actions.md#chime:stopmeetingtranscription) | chime |
+| [chime:SubmitSupportRequest](../actions.md#chime:submitsupportrequest) | chime |
+| [chime:SuspendUsers](../actions.md#chime:suspendusers) | chime |
+| [chime:TagAttendee](../actions.md#chime:tagattendee) | chime |
+| [chime:TagMeeting](../actions.md#chime:tagmeeting) | chime |
+| [chime:TagResource](../actions.md#chime:tagresource) | chime |
+| [chime:UntagAttendee](../actions.md#chime:untagattendee) | chime |
+| [chime:UntagMeeting](../actions.md#chime:untagmeeting) | chime |
+| [chime:UntagResource](../actions.md#chime:untagresource) | chime |
+| [chime:UpdateAccountSettings](../actions.md#chime:updateaccountsettings) | chime |
+| [chime:UpdateAppInstanceUser](../actions.md#chime:updateappinstanceuser) | chime |
+| [chime:UpdateChannelReadMarker](../actions.md#chime:updatechannelreadmarker) | chime |
+| [chime:UpdateUser](../actions.md#chime:updateuser) | chime |
+| [chime:UpdateUserLicenses](../actions.md#chime:updateuserlicenses) | chime |
+| [chime:UpdateUserSettings](../actions.md#chime:updateusersettings) | chime |
+| [chime:Validate*](../actions.md#chime:validateall) | chime |
+| [chime:describeAppInstance](../actions.md#chime:describeappinstance) | chime |
+| [chime:getAttendee](../actions.md#chime:getattendee) | chime |
+| [chime:getGlobalSettings](../actions.md#chime:getglobalsettings) | chime |
+| [chime:getMediaCapturePipeline](../actions.md#chime:getmediacapturepipeline) | chime |
+| [chime:getMediaPipeline](../actions.md#chime:getmediapipeline) | chime |
+| [chime:getMeeting](../actions.md#chime:getmeeting) | chime |
+| [chime:getProxySession](../actions.md#chime:getproxysession) | chime |
+| [chime:getSipMediaApplication](../actions.md#chime:getsipmediaapplication) | chime |
+| [chime:getSipRule](../actions.md#chime:getsiprule) | chime |
+| [chime:getVoiceConnector](../actions.md#chime:getvoiceconnector) | chime |
+| [chime:getVoiceConnectorGroup](../actions.md#chime:getvoiceconnectorgroup) | chime |
+| [chime:getVoiceConnectorLoggingConfiguration](../actions.md#chime:getvoiceconnectorloggingconfiguration) | chime |
+| [chime:listAppInstances](../actions.md#chime:listappinstances) | chime |
+| [chime:listAttendees](../actions.md#chime:listattendees) | chime |
+| [chime:listChannelBans](../actions.md#chime:listchannelbans) | chime |
+| [chime:listChannels](../actions.md#chime:listchannels) | chime |
+| [chime:listChannelsModeratedByAppInstanceUser](../actions.md#chime:listchannelsmoderatedbyappinstanceuser) | chime |
+| [chime:listMediaCapturePipelines](../actions.md#chime:listmediacapturepipelines) | chime |
+| [chime:listMediaPipelines](../actions.md#chime:listmediapipelines) | chime |
+| [chime:listMeetings](../actions.md#chime:listmeetings) | chime |
+| [chime:listSipMediaApplications](../actions.md#chime:listsipmediaapplications) | chime |
+| [chime:listSipRules](../actions.md#chime:listsiprules) | chime |
+| [chime:listVoiceConnectorGroups](../actions.md#chime:listvoiceconnectorgroups) | chime |
+| [chime:listVoiceConnectors](../actions.md#chime:listvoiceconnectors) | chime |
