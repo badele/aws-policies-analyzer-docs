@@ -1,0 +1,1312 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://badele.github.io/aws-policies-analyzer-docs/policies/sagemakerstudioprojectrolemachinelearningpolicy/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Policy: SageMakerStudioProjectRoleMachineLearningPolicy - AWS Policies Analyzer Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#policy-sagemakerstudioprojectrolemachinelearningpolicy" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AWS Policies Analyzer Docs" class="md-header__button md-logo" aria-label="AWS Policies Analyzer Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AWS Policies Analyzer Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Policy: SageMakerStudioProjectRoleMachineLearningPolicy
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/badele/aws-policies-analyzer-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AWS Policies Analyzer Docs" class="md-nav__button md-logo" aria-label="AWS Policies Analyzer Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AWS Policies Analyzer Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/badele/aws-policies-analyzer-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accueil
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#allowed-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allowed Actions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="policy-sagemakerstudioprojectrolemachinelearningpolicy">Policy: SageMakerStudioProjectRoleMachineLearningPolicy</h1>
+<p>ARN: <code>arn:aws:iam::aws:policy/SageMakerStudioProjectRoleMachineLearningPolicy</code></p>
+<h2 id="allowed-actions">Allowed Actions</h2>
+<table>
+<thead>
+<tr>
+<th>Actions</th>
+<th style="text-align: center;">Services</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/actions/application-autoscaling:deregisterscalabletarget">application-autoscaling:DeregisterScalableTarget</a></td>
+<td style="text-align: center;"><a href="/services/application-autoscaling">application-autoscaling</a></td>
+</tr>
+<tr>
+<td><a href="/actions/application-autoscaling:describescalabletargets">application-autoscaling:DescribeScalableTargets</a></td>
+<td style="text-align: center;"><a href="/services/application-autoscaling">application-autoscaling</a></td>
+</tr>
+<tr>
+<td><a href="/actions/application-autoscaling:describescalingactivities">application-autoscaling:DescribeScalingActivities</a></td>
+<td style="text-align: center;"><a href="/services/application-autoscaling">application-autoscaling</a></td>
+</tr>
+<tr>
+<td><a href="/actions/application-autoscaling:describescalingpolicies">application-autoscaling:DescribeScalingPolicies</a></td>
+<td style="text-align: center;"><a href="/services/application-autoscaling">application-autoscaling</a></td>
+</tr>
+<tr>
+<td><a href="/actions/application-autoscaling:describescheduledactions">application-autoscaling:DescribeScheduledActions</a></td>
+<td style="text-align: center;"><a href="/services/application-autoscaling">application-autoscaling</a></td>
+</tr>
+<tr>
+<td><a href="/actions/application-autoscaling:putscalingpolicy">application-autoscaling:PutScalingPolicy</a></td>
+<td style="text-align: center;"><a href="/services/application-autoscaling">application-autoscaling</a></td>
+</tr>
+<tr>
+<td><a href="/actions/application-autoscaling:putscheduledaction">application-autoscaling:PutScheduledAction</a></td>
+<td style="text-align: center;"><a href="/services/application-autoscaling">application-autoscaling</a></td>
+</tr>
+<tr>
+<td><a href="/actions/application-autoscaling:registerscalabletarget">application-autoscaling:RegisterScalableTarget</a></td>
+<td style="text-align: center;"><a href="/services/application-autoscaling">application-autoscaling</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloudwatch:deletealarms">cloudwatch:DeleteAlarms</a></td>
+<td style="text-align: center;"><a href="/services/cloudwatch">cloudwatch</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloudwatch:describealarms">cloudwatch:DescribeAlarms</a></td>
+<td style="text-align: center;"><a href="/services/cloudwatch">cloudwatch</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloudwatch:putmetricalarm">cloudwatch:PutMetricAlarm</a></td>
+<td style="text-align: center;"><a href="/services/cloudwatch">cloudwatch</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloudwatch:putmetricdata">cloudwatch:PutMetricData</a></td>
+<td style="text-align: center;"><a href="/services/cloudwatch">cloudwatch</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:attachnetworkinterface">ec2:AttachNetworkInterface</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:attachnetworkinterface">ec2:AttachNetworkInterface</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:createnetworkinterface">ec2:CreateNetworkInterface</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:createnetworkinterface">ec2:CreateNetworkInterface</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:createnetworkinterfacepermission">ec2:CreateNetworkInterfacePermission</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:createvpcendpoint">ec2:CreateVpcEndpoint</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:createvpcendpoint">ec2:CreateVpcEndpoint</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:createvpcendpoint">ec2:CreateVpcEndpoint</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:deletenetworkinterface">ec2:DeleteNetworkInterface</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:deletenetworkinterfacepermission">ec2:DeleteNetworkInterfacePermission</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:describedhcpoptions">ec2:DescribeDhcpOptions</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:describenetworkinterfaces">ec2:DescribeNetworkInterfaces</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:describeroutetables">ec2:DescribeRouteTables</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:describesecuritygroups">ec2:DescribeSecurityGroups</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:describesubnets">ec2:DescribeSubnets</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:describevpcendpoints">ec2:DescribeVpcEndpoints</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:describevpcs">ec2:DescribeVpcs</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ecr:batchgetimage">ecr:BatchGetImage</a></td>
+<td style="text-align: center;"><a href="/services/ecr">ecr</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ecr:describeimages">ecr:DescribeImages</a></td>
+<td style="text-align: center;"><a href="/services/ecr">ecr</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ecr:getauthorizationtoken">ecr:GetAuthorizationToken</a></td>
+<td style="text-align: center;"><a href="/services/ecr">ecr</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ecr:getdownloadurlforlayer">ecr:GetDownloadUrlForLayer</a></td>
+<td style="text-align: center;"><a href="/services/ecr">ecr</a></td>
+</tr>
+<tr>
+<td><a href="/actions/elasticfilesystem:describemounttargets">elasticfilesystem:DescribeMountTargets</a></td>
+<td style="text-align: center;"><a href="/services/elasticfilesystem">elasticfilesystem</a></td>
+</tr>
+<tr>
+<td><a href="/actions/glue:listsessions">glue:ListSessions</a></td>
+<td style="text-align: center;"><a href="/services/glue">glue</a></td>
+</tr>
+<tr>
+<td><a href="/actions/iam:createservicelinkedrole">iam:CreateServiceLinkedRole</a></td>
+<td style="text-align: center;"><a href="/services/iam">iam</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kms:creategrant">kms:CreateGrant</a></td>
+<td style="text-align: center;"><a href="/services/kms">kms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/logs:createloggroup">logs:CreateLogGroup</a></td>
+<td style="text-align: center;"><a href="/services/logs">logs</a></td>
+</tr>
+<tr>
+<td><a href="/actions/logs:createlogstream">logs:CreateLogStream</a></td>
+<td style="text-align: center;"><a href="/services/logs">logs</a></td>
+</tr>
+<tr>
+<td><a href="/actions/logs:describelogstreams">logs:DescribeLogStreams</a></td>
+<td style="text-align: center;"><a href="/services/logs">logs</a></td>
+</tr>
+<tr>
+<td><a href="/actions/logs:getlogevents">logs:GetLogEvents</a></td>
+<td style="text-align: center;"><a href="/services/logs">logs</a></td>
+</tr>
+<tr>
+<td><a href="/actions/logs:putlogevents">logs:PutLogEvents</a></td>
+<td style="text-align: center;"><a href="/services/logs">logs</a></td>
+</tr>
+<tr>
+<td><a href="/actions/resource-groups:creategroup">resource-groups:CreateGroup</a></td>
+<td style="text-align: center;"><a href="/services/resource-groups">resource-groups</a></td>
+</tr>
+<tr>
+<td><a href="/actions/resource-groups:deletegroup">resource-groups:DeleteGroup</a></td>
+<td style="text-align: center;"><a href="/services/resource-groups">resource-groups</a></td>
+</tr>
+<tr>
+<td><a href="/actions/resource-groups:getgroupquery">resource-groups:GetGroupQuery</a></td>
+<td style="text-align: center;"><a href="/services/resource-groups">resource-groups</a></td>
+</tr>
+<tr>
+<td><a href="/actions/resource-groups:listgroupresources">resource-groups:ListGroupResources</a></td>
+<td style="text-align: center;"><a href="/services/resource-groups">resource-groups</a></td>
+</tr>
+<tr>
+<td><a href="/actions/resource-groups:tag">resource-groups:Tag</a></td>
+<td style="text-align: center;"><a href="/services/resource-groups">resource-groups</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:getobject">s3:GetObject</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:addassociation">sagemaker:AddAssociation</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:addtags">sagemaker:AddTags</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:batchdescribemodelpackage">sagemaker:BatchDescribeModelPackage</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:batchdescribemodelpackage">sagemaker:BatchDescribeModelPackage</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:batchgetmetrics">sagemaker:BatchGetMetrics</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:batchputmetrics">sagemaker:BatchPutMetrics</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createaction">sagemaker:CreateAction</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createapp">sagemaker:CreateApp</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createapp">sagemaker:CreateApp</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createartifact">sagemaker:CreateArtifact</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createautomljob">sagemaker:CreateAutoMLJob</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createautomljobv2">sagemaker:CreateAutoMLJobV2</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createcontext">sagemaker:CreateContext</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createendpoint">sagemaker:CreateEndpoint</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createendpointconfig">sagemaker:CreateEndpointConfig</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createhyperparametertuningjob">sagemaker:CreateHyperParameterTuningJob</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createinferencecomponent">sagemaker:CreateInferenceComponent</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createinferencerecommendationsjob">sagemaker:CreateInferenceRecommendationsJob</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createmodel">sagemaker:CreateModel</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createmodel">sagemaker:CreateModel</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createmodelpackage">sagemaker:CreateModelPackage</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createmodelpackagegroup">sagemaker:CreateModelPackageGroup</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createpipeline">sagemaker:CreatePipeline</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createpresigneddomainurl">sagemaker:CreatePresignedDomainUrl</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createpresigneddomainurl">sagemaker:CreatePresignedDomainUrl</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createpresignedmlflowtrackingserverurl">sagemaker:CreatePresignedMlflowTrackingServerUrl</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createprocessingjob">sagemaker:CreateProcessingJob</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createspace">sagemaker:CreateSpace</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createspace">sagemaker:CreateSpace</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createtrainingjob">sagemaker:CreateTrainingJob</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createtransformjob">sagemaker:CreateTransformJob</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createuserprofile">sagemaker:CreateUserProfile</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:createuserprofile">sagemaker:CreateUserProfile</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:deleteaction">sagemaker:DeleteAction</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:deleteapp">sagemaker:DeleteApp</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:deleteapp">sagemaker:DeleteApp</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:deleteartifact">sagemaker:DeleteArtifact</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:deleteassociation">sagemaker:DeleteAssociation</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:deletecontext">sagemaker:DeleteContext</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:deleteendpoint">sagemaker:DeleteEndpoint</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:deleteendpointconfig">sagemaker:DeleteEndpointConfig</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:deleteinferencecomponent">sagemaker:DeleteInferenceComponent</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:deletemodel">sagemaker:DeleteModel</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:deletemodelpackage">sagemaker:DeleteModelPackage</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:deletemodelpackagegroup">sagemaker:DeleteModelPackageGroup</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:deletepipeline">sagemaker:DeletePipeline</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:deletespace">sagemaker:DeleteSpace</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:deletespace">sagemaker:DeleteSpace</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:deletetags">sagemaker:DeleteTags</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:deleteuserprofile">sagemaker:DeleteUserProfile</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:deleteuserprofile">sagemaker:DeleteUserProfile</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describeaction">sagemaker:DescribeAction</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describeapp">sagemaker:DescribeApp</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describeartifact">sagemaker:DescribeArtifact</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describeautomljob">sagemaker:DescribeAutoMLJob</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describeautomljobv2">sagemaker:DescribeAutoMLJobV2</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describecontext">sagemaker:DescribeContext</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describedomain">sagemaker:DescribeDomain</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describeendpoint">sagemaker:DescribeEndpoint</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describeendpointconfig">sagemaker:DescribeEndpointConfig</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describehyperparametertuningjob">sagemaker:DescribeHyperParameterTuningJob</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describeimage">sagemaker:DescribeImage</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describeimageversion">sagemaker:DescribeImageVersion</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describeinferencecomponent">sagemaker:DescribeInferenceComponent</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describeinferencerecommendationsjob">sagemaker:DescribeInferenceRecommendationsJob</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describemlflowtrackingserver">sagemaker:DescribeMlflowTrackingServer</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describemodel">sagemaker:DescribeModel</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describemodelpackage">sagemaker:DescribeModelPackage</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describemodelpackage">sagemaker:DescribeModelPackage</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describemodelpackagegroup">sagemaker:DescribeModelPackageGroup</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describemodelpackagegroup">sagemaker:DescribeModelPackageGroup</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describemodelpackagegroup">sagemaker:DescribeModelPackageGroup</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describeoptimizationjob">sagemaker:DescribeOptimizationJob</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describepipeline">sagemaker:DescribePipeline</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describepipelinedefinitionforexecution">sagemaker:DescribePipelineDefinitionForExecution</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describepipelineexecution">sagemaker:DescribePipelineExecution</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describeprocessingjob">sagemaker:DescribeProcessingJob</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describespace">sagemaker:DescribeSpace</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describetrainingjob">sagemaker:DescribeTrainingJob</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describetransformjob">sagemaker:DescribeTransformJob</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describetrialcomponent">sagemaker:DescribeTrialComponent</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describeuserprofile">sagemaker:DescribeUserProfile</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describeuserprofile">sagemaker:DescribeUserProfile</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:getsearchsuggestions">sagemaker:GetSearchSuggestions</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:invokeendpoint">sagemaker:InvokeEndpoint</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:invokeendpointasync">sagemaker:InvokeEndpointAsync</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:invokeendpointwithresponsestream">sagemaker:InvokeEndpointWithResponseStream</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listapps">sagemaker:ListApps</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listartifacts">sagemaker:ListArtifacts</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listassociations">sagemaker:ListAssociations</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listautomljobs">sagemaker:ListAutoMLJobs</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listcandidatesforautomljob">sagemaker:ListCandidatesForAutoMLJob</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listcontexts">sagemaker:ListContexts</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listdomains">sagemaker:ListDomains</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listendpointconfigs">sagemaker:ListEndpointConfigs</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listendpoints">sagemaker:ListEndpoints</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listhubcontents">sagemaker:ListHubContents</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listhubs">sagemaker:ListHubs</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listhyperparametertuningjobs">sagemaker:ListHyperParameterTuningJobs</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listimageversions">sagemaker:ListImageVersions</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listinferencecomponents">sagemaker:ListInferenceComponents</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listmlflowtrackingservers">sagemaker:ListMlflowTrackingServers</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listmodelmetadata">sagemaker:ListModelMetadata</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listmodelpackagegroups">sagemaker:ListModelPackageGroups</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listmodelpackages">sagemaker:ListModelPackages</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listmodelpackages">sagemaker:ListModelPackages</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listmodels">sagemaker:ListModels</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listpipelineexecutionsteps">sagemaker:ListPipelineExecutionSteps</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listpipelineexecutions">sagemaker:ListPipelineExecutions</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listpipelineparametersforexecution">sagemaker:ListPipelineParametersForExecution</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listpipelines">sagemaker:ListPipelines</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listprocessingjobs">sagemaker:ListProcessingJobs</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listspaces">sagemaker:ListSpaces</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listtags">sagemaker:ListTags</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listtrainingjobs">sagemaker:ListTrainingJobs</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listtrainingjobsforhyperparametertuningjob">sagemaker:ListTrainingJobsForHyperParameterTuningJob</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listtransformjobs">sagemaker:ListTransformJobs</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listuserprofiles">sagemaker:ListUserProfiles</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:querylineage">sagemaker:QueryLineage</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:retrypipelineexecution">sagemaker:RetryPipelineExecution</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:search">sagemaker:Search</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:sendpipelineexecutionstepfailure">sagemaker:SendPipelineExecutionStepFailure</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:sendpipelineexecutionstepsuccess">sagemaker:SendPipelineExecutionStepSuccess</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:startmlflowtrackingserver">sagemaker:StartMlflowTrackingServer</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:startpipelineexecution">sagemaker:StartPipelineExecution</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:stopautomljob">sagemaker:StopAutoMLJob</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:stophyperparametertuningjob">sagemaker:StopHyperParameterTuningJob</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:stopmlflowtrackingserver">sagemaker:StopMlflowTrackingServer</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:stoppipelineexecution">sagemaker:StopPipelineExecution</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:stopprocessingjob">sagemaker:StopProcessingJob</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:stoptrainingjob">sagemaker:StopTrainingJob</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:stoptransformjob">sagemaker:StopTransformJob</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:updateendpoint">sagemaker:UpdateEndpoint</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:updateendpointweightsandcapacities">sagemaker:UpdateEndpointWeightsAndCapacities</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:updateinferencecomponentruntimeconfig">sagemaker:UpdateInferenceComponentRuntimeConfig</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:updateinferencecomponentruntimeconfig">sagemaker:UpdateInferenceComponentRuntimeConfig</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:updatemlflowtrackingserver">sagemaker:UpdateMlflowTrackingServer</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:updatemodelpackage">sagemaker:UpdateModelPackage</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:updatepipeline">sagemaker:UpdatePipeline</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:updatepipelineexecution">sagemaker:UpdatePipelineExecution</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:updatespace">sagemaker:UpdateSpace</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:updatespace">sagemaker:UpdateSpace</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:updatetrainingjob">sagemaker:UpdateTrainingJob</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:accessui">sagemaker-mlflow:AccessUI</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:createexperiment">sagemaker-mlflow:CreateExperiment</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:createmodelversion">sagemaker-mlflow:CreateModelVersion</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:createregisteredmodel">sagemaker-mlflow:CreateRegisteredModel</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:createrun">sagemaker-mlflow:CreateRun</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:deleteexperiment">sagemaker-mlflow:DeleteExperiment</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:deletemodelversion">sagemaker-mlflow:DeleteModelVersion</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:deletemodelversiontag">sagemaker-mlflow:DeleteModelVersionTag</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:deleteregisteredmodel">sagemaker-mlflow:DeleteRegisteredModel</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:deleteregisteredmodelalias">sagemaker-mlflow:DeleteRegisteredModelAlias</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:deleteregisteredmodeltag">sagemaker-mlflow:DeleteRegisteredModelTag</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:deleterun">sagemaker-mlflow:DeleteRun</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:deletetag">sagemaker-mlflow:DeleteTag</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:getdownloaduriformodelversionartifacts">sagemaker-mlflow:GetDownloadURIForModelVersionArtifacts</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:getexperiment">sagemaker-mlflow:GetExperiment</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:getexperimentbyname">sagemaker-mlflow:GetExperimentByName</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:getlatestmodelversions">sagemaker-mlflow:GetLatestModelVersions</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:getmetrichistory">sagemaker-mlflow:GetMetricHistory</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:getmodelversion">sagemaker-mlflow:GetModelVersion</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:getmodelversionbyalias">sagemaker-mlflow:GetModelVersionByAlias</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:getregisteredmodel">sagemaker-mlflow:GetRegisteredModel</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:getrun">sagemaker-mlflow:GetRun</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:listartifacts">sagemaker-mlflow:ListArtifacts</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:logbatch">sagemaker-mlflow:LogBatch</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:loginputs">sagemaker-mlflow:LogInputs</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:logmetric">sagemaker-mlflow:LogMetric</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:logmodel">sagemaker-mlflow:LogModel</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:logparam">sagemaker-mlflow:LogParam</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:renameregisteredmodel">sagemaker-mlflow:RenameRegisteredModel</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:restoreexperiment">sagemaker-mlflow:RestoreExperiment</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:restorerun">sagemaker-mlflow:RestoreRun</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:searchexperiments">sagemaker-mlflow:SearchExperiments</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:searchmodelversions">sagemaker-mlflow:SearchModelVersions</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:searchregisteredmodels">sagemaker-mlflow:SearchRegisteredModels</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:searchruns">sagemaker-mlflow:SearchRuns</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:setexperimenttag">sagemaker-mlflow:SetExperimentTag</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:setregisteredmodelalias">sagemaker-mlflow:SetRegisteredModelAlias</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:setregisteredmodeltag">sagemaker-mlflow:SetRegisteredModelTag</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:settag">sagemaker-mlflow:SetTag</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:transitionmodelversionstage">sagemaker-mlflow:TransitionModelVersionStage</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:updateexperiment">sagemaker-mlflow:UpdateExperiment</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:updatemodelversion">sagemaker-mlflow:UpdateModelVersion</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:updateregisteredmodel">sagemaker-mlflow:UpdateRegisteredModel</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker-mlflow:updaterun">sagemaker-mlflow:UpdateRun</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker-mlflow">sagemaker-mlflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ssm:getparameter">ssm:GetParameter</a></td>
+<td style="text-align: center;"><a href="/services/ssm">ssm</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ssm:getparameters">ssm:GetParameters</a></td>
+<td style="text-align: center;"><a href="/services/ssm">ssm</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ssm:getparametersbypath">ssm:GetParametersByPath</a></td>
+<td style="text-align: center;"><a href="/services/ssm">ssm</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sts:getcalleridentity">sts:GetCallerIdentity</a></td>
+<td style="text-align: center;"><a href="/services/sts">sts</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

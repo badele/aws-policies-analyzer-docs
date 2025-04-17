@@ -1,0 +1,1483 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://badele.github.io/aws-policies-analyzer-docs/services/iot/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Service: iot - AWS Policies Analyzer Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#service-iot" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AWS Policies Analyzer Docs" class="md-header__button md-logo" aria-label="AWS Policies Analyzer Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AWS Policies Analyzer Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Service: iot
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/badele/aws-policies-analyzer-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AWS Policies Analyzer Docs" class="md-nav__button md-logo" aria-label="AWS Policies Analyzer Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AWS Policies Analyzer Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/badele/aws-policies-analyzer-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accueil
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attached-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attached Policies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#allowed-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allowed Actions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="service-iot">Service: iot</h1>
+<h2 id="attached-policies">Attached Policies</h2>
+<table>
+<thead>
+<tr>
+<th>Policy ARN</th>
+<th>Policy Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>arn:aws:iam::aws:policy/ReadOnlyAccess</code></td>
+<td><a href="/policies/readonlyaccess">ReadOnlyAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/SecurityAudit</code></td>
+<td><a href="/policies/securityaudit">SecurityAudit</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AWSIoTFullAccess</code></td>
+<td><a href="/policies/awsiotfullaccess">AWSIoTFullAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AWSIoTDataAccess</code></td>
+<td><a href="/policies/awsiotdataaccess">AWSIoTDataAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AWSIoTConfigAccess</code></td>
+<td><a href="/policies/awsiotconfigaccess">AWSIoTConfigAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AWSIoTConfigReadOnlyAccess</code></td>
+<td><a href="/policies/awsiotconfigreadonlyaccess">AWSIoTConfigReadOnlyAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/job-function/ViewOnlyAccess</code></td>
+<td><a href="/policies/viewonlyaccess">ViewOnlyAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/job-function/SupportUser</code></td>
+<td><a href="/policies/supportuser">SupportUser</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AWSGreengrassResourceAccessRolePolicy</code></td>
+<td><a href="/policies/awsgreengrassresourceaccessrolepolicy">AWSGreengrassResourceAccessRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AWSDeepLensServiceRolePolicy</code></td>
+<td><a href="/policies/awsdeeplensservicerolepolicy">AWSDeepLensServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AWSIoTThingsRegistration</code></td>
+<td><a href="/policies/awsiotthingsregistration">AWSIoTThingsRegistration</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AWSConfigServiceRolePolicy</code></td>
+<td><a href="/policies/awsconfigservicerolepolicy">AWSConfigServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AWSIoTDeviceDefenderAudit</code></td>
+<td><a href="/policies/awsiotdevicedefenderaudit">AWSIoTDeviceDefenderAudit</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AmazonFreeRTOSOTAUpdate</code></td>
+<td><a href="/policies/amazonfreertosotaupdate">AmazonFreeRTOSOTAUpdate</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AWSIoTSiteWiseConsoleFullAccess</code></td>
+<td><a href="/policies/awsiotsitewiseconsolefullaccess">AWSIoTSiteWiseConsoleFullAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AWSIoTDeviceDefenderEnableIoTLoggingMitigationAction</code></td>
+<td><a href="/policies/awsiotdevicedefenderenableiotloggingmitigationaction">AWSIoTDeviceDefenderEnableIoTLoggingMitigationAction</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AWSIoTDeviceDefenderReplaceDefaultPolicyMitigationAction</code></td>
+<td><a href="/policies/awsiotdevicedefenderreplacedefaultpolicymitigationaction">AWSIoTDeviceDefenderReplaceDefaultPolicyMitigationAction</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AWSIoTDeviceDefenderUpdateCACertMitigationAction</code></td>
+<td><a href="/policies/awsiotdevicedefenderupdatecacertmitigationaction">AWSIoTDeviceDefenderUpdateCACertMitigationAction</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AWSIoTDeviceDefenderUpdateDeviceCertMitigationAction</code></td>
+<td><a href="/policies/awsiotdevicedefenderupdatedevicecertmitigationaction">AWSIoTDeviceDefenderUpdateDeviceCertMitigationAction</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AWSIoTDeviceDefenderAddThingsToThingGroupMitigationAction</code></td>
+<td><a href="/policies/awsiotdevicedefenderaddthingstothinggroupmitigationaction">AWSIoTDeviceDefenderAddThingsToThingGroupMitigationAction</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AWSIoTDeviceTesterForFreeRTOSFullAccess</code></td>
+<td><a href="/policies/awsiotdevicetesterforfreertosfullaccess">AWSIoTDeviceTesterForFreeRTOSFullAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AWSIoTDeviceTesterForGreengrassFullAccess</code></td>
+<td><a href="/policies/awsiotdevicetesterforgreengrassfullaccess">AWSIoTDeviceTesterForGreengrassFullAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AWS_ConfigRole</code></td>
+<td><a href="/policies/aws_configrole">AWS_ConfigRole</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AWSSupportServiceRolePolicy</code></td>
+<td><a href="/policies/awssupportservicerolepolicy">AWSSupportServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AWSPanoramaServiceRolePolicy</code></td>
+<td><a href="/policies/awspanoramaservicerolepolicy">AWSPanoramaServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AmazonSageMakerEdgeDeviceFleetPolicy</code></td>
+<td><a href="/policies/amazonsagemakeredgedevicefleetpolicy">AmazonSageMakerEdgeDeviceFleetPolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AWSIoTFleetHubFederationAccess</code></td>
+<td><a href="/policies/awsiotfleethubfederationaccess">AWSIoTFleetHubFederationAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AWSIoTWirelessFullPublishAccess</code></td>
+<td><a href="/policies/awsiotwirelessfullpublishaccess">AWSIoTWirelessFullPublishAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AWSIoTWirelessGatewayCertManager</code></td>
+<td><a href="/policies/awsiotwirelessgatewaycertmanager">AWSIoTWirelessGatewayCertManager</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AWSPanoramaServiceLinkedRolePolicy</code></td>
+<td><a href="/policies/awspanoramaservicelinkedrolepolicy">AWSPanoramaServiceLinkedRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AWSResourceExplorerServiceRolePolicy</code></td>
+<td><a href="/policies/awsresourceexplorerservicerolepolicy">AWSResourceExplorerServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/ResourceGroupsTaggingAPITagUntagSupportedResources</code></td>
+<td><a href="/policies/resourcegroupstaggingapitaguntagsupportedresources">ResourceGroupsTaggingAPITagUntagSupportedResources</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AIOpsAssistantPolicy</code></td>
+<td><a href="/policies/aiopsassistantpolicy">AIOpsAssistantPolicy</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="allowed-actions">Allowed Actions</h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Service</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/actions/iot:all">iot:*</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:acceptcertificatetransfer">iot:AcceptCertificateTransfer</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:addthingtobillinggroup">iot:AddThingToBillingGroup</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:addthingtothinggroup">iot:AddThingToThingGroup</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:associatetargetswithjob">iot:AssociateTargetsWithJob</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:attachpolicy">iot:AttachPolicy</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:attachprincipalpolicy">iot:AttachPrincipalPolicy</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:attachsecurityprofile">iot:AttachSecurityProfile</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:attachthingprincipal">iot:AttachThingPrincipal</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:cancelaudittask">iot:CancelAuditTask</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:cancelcertificatetransfer">iot:CancelCertificateTransfer</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:canceljob">iot:CancelJob</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:canceljobexecution">iot:CancelJobExecution</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:cleardefaultauthorizer">iot:ClearDefaultAuthorizer</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:connect">iot:Connect</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:createauthorizer">iot:CreateAuthorizer</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:createcertificatefromcsr">iot:CreateCertificateFromCsr</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:createfleetmetric">iot:CreateFleetMetric</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:createjob">iot:CreateJob</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:createkeysandcertificate">iot:CreateKeysAndCertificate</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:createotaupdate">iot:CreateOTAUpdate</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:createpolicy">iot:CreatePolicy</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:createpolicyversion">iot:CreatePolicyVersion</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:createrolealias">iot:CreateRoleAlias</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:createscheduledaudit">iot:CreateScheduledAudit</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:createsecurityprofile">iot:CreateSecurityProfile</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:createstream">iot:CreateStream</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:creatething">iot:CreateThing</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:createthinggroup">iot:CreateThingGroup</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:createthingtype">iot:CreateThingType</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:createtopicrule">iot:CreateTopicRule</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:deleteaccountauditconfiguration">iot:DeleteAccountAuditConfiguration</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:deleteauthorizer">iot:DeleteAuthorizer</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:deletecacertificate">iot:DeleteCACertificate</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:deletecertificate">iot:DeleteCertificate</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:deletefleetmetric">iot:DeleteFleetMetric</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:deletejob">iot:DeleteJob</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:deletejobexecution">iot:DeleteJobExecution</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:deleteotaupdate">iot:DeleteOTAUpdate</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:deletepolicy">iot:DeletePolicy</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:deletepolicyversion">iot:DeletePolicyVersion</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:deleteregistrationcode">iot:DeleteRegistrationCode</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:deleterolealias">iot:DeleteRoleAlias</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:deletescheduledaudit">iot:DeleteScheduledAudit</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:deletesecurityprofile">iot:DeleteSecurityProfile</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:deletestream">iot:DeleteStream</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:deletething">iot:DeleteThing</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:deletethinggroup">iot:DeleteThingGroup</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:deletethingshadow">iot:DeleteThingShadow</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:deletethingtype">iot:DeleteThingType</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:deletetopicrule">iot:DeleteTopicRule</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:deletev2logginglevel">iot:DeleteV2LoggingLevel</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:deprecatethingtype">iot:DeprecateThingType</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describeall">iot:Describe*</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describeaccountauditconfiguration">iot:DescribeAccountAuditConfiguration</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describeaudittask">iot:DescribeAuditTask</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describeauthorizer">iot:DescribeAuthorizer</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describebillinggroup">iot:DescribeBillingGroup</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describecacertificate">iot:DescribeCACertificate</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describecertificate">iot:DescribeCertificate</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describecustommetric">iot:DescribeCustomMetric</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describedefaultauthorizer">iot:DescribeDefaultAuthorizer</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describedimension">iot:DescribeDimension</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describedomainconfiguration">iot:DescribeDomainConfiguration</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describeendpoint">iot:DescribeEndpoint</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describeeventconfigurations">iot:DescribeEventConfigurations</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describefleetmetric">iot:DescribeFleetMetric</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describeindex">iot:DescribeIndex</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describejob">iot:DescribeJob</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describejobexecution">iot:DescribeJobExecution</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describejobtemplate">iot:DescribeJobTemplate</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describemitigationaction">iot:DescribeMitigationAction</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describeprovisioningtemplate">iot:DescribeProvisioningTemplate</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describerolealias">iot:DescribeRoleAlias</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describescheduledaudit">iot:DescribeScheduledAudit</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describesecurityprofile">iot:DescribeSecurityProfile</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describestream">iot:DescribeStream</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describething">iot:DescribeThing</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describethinggroup">iot:DescribeThingGroup</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describethingregistrationtask">iot:DescribeThingRegistrationTask</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describethingtype">iot:DescribeThingType</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:detachpolicy">iot:DetachPolicy</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:detachprincipalpolicy">iot:DetachPrincipalPolicy</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:detachsecurityprofile">iot:DetachSecurityProfile</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:detachthingprincipal">iot:DetachThingPrincipal</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:disabletopicrule">iot:DisableTopicRule</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:enabletopicrule">iot:EnableTopicRule</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:getall">iot:Get*</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:getbucketsaggregation">iot:GetBucketsAggregation</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:getcardinality">iot:GetCardinality</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:geteffectivepolicies">iot:GetEffectivePolicies</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:getindexingconfiguration">iot:GetIndexingConfiguration</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:getjobdocument">iot:GetJobDocument</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:getloggingoptions">iot:GetLoggingOptions</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:getotaupdate">iot:GetOTAUpdate</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:getpackage">iot:GetPackage</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:getpackageversion">iot:GetPackageVersion</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:getpercentiles">iot:GetPercentiles</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:getpolicy">iot:GetPolicy</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:getpolicyversion">iot:GetPolicyVersion</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:getregistrationcode">iot:GetRegistrationCode</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:getstatistics">iot:GetStatistics</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:getthingshadow">iot:GetThingShadow</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:gettopicrule">iot:GetTopicRule</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:gettopicruledestination">iot:GetTopicRuleDestination</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:getv2loggingoptions">iot:GetV2LoggingOptions</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listall">iot:List*</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listactiveviolations">iot:ListActiveViolations</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listattachedpolicies">iot:ListAttachedPolicies</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listauditfindings">iot:ListAuditFindings</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listaudittasks">iot:ListAuditTasks</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listauthorizers">iot:ListAuthorizers</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listbillinggroups">iot:ListBillingGroups</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listcacertificates">iot:ListCACertificates</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listcertificates">iot:ListCertificates</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listcertificatesbyca">iot:ListCertificatesByCA</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listcustommetrics">iot:ListCustomMetrics</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listdimensions">iot:ListDimensions</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listdomainconfigurations">iot:ListDomainConfigurations</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listfleetmetrics">iot:ListFleetMetrics</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listindices">iot:ListIndices</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listjobexecutionsforjob">iot:ListJobExecutionsForJob</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listjobexecutionsforthing">iot:ListJobExecutionsForThing</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listjobtemplates">iot:ListJobTemplates</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listjobs">iot:ListJobs</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listmetricvalues">iot:ListMetricValues</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listmitigationactions">iot:ListMitigationActions</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listnamedshadowsforthing">iot:ListNamedShadowsForThing</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listotaupdates">iot:ListOTAUpdates</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listoutgoingcertificates">iot:ListOutgoingCertificates</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listpolicies">iot:ListPolicies</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listpolicyprincipals">iot:ListPolicyPrincipals</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listpolicyversions">iot:ListPolicyVersions</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listprincipalpolicies">iot:ListPrincipalPolicies</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listprincipalthings">iot:ListPrincipalThings</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listprovisioningtemplates">iot:ListProvisioningTemplates</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listrolealiases">iot:ListRoleAliases</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listscheduledaudits">iot:ListScheduledAudits</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listsecurityprofiles">iot:ListSecurityProfiles</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listsecurityprofilesfortarget">iot:ListSecurityProfilesForTarget</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:liststreams">iot:ListStreams</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listtagsforresource">iot:ListTagsForResource</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listtargetsforpolicy">iot:ListTargetsForPolicy</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listtargetsforsecurityprofile">iot:ListTargetsForSecurityProfile</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listthinggroups">iot:ListThingGroups</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listthinggroupsforthing">iot:ListThingGroupsForThing</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listthingprincipals">iot:ListThingPrincipals</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listthingregistrationtaskreports">iot:ListThingRegistrationTaskReports</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listthingregistrationtasks">iot:ListThingRegistrationTasks</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listthingtypes">iot:ListThingTypes</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listthings">iot:ListThings</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listthingsinthinggroup">iot:ListThingsInThingGroup</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listtopicruledestinations">iot:ListTopicRuleDestinations</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listtopicrules">iot:ListTopicRules</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listv2logginglevels">iot:ListV2LoggingLevels</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listviolationevents">iot:ListViolationEvents</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:publish">iot:Publish</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:receive">iot:Receive</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:registercacertificate">iot:RegisterCACertificate</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:registercertificate">iot:RegisterCertificate</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:registerthing">iot:RegisterThing</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:rejectcertificatetransfer">iot:RejectCertificateTransfer</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:removethingfrombillinggroup">iot:RemoveThingFromBillingGroup</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:removethingfromthinggroup">iot:RemoveThingFromThingGroup</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:replacetopicrule">iot:ReplaceTopicRule</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:searchindex">iot:SearchIndex</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:setdefaultauthorizer">iot:SetDefaultAuthorizer</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:setdefaultpolicyversion">iot:SetDefaultPolicyVersion</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:setloggingoptions">iot:SetLoggingOptions</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:setv2logginglevel">iot:SetV2LoggingLevel</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:setv2loggingoptions">iot:SetV2LoggingOptions</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:startondemandaudittask">iot:StartOnDemandAuditTask</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:startthingregistrationtask">iot:StartThingRegistrationTask</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:stopthingregistrationtask">iot:StopThingRegistrationTask</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:subscribe">iot:Subscribe</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:tagresource">iot:TagResource</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:testauthorization">iot:TestAuthorization</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:testinvokeauthorizer">iot:TestInvokeAuthorizer</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:transfercertificate">iot:TransferCertificate</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:untagresource">iot:UntagResource</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:updateaccountauditconfiguration">iot:UpdateAccountAuditConfiguration</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:updateauthorizer">iot:UpdateAuthorizer</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:updatecacertificate">iot:UpdateCACertificate</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:updatecertificate">iot:UpdateCertificate</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:updateeventconfigurations">iot:UpdateEventConfigurations</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:updatefleetmetric">iot:UpdateFleetMetric</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:updateindexingconfiguration">iot:UpdateIndexingConfiguration</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:updaterolealias">iot:UpdateRoleAlias</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:updatescheduledaudit">iot:UpdateScheduledAudit</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:updatesecurityprofile">iot:UpdateSecurityProfile</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:updatestream">iot:UpdateStream</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:updatething">iot:UpdateThing</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:updatethinggroup">iot:UpdateThingGroup</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:updatethinggroupsforthing">iot:UpdateThingGroupsForThing</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:updatethingshadow">iot:UpdateThingShadow</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:validatesecurityprofilebehaviors">iot:ValidateSecurityProfileBehaviors</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describeauthorizer">iot:describeAuthorizer</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describecacertificate">iot:describeCACertificate</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describecertificate">iot:describeCertificate</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describedefaultauthorizer">iot:describeDefaultAuthorizer</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describedomainconfiguration">iot:describeDomainConfiguration</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describeendpoint">iot:describeEndpoint</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describeindex">iot:describeIndex</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describejobexecution">iot:describeJobExecution</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describething">iot:describeThing</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describethinggroup">iot:describeThingGroup</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describetunnel">iot:describeTunnel</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:geteffectivepolicies">iot:getEffectivePolicies</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:getindexingconfiguration">iot:getIndexingConfiguration</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:getloggingoptions">iot:getLoggingOptions</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:getpolicy">iot:getPolicy</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:getpolicyversion">iot:getPolicyVersion</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:gettopicrule">iot:getTopicRule</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:getv2loggingoptions">iot:getV2LoggingOptions</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listattachedpolicies">iot:listAttachedPolicies</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listauthorizers">iot:listAuthorizers</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listcacertificates">iot:listCACertificates</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listcertificates">iot:listCertificates</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listcertificatesbyca">iot:listCertificatesByCA</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listdomainconfigurations">iot:listDomainConfigurations</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listjobexecutionsforjob">iot:listJobExecutionsForJob</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listjobexecutionsforthing">iot:listJobExecutionsForThing</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listjobs">iot:listJobs</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listnamedshadowsforthing">iot:listNamedShadowsForThing</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listoutgoingcertificates">iot:listOutgoingCertificates</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listpackageversions">iot:listPackageVersions</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listpackages">iot:listPackages</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listpolicies">iot:listPolicies</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listpolicyprincipals">iot:listPolicyPrincipals</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listpolicyversions">iot:listPolicyVersions</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listprincipalpolicies">iot:listPrincipalPolicies</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listprincipalthings">iot:listPrincipalThings</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listrolealiases">iot:listRoleAliases</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listtargetsforpolicy">iot:listTargetsForPolicy</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listthinggroups">iot:listThingGroups</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listthinggroupsforthing">iot:listThingGroupsForThing</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listthingprincipals">iot:listThingPrincipals</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listthingregistrationtasks">iot:listThingRegistrationTasks</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listthingtypes">iot:listThingTypes</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listthings">iot:listThings</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listthingsinthinggroup">iot:listThingsInThingGroup</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listtopicrules">iot:listTopicRules</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listtunnels">iot:listTunnels</a></td>
+<td>iot</td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listv2logginglevels">iot:listV2LoggingLevels</a></td>
+<td>iot</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

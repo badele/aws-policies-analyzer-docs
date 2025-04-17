@@ -1,0 +1,3532 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://badele.github.io/aws-policies-analyzer-docs/policies/securityaudit/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Policy: SecurityAudit - AWS Policies Analyzer Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#policy-securityaudit" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AWS Policies Analyzer Docs" class="md-header__button md-logo" aria-label="AWS Policies Analyzer Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AWS Policies Analyzer Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Policy: SecurityAudit
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/badele/aws-policies-analyzer-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AWS Policies Analyzer Docs" class="md-nav__button md-logo" aria-label="AWS Policies Analyzer Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AWS Policies Analyzer Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/badele/aws-policies-analyzer-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accueil
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#allowed-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allowed Actions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="policy-securityaudit">Policy: SecurityAudit</h1>
+<p>ARN: <code>arn:aws:iam::aws:policy/SecurityAudit</code></p>
+<h2 id="allowed-actions">Allowed Actions</h2>
+<table>
+<thead>
+<tr>
+<th>Actions</th>
+<th style="text-align: center;">Services</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/actions/a4b:listskills">a4b:ListSkills</a></td>
+<td style="text-align: center;"><a href="/services/a4b">a4b</a></td>
+</tr>
+<tr>
+<td><a href="/actions/access-analyzer:getanalyzedresource">access-analyzer:GetAnalyzedResource</a></td>
+<td style="text-align: center;"><a href="/services/access-analyzer">access-analyzer</a></td>
+</tr>
+<tr>
+<td><a href="/actions/access-analyzer:getanalyzer">access-analyzer:GetAnalyzer</a></td>
+<td style="text-align: center;"><a href="/services/access-analyzer">access-analyzer</a></td>
+</tr>
+<tr>
+<td><a href="/actions/access-analyzer:getarchiverule">access-analyzer:GetArchiveRule</a></td>
+<td style="text-align: center;"><a href="/services/access-analyzer">access-analyzer</a></td>
+</tr>
+<tr>
+<td><a href="/actions/access-analyzer:getfinding">access-analyzer:GetFinding</a></td>
+<td style="text-align: center;"><a href="/services/access-analyzer">access-analyzer</a></td>
+</tr>
+<tr>
+<td><a href="/actions/access-analyzer:listanalyzedresources">access-analyzer:ListAnalyzedResources</a></td>
+<td style="text-align: center;"><a href="/services/access-analyzer">access-analyzer</a></td>
+</tr>
+<tr>
+<td><a href="/actions/access-analyzer:listanalyzers">access-analyzer:ListAnalyzers</a></td>
+<td style="text-align: center;"><a href="/services/access-analyzer">access-analyzer</a></td>
+</tr>
+<tr>
+<td><a href="/actions/access-analyzer:listarchiverules">access-analyzer:ListArchiveRules</a></td>
+<td style="text-align: center;"><a href="/services/access-analyzer">access-analyzer</a></td>
+</tr>
+<tr>
+<td><a href="/actions/access-analyzer:listfindings">access-analyzer:ListFindings</a></td>
+<td style="text-align: center;"><a href="/services/access-analyzer">access-analyzer</a></td>
+</tr>
+<tr>
+<td><a href="/actions/access-analyzer:listtagsforresource">access-analyzer:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/access-analyzer">access-analyzer</a></td>
+</tr>
+<tr>
+<td><a href="/actions/account:getalternatecontact">account:GetAlternateContact</a></td>
+<td style="text-align: center;"><a href="/services/account">account</a></td>
+</tr>
+<tr>
+<td><a href="/actions/account:getprimaryemail">account:GetPrimaryEmail</a></td>
+<td style="text-align: center;"><a href="/services/account">account</a></td>
+</tr>
+<tr>
+<td><a href="/actions/account:getregionoptstatus">account:GetRegionOptStatus</a></td>
+<td style="text-align: center;"><a href="/services/account">account</a></td>
+</tr>
+<tr>
+<td><a href="/actions/acm:describeall">acm:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/acm">acm</a></td>
+</tr>
+<tr>
+<td><a href="/actions/acm:listall">acm:List*</a></td>
+<td style="text-align: center;"><a href="/services/acm">acm</a></td>
+</tr>
+<tr>
+<td><a href="/actions/acm-pca:describecertificateauthority">acm-pca:DescribeCertificateAuthority</a></td>
+<td style="text-align: center;"><a href="/services/acm-pca">acm-pca</a></td>
+</tr>
+<tr>
+<td><a href="/actions/acm-pca:describecertificateauthorityauditreport">acm-pca:DescribeCertificateAuthorityAuditReport</a></td>
+<td style="text-align: center;"><a href="/services/acm-pca">acm-pca</a></td>
+</tr>
+<tr>
+<td><a href="/actions/acm-pca:getpolicy">acm-pca:GetPolicy</a></td>
+<td style="text-align: center;"><a href="/services/acm-pca">acm-pca</a></td>
+</tr>
+<tr>
+<td><a href="/actions/acm-pca:listcertificateauthorities">acm-pca:ListCertificateAuthorities</a></td>
+<td style="text-align: center;"><a href="/services/acm-pca">acm-pca</a></td>
+</tr>
+<tr>
+<td><a href="/actions/acm-pca:listpermissions">acm-pca:ListPermissions</a></td>
+<td style="text-align: center;"><a href="/services/acm-pca">acm-pca</a></td>
+</tr>
+<tr>
+<td><a href="/actions/acm-pca:listtags">acm-pca:ListTags</a></td>
+<td style="text-align: center;"><a href="/services/acm-pca">acm-pca</a></td>
+</tr>
+<tr>
+<td><a href="/actions/airflow:getenvironment">airflow:GetEnvironment</a></td>
+<td style="text-align: center;"><a href="/services/airflow">airflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/airflow:listenvironments">airflow:ListEnvironments</a></td>
+<td style="text-align: center;"><a href="/services/airflow">airflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/apigateway:get">apigateway:GET</a></td>
+<td style="text-align: center;"><a href="/services/apigateway">apigateway</a></td>
+</tr>
+<tr>
+<td><a href="/actions/appflow:listflows">appflow:ListFlows</a></td>
+<td style="text-align: center;"><a href="/services/appflow">appflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/appflow:listtagsforresource">appflow:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/appflow">appflow</a></td>
+</tr>
+<tr>
+<td><a href="/actions/application-autoscaling:describeall">application-autoscaling:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/application-autoscaling">application-autoscaling</a></td>
+</tr>
+<tr>
+<td><a href="/actions/appmesh:describeall">appmesh:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/appmesh">appmesh</a></td>
+</tr>
+<tr>
+<td><a href="/actions/appmesh:listall">appmesh:List*</a></td>
+<td style="text-align: center;"><a href="/services/appmesh">appmesh</a></td>
+</tr>
+<tr>
+<td><a href="/actions/apprunner:describeautoscalingconfiguration">apprunner:DescribeAutoScalingConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/apprunner">apprunner</a></td>
+</tr>
+<tr>
+<td><a href="/actions/apprunner:describecustomdomains">apprunner:DescribeCustomDomains</a></td>
+<td style="text-align: center;"><a href="/services/apprunner">apprunner</a></td>
+</tr>
+<tr>
+<td><a href="/actions/apprunner:describeobservabilityconfiguration">apprunner:DescribeObservabilityConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/apprunner">apprunner</a></td>
+</tr>
+<tr>
+<td><a href="/actions/apprunner:describeservice">apprunner:DescribeService</a></td>
+<td style="text-align: center;"><a href="/services/apprunner">apprunner</a></td>
+</tr>
+<tr>
+<td><a href="/actions/apprunner:describevpcconnector">apprunner:DescribeVpcConnector</a></td>
+<td style="text-align: center;"><a href="/services/apprunner">apprunner</a></td>
+</tr>
+<tr>
+<td><a href="/actions/apprunner:describevpcingressconnection">apprunner:DescribeVpcIngressConnection</a></td>
+<td style="text-align: center;"><a href="/services/apprunner">apprunner</a></td>
+</tr>
+<tr>
+<td><a href="/actions/apprunner:listautoscalingconfigurations">apprunner:ListAutoScalingConfigurations</a></td>
+<td style="text-align: center;"><a href="/services/apprunner">apprunner</a></td>
+</tr>
+<tr>
+<td><a href="/actions/apprunner:listconnections">apprunner:ListConnections</a></td>
+<td style="text-align: center;"><a href="/services/apprunner">apprunner</a></td>
+</tr>
+<tr>
+<td><a href="/actions/apprunner:listobservabilityconfigurations">apprunner:ListObservabilityConfigurations</a></td>
+<td style="text-align: center;"><a href="/services/apprunner">apprunner</a></td>
+</tr>
+<tr>
+<td><a href="/actions/apprunner:listoperations">apprunner:ListOperations</a></td>
+<td style="text-align: center;"><a href="/services/apprunner">apprunner</a></td>
+</tr>
+<tr>
+<td><a href="/actions/apprunner:listservices">apprunner:ListServices</a></td>
+<td style="text-align: center;"><a href="/services/apprunner">apprunner</a></td>
+</tr>
+<tr>
+<td><a href="/actions/apprunner:listtagsforresource">apprunner:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/apprunner">apprunner</a></td>
+</tr>
+<tr>
+<td><a href="/actions/apprunner:listvpcconnectors">apprunner:ListVpcConnectors</a></td>
+<td style="text-align: center;"><a href="/services/apprunner">apprunner</a></td>
+</tr>
+<tr>
+<td><a href="/actions/apprunner:listvpcingressconnections">apprunner:ListVpcIngressConnections</a></td>
+<td style="text-align: center;"><a href="/services/apprunner">apprunner</a></td>
+</tr>
+<tr>
+<td><a href="/actions/appsync:getapicache">appsync:GetApiCache</a></td>
+<td style="text-align: center;"><a href="/services/appsync">appsync</a></td>
+</tr>
+<tr>
+<td><a href="/actions/appsync:listall">appsync:List*</a></td>
+<td style="text-align: center;"><a href="/services/appsync">appsync</a></td>
+</tr>
+<tr>
+<td><a href="/actions/athena:getworkgroup">athena:GetWorkGroup</a></td>
+<td style="text-align: center;"><a href="/services/athena">athena</a></td>
+</tr>
+<tr>
+<td><a href="/actions/athena:listall">athena:List*</a></td>
+<td style="text-align: center;"><a href="/services/athena">athena</a></td>
+</tr>
+<tr>
+<td><a href="/actions/auditmanager:getaccountstatus">auditmanager:GetAccountStatus</a></td>
+<td style="text-align: center;"><a href="/services/auditmanager">auditmanager</a></td>
+</tr>
+<tr>
+<td><a href="/actions/auditmanager:listassessmentcontrolinsightsbycontroldomain">auditmanager:ListAssessmentControlInsightsByControlDomain</a></td>
+<td style="text-align: center;"><a href="/services/auditmanager">auditmanager</a></td>
+</tr>
+<tr>
+<td><a href="/actions/auditmanager:listassessmentframeworksharerequests">auditmanager:ListAssessmentFrameworkShareRequests</a></td>
+<td style="text-align: center;"><a href="/services/auditmanager">auditmanager</a></td>
+</tr>
+<tr>
+<td><a href="/actions/auditmanager:listassessmentframeworks">auditmanager:ListAssessmentFrameworks</a></td>
+<td style="text-align: center;"><a href="/services/auditmanager">auditmanager</a></td>
+</tr>
+<tr>
+<td><a href="/actions/auditmanager:listassessmentreports">auditmanager:ListAssessmentReports</a></td>
+<td style="text-align: center;"><a href="/services/auditmanager">auditmanager</a></td>
+</tr>
+<tr>
+<td><a href="/actions/auditmanager:listassessments">auditmanager:ListAssessments</a></td>
+<td style="text-align: center;"><a href="/services/auditmanager">auditmanager</a></td>
+</tr>
+<tr>
+<td><a href="/actions/auditmanager:listcontroldomaininsights">auditmanager:ListControlDomainInsights</a></td>
+<td style="text-align: center;"><a href="/services/auditmanager">auditmanager</a></td>
+</tr>
+<tr>
+<td><a href="/actions/auditmanager:listcontroldomaininsightsbyassessment">auditmanager:ListControlDomainInsightsByAssessment</a></td>
+<td style="text-align: center;"><a href="/services/auditmanager">auditmanager</a></td>
+</tr>
+<tr>
+<td><a href="/actions/auditmanager:listcontrolinsightsbycontroldomain">auditmanager:ListControlInsightsByControlDomain</a></td>
+<td style="text-align: center;"><a href="/services/auditmanager">auditmanager</a></td>
+</tr>
+<tr>
+<td><a href="/actions/auditmanager:listcontrols">auditmanager:ListControls</a></td>
+<td style="text-align: center;"><a href="/services/auditmanager">auditmanager</a></td>
+</tr>
+<tr>
+<td><a href="/actions/auditmanager:listnotifications">auditmanager:ListNotifications</a></td>
+<td style="text-align: center;"><a href="/services/auditmanager">auditmanager</a></td>
+</tr>
+<tr>
+<td><a href="/actions/auditmanager:listtagsforresource">auditmanager:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/auditmanager">auditmanager</a></td>
+</tr>
+<tr>
+<td><a href="/actions/autoscaling:describeall">autoscaling:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/autoscaling">autoscaling</a></td>
+</tr>
+<tr>
+<td><a href="/actions/autoscaling-plans:describescalingplans">autoscaling-plans:DescribeScalingPlans</a></td>
+<td style="text-align: center;"><a href="/services/autoscaling-plans">autoscaling-plans</a></td>
+</tr>
+<tr>
+<td><a href="/actions/backup:describeglobalsettings">backup:DescribeGlobalSettings</a></td>
+<td style="text-align: center;"><a href="/services/backup">backup</a></td>
+</tr>
+<tr>
+<td><a href="/actions/backup:describeregionsettings">backup:DescribeRegionSettings</a></td>
+<td style="text-align: center;"><a href="/services/backup">backup</a></td>
+</tr>
+<tr>
+<td><a href="/actions/backup:getbackupvaultaccesspolicy">backup:GetBackupVaultAccessPolicy</a></td>
+<td style="text-align: center;"><a href="/services/backup">backup</a></td>
+</tr>
+<tr>
+<td><a href="/actions/backup:getbackupvaultnotifications">backup:GetBackupVaultNotifications</a></td>
+<td style="text-align: center;"><a href="/services/backup">backup</a></td>
+</tr>
+<tr>
+<td><a href="/actions/backup:listbackupvaults">backup:ListBackupVaults</a></td>
+<td style="text-align: center;"><a href="/services/backup">backup</a></td>
+</tr>
+<tr>
+<td><a href="/actions/backup:listtags">backup:ListTags</a></td>
+<td style="text-align: center;"><a href="/services/backup">backup</a></td>
+</tr>
+<tr>
+<td><a href="/actions/batch:describecomputeenvironments">batch:DescribeComputeEnvironments</a></td>
+<td style="text-align: center;"><a href="/services/batch">batch</a></td>
+</tr>
+<tr>
+<td><a href="/actions/batch:describejobdefinitions">batch:DescribeJobDefinitions</a></td>
+<td style="text-align: center;"><a href="/services/batch">batch</a></td>
+</tr>
+<tr>
+<td><a href="/actions/bedrock:getcustommodel">bedrock:GetCustomModel</a></td>
+<td style="text-align: center;"><a href="/services/bedrock">bedrock</a></td>
+</tr>
+<tr>
+<td><a href="/actions/bedrock:getmodelinvocationloggingconfiguration">bedrock:GetModelInvocationLoggingConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/bedrock">bedrock</a></td>
+</tr>
+<tr>
+<td><a href="/actions/bedrock:listcustommodels">bedrock:ListCustomModels</a></td>
+<td style="text-align: center;"><a href="/services/bedrock">bedrock</a></td>
+</tr>
+<tr>
+<td><a href="/actions/bedrock:listtagsforresource">bedrock:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/bedrock">bedrock</a></td>
+</tr>
+<tr>
+<td><a href="/actions/braket:searchjobs">braket:SearchJobs</a></td>
+<td style="text-align: center;"><a href="/services/braket">braket</a></td>
+</tr>
+<tr>
+<td><a href="/actions/braket:searchquantumtasks">braket:SearchQuantumTasks</a></td>
+<td style="text-align: center;"><a href="/services/braket">braket</a></td>
+</tr>
+<tr>
+<td><a href="/actions/chime:listall">chime:List*</a></td>
+<td style="text-align: center;"><a href="/services/chime">chime</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:batchgetcollaborationanalysistemplate">cleanrooms:BatchGetCollaborationAnalysisTemplate</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:batchgetschema">cleanrooms:BatchGetSchema</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:batchgetschemaanalysisrule">cleanrooms:BatchGetSchemaAnalysisRule</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:getanalysistemplate">cleanrooms:GetAnalysisTemplate</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:getcollaboration">cleanrooms:GetCollaboration</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:getcollaborationanalysistemplate">cleanrooms:GetCollaborationAnalysisTemplate</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:getcollaborationconfiguredaudiencemodelassociation">cleanrooms:GetCollaborationConfiguredAudienceModelAssociation</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:getcollaborationidnamespaceassociation">cleanrooms:GetCollaborationIdNamespaceAssociation</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:getcollaborationprivacybudgettemplate">cleanrooms:GetCollaborationPrivacyBudgetTemplate</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:getconfiguredaudiencemodelassociation">cleanrooms:GetConfiguredAudienceModelAssociation</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:getconfiguredtable">cleanrooms:GetConfiguredTable</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:getconfiguredtableanalysisrule">cleanrooms:GetConfiguredTableAnalysisRule</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:getconfiguredtableassociation">cleanrooms:GetConfiguredTableAssociation</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:getconfiguredtableassociationanalysisrule">cleanrooms:GetConfiguredTableAssociationAnalysisRule</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:getidmappingtable">cleanrooms:GetIdMappingTable</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:getidnamespaceassociation">cleanrooms:GetIdNamespaceAssociation</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:getmembership">cleanrooms:GetMembership</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:getprivacybudgettemplate">cleanrooms:GetPrivacyBudgetTemplate</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:getprotectedquery">cleanrooms:GetProtectedQuery</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:getschema">cleanrooms:GetSchema</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:getschemaanalysisrule">cleanrooms:GetSchemaAnalysisRule</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:listanalysistemplates">cleanrooms:ListAnalysisTemplates</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:listcollaborationanalysistemplates">cleanrooms:ListCollaborationAnalysisTemplates</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:listcollaborationconfiguredaudiencemodelassociations">cleanrooms:ListCollaborationConfiguredAudienceModelAssociations</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:listcollaborationidnamespaceassociations">cleanrooms:ListCollaborationIdNamespaceAssociations</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:listcollaborationprivacybudgettemplates">cleanrooms:ListCollaborationPrivacyBudgetTemplates</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:listcollaborationprivacybudgets">cleanrooms:ListCollaborationPrivacyBudgets</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:listcollaborations">cleanrooms:ListCollaborations</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:listconfiguredaudiencemodelassociations">cleanrooms:ListConfiguredAudienceModelAssociations</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:listconfiguredtableassociations">cleanrooms:ListConfiguredTableAssociations</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:listconfiguredtables">cleanrooms:ListConfiguredTables</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:listidmappingtables">cleanrooms:ListIdMappingTables</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:listidnamespaceassociations">cleanrooms:ListIdNamespaceAssociations</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:listmembers">cleanrooms:ListMembers</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:listmemberships">cleanrooms:ListMemberships</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:listprivacybudgettemplates">cleanrooms:ListPrivacyBudgetTemplates</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:listprivacybudgets">cleanrooms:ListPrivacyBudgets</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:listprotectedqueries">cleanrooms:ListProtectedQueries</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:listschemas">cleanrooms:ListSchemas</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:listtagsforresource">cleanrooms:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cleanrooms:previewprivacyimpact">cleanrooms:PreviewPrivacyImpact</a></td>
+<td style="text-align: center;"><a href="/services/cleanrooms">cleanrooms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloud9:describeall">cloud9:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/cloud9">cloud9</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloud9:listenvironments">cloud9:ListEnvironments</a></td>
+<td style="text-align: center;"><a href="/services/cloud9">cloud9</a></td>
+</tr>
+<tr>
+<td><a href="/actions/clouddirectory:listdirectories">clouddirectory:ListDirectories</a></td>
+<td style="text-align: center;"><a href="/services/clouddirectory">clouddirectory</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloudformation:describestackall">cloudformation:DescribeStack*</a></td>
+<td style="text-align: center;"><a href="/services/cloudformation">cloudformation</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloudformation:getstackpolicy">cloudformation:GetStackPolicy</a></td>
+<td style="text-align: center;"><a href="/services/cloudformation">cloudformation</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloudformation:gettemplate">cloudformation:GetTemplate</a></td>
+<td style="text-align: center;"><a href="/services/cloudformation">cloudformation</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloudformation:liststackall">cloudformation:ListStack*</a></td>
+<td style="text-align: center;"><a href="/services/cloudformation">cloudformation</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloudfront:getall">cloudfront:Get*</a></td>
+<td style="text-align: center;"><a href="/services/cloudfront">cloudfront</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloudfront:listall">cloudfront:List*</a></td>
+<td style="text-align: center;"><a href="/services/cloudfront">cloudfront</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloudsearch:describedomainendpointoptions">cloudsearch:DescribeDomainEndpointOptions</a></td>
+<td style="text-align: center;"><a href="/services/cloudsearch">cloudsearch</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloudsearch:describedomains">cloudsearch:DescribeDomains</a></td>
+<td style="text-align: center;"><a href="/services/cloudsearch">cloudsearch</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloudsearch:describeserviceaccesspolicies">cloudsearch:DescribeServiceAccessPolicies</a></td>
+<td style="text-align: center;"><a href="/services/cloudsearch">cloudsearch</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloudtrail:describetrails">cloudtrail:DescribeTrails</a></td>
+<td style="text-align: center;"><a href="/services/cloudtrail">cloudtrail</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloudtrail:geteventselectors">cloudtrail:GetEventSelectors</a></td>
+<td style="text-align: center;"><a href="/services/cloudtrail">cloudtrail</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloudtrail:getinsightselectors">cloudtrail:GetInsightSelectors</a></td>
+<td style="text-align: center;"><a href="/services/cloudtrail">cloudtrail</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloudtrail:gettrail">cloudtrail:GetTrail</a></td>
+<td style="text-align: center;"><a href="/services/cloudtrail">cloudtrail</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloudtrail:gettrailstatus">cloudtrail:GetTrailStatus</a></td>
+<td style="text-align: center;"><a href="/services/cloudtrail">cloudtrail</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloudtrail:listtags">cloudtrail:ListTags</a></td>
+<td style="text-align: center;"><a href="/services/cloudtrail">cloudtrail</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloudtrail:listtrails">cloudtrail:ListTrails</a></td>
+<td style="text-align: center;"><a href="/services/cloudtrail">cloudtrail</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloudtrail:lookupevents">cloudtrail:LookupEvents</a></td>
+<td style="text-align: center;"><a href="/services/cloudtrail">cloudtrail</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloudwatch:describeall">cloudwatch:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/cloudwatch">cloudwatch</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloudwatch:getdashboard">cloudwatch:GetDashboard</a></td>
+<td style="text-align: center;"><a href="/services/cloudwatch">cloudwatch</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloudwatch:listdashboards">cloudwatch:ListDashboards</a></td>
+<td style="text-align: center;"><a href="/services/cloudwatch">cloudwatch</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cloudwatch:listtagsforresource">cloudwatch:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/cloudwatch">cloudwatch</a></td>
+</tr>
+<tr>
+<td><a href="/actions/codeartifact:getdomainpermissionspolicy">codeartifact:GetDomainPermissionsPolicy</a></td>
+<td style="text-align: center;"><a href="/services/codeartifact">codeartifact</a></td>
+</tr>
+<tr>
+<td><a href="/actions/codeartifact:getrepositorypermissionspolicy">codeartifact:GetRepositoryPermissionsPolicy</a></td>
+<td style="text-align: center;"><a href="/services/codeartifact">codeartifact</a></td>
+</tr>
+<tr>
+<td><a href="/actions/codeartifact:listrepositories">codeartifact:ListRepositories</a></td>
+<td style="text-align: center;"><a href="/services/codeartifact">codeartifact</a></td>
+</tr>
+<tr>
+<td><a href="/actions/codebuild:batchgetprojects">codebuild:BatchGetProjects</a></td>
+<td style="text-align: center;"><a href="/services/codebuild">codebuild</a></td>
+</tr>
+<tr>
+<td><a href="/actions/codebuild:getresourcepolicy">codebuild:GetResourcePolicy</a></td>
+<td style="text-align: center;"><a href="/services/codebuild">codebuild</a></td>
+</tr>
+<tr>
+<td><a href="/actions/codebuild:listprojects">codebuild:ListProjects</a></td>
+<td style="text-align: center;"><a href="/services/codebuild">codebuild</a></td>
+</tr>
+<tr>
+<td><a href="/actions/codebuild:listsourcecredentials">codebuild:ListSourceCredentials</a></td>
+<td style="text-align: center;"><a href="/services/codebuild">codebuild</a></td>
+</tr>
+<tr>
+<td><a href="/actions/codecommit:batchgetrepositories">codecommit:BatchGetRepositories</a></td>
+<td style="text-align: center;"><a href="/services/codecommit">codecommit</a></td>
+</tr>
+<tr>
+<td><a href="/actions/codecommit:getbranch">codecommit:GetBranch</a></td>
+<td style="text-align: center;"><a href="/services/codecommit">codecommit</a></td>
+</tr>
+<tr>
+<td><a href="/actions/codecommit:getobjectidentifier">codecommit:GetObjectIdentifier</a></td>
+<td style="text-align: center;"><a href="/services/codecommit">codecommit</a></td>
+</tr>
+<tr>
+<td><a href="/actions/codecommit:getrepository">codecommit:GetRepository</a></td>
+<td style="text-align: center;"><a href="/services/codecommit">codecommit</a></td>
+</tr>
+<tr>
+<td><a href="/actions/codecommit:getrepositorytriggers">codecommit:GetRepositoryTriggers</a></td>
+<td style="text-align: center;"><a href="/services/codecommit">codecommit</a></td>
+</tr>
+<tr>
+<td><a href="/actions/codecommit:listall">codecommit:List*</a></td>
+<td style="text-align: center;"><a href="/services/codecommit">codecommit</a></td>
+</tr>
+<tr>
+<td><a href="/actions/codedeploy:batchall">codedeploy:Batch*</a></td>
+<td style="text-align: center;"><a href="/services/codedeploy">codedeploy</a></td>
+</tr>
+<tr>
+<td><a href="/actions/codedeploy:getall">codedeploy:Get*</a></td>
+<td style="text-align: center;"><a href="/services/codedeploy">codedeploy</a></td>
+</tr>
+<tr>
+<td><a href="/actions/codedeploy:listall">codedeploy:List*</a></td>
+<td style="text-align: center;"><a href="/services/codedeploy">codedeploy</a></td>
+</tr>
+<tr>
+<td><a href="/actions/codepipeline:getjobdetails">codepipeline:GetJobDetails</a></td>
+<td style="text-align: center;"><a href="/services/codepipeline">codepipeline</a></td>
+</tr>
+<tr>
+<td><a href="/actions/codepipeline:getpipeline">codepipeline:GetPipeline</a></td>
+<td style="text-align: center;"><a href="/services/codepipeline">codepipeline</a></td>
+</tr>
+<tr>
+<td><a href="/actions/codepipeline:getpipelineexecution">codepipeline:GetPipelineExecution</a></td>
+<td style="text-align: center;"><a href="/services/codepipeline">codepipeline</a></td>
+</tr>
+<tr>
+<td><a href="/actions/codepipeline:getpipelinestate">codepipeline:GetPipelineState</a></td>
+<td style="text-align: center;"><a href="/services/codepipeline">codepipeline</a></td>
+</tr>
+<tr>
+<td><a href="/actions/codepipeline:listpipelines">codepipeline:ListPipelines</a></td>
+<td style="text-align: center;"><a href="/services/codepipeline">codepipeline</a></td>
+</tr>
+<tr>
+<td><a href="/actions/codestar:describeall">codestar:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/codestar">codestar</a></td>
+</tr>
+<tr>
+<td><a href="/actions/codestar:listall">codestar:List*</a></td>
+<td style="text-align: center;"><a href="/services/codestar">codestar</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cognito-identity:describeall">cognito-identity:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/cognito-identity">cognito-identity</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cognito-identity:getidentitypoolroles">cognito-identity:GetIdentityPoolRoles</a></td>
+<td style="text-align: center;"><a href="/services/cognito-identity">cognito-identity</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cognito-identity:listidentitypools">cognito-identity:ListIdentityPools</a></td>
+<td style="text-align: center;"><a href="/services/cognito-identity">cognito-identity</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cognito-identity:listtagsforresource">cognito-identity:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/cognito-identity">cognito-identity</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cognito-idp:describeall">cognito-idp:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/cognito-idp">cognito-idp</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cognito-idp:listdevices">cognito-idp:ListDevices</a></td>
+<td style="text-align: center;"><a href="/services/cognito-idp">cognito-idp</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cognito-idp:listgroups">cognito-idp:ListGroups</a></td>
+<td style="text-align: center;"><a href="/services/cognito-idp">cognito-idp</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cognito-idp:listidentityproviders">cognito-idp:ListIdentityProviders</a></td>
+<td style="text-align: center;"><a href="/services/cognito-idp">cognito-idp</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cognito-idp:listresourceservers">cognito-idp:ListResourceServers</a></td>
+<td style="text-align: center;"><a href="/services/cognito-idp">cognito-idp</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cognito-idp:listtagsforresource">cognito-idp:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/cognito-idp">cognito-idp</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cognito-idp:listuserimportjobs">cognito-idp:ListUserImportJobs</a></td>
+<td style="text-align: center;"><a href="/services/cognito-idp">cognito-idp</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cognito-idp:listuserpoolclients">cognito-idp:ListUserPoolClients</a></td>
+<td style="text-align: center;"><a href="/services/cognito-idp">cognito-idp</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cognito-idp:listuserpools">cognito-idp:ListUserPools</a></td>
+<td style="text-align: center;"><a href="/services/cognito-idp">cognito-idp</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cognito-idp:listusers">cognito-idp:ListUsers</a></td>
+<td style="text-align: center;"><a href="/services/cognito-idp">cognito-idp</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cognito-idp:listusersingroup">cognito-idp:ListUsersInGroup</a></td>
+<td style="text-align: center;"><a href="/services/cognito-idp">cognito-idp</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cognito-sync:describeall">cognito-sync:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/cognito-sync">cognito-sync</a></td>
+</tr>
+<tr>
+<td><a href="/actions/cognito-sync:listall">cognito-sync:List*</a></td>
+<td style="text-align: center;"><a href="/services/cognito-sync">cognito-sync</a></td>
+</tr>
+<tr>
+<td><a href="/actions/comprehend:describeall">comprehend:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/comprehend">comprehend</a></td>
+</tr>
+<tr>
+<td><a href="/actions/comprehend:listall">comprehend:List*</a></td>
+<td style="text-align: center;"><a href="/services/comprehend">comprehend</a></td>
+</tr>
+<tr>
+<td><a href="/actions/comprehendmedical:listicd10cminferencejobs">comprehendmedical:ListICD10CMInferenceJobs</a></td>
+<td style="text-align: center;"><a href="/services/comprehendmedical">comprehendmedical</a></td>
+</tr>
+<tr>
+<td><a href="/actions/comprehendmedical:listphidetectionjobs">comprehendmedical:ListPHIDetectionJobs</a></td>
+<td style="text-align: center;"><a href="/services/comprehendmedical">comprehendmedical</a></td>
+</tr>
+<tr>
+<td><a href="/actions/comprehendmedical:listrxnorminferencejobs">comprehendmedical:ListRxNormInferenceJobs</a></td>
+<td style="text-align: center;"><a href="/services/comprehendmedical">comprehendmedical</a></td>
+</tr>
+<tr>
+<td><a href="/actions/comprehendmedical:listsnomedctinferencejobs">comprehendmedical:ListSNOMEDCTInferenceJobs</a></td>
+<td style="text-align: center;"><a href="/services/comprehendmedical">comprehendmedical</a></td>
+</tr>
+<tr>
+<td><a href="/actions/config:batchgetaggregateresourceconfig">config:BatchGetAggregateResourceConfig</a></td>
+<td style="text-align: center;"><a href="/services/config">config</a></td>
+</tr>
+<tr>
+<td><a href="/actions/config:batchgetresourceconfig">config:BatchGetResourceConfig</a></td>
+<td style="text-align: center;"><a href="/services/config">config</a></td>
+</tr>
+<tr>
+<td><a href="/actions/config:deliverall">config:Deliver*</a></td>
+<td style="text-align: center;"><a href="/services/config">config</a></td>
+</tr>
+<tr>
+<td><a href="/actions/config:describeall">config:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/config">config</a></td>
+</tr>
+<tr>
+<td><a href="/actions/config:getall">config:Get*</a></td>
+<td style="text-align: center;"><a href="/services/config">config</a></td>
+</tr>
+<tr>
+<td><a href="/actions/config:listall">config:List*</a></td>
+<td style="text-align: center;"><a href="/services/config">config</a></td>
+</tr>
+<tr>
+<td><a href="/actions/config:selectaggregateresourceconfig">config:SelectAggregateResourceConfig</a></td>
+<td style="text-align: center;"><a href="/services/config">config</a></td>
+</tr>
+<tr>
+<td><a href="/actions/config:selectresourceconfig">config:SelectResourceConfig</a></td>
+<td style="text-align: center;"><a href="/services/config">config</a></td>
+</tr>
+<tr>
+<td><a href="/actions/connect:listapprovedorigins">connect:ListApprovedOrigins</a></td>
+<td style="text-align: center;"><a href="/services/connect">connect</a></td>
+</tr>
+<tr>
+<td><a href="/actions/connect:listinstanceattributes">connect:ListInstanceAttributes</a></td>
+<td style="text-align: center;"><a href="/services/connect">connect</a></td>
+</tr>
+<tr>
+<td><a href="/actions/connect:listinstancestorageconfigs">connect:ListInstanceStorageConfigs</a></td>
+<td style="text-align: center;"><a href="/services/connect">connect</a></td>
+</tr>
+<tr>
+<td><a href="/actions/connect:listinstances">connect:ListInstances</a></td>
+<td style="text-align: center;"><a href="/services/connect">connect</a></td>
+</tr>
+<tr>
+<td><a href="/actions/connect:listintegrationassociations">connect:ListIntegrationAssociations</a></td>
+<td style="text-align: center;"><a href="/services/connect">connect</a></td>
+</tr>
+<tr>
+<td><a href="/actions/connect:listlambdafunctions">connect:ListLambdaFunctions</a></td>
+<td style="text-align: center;"><a href="/services/connect">connect</a></td>
+</tr>
+<tr>
+<td><a href="/actions/connect:listlexbots">connect:ListLexBots</a></td>
+<td style="text-align: center;"><a href="/services/connect">connect</a></td>
+</tr>
+<tr>
+<td><a href="/actions/connect:listsecuritykeys">connect:ListSecurityKeys</a></td>
+<td style="text-align: center;"><a href="/services/connect">connect</a></td>
+</tr>
+<tr>
+<td><a href="/actions/databrew:describedataset">databrew:DescribeDataset</a></td>
+<td style="text-align: center;"><a href="/services/databrew">databrew</a></td>
+</tr>
+<tr>
+<td><a href="/actions/databrew:describeproject">databrew:DescribeProject</a></td>
+<td style="text-align: center;"><a href="/services/databrew">databrew</a></td>
+</tr>
+<tr>
+<td><a href="/actions/databrew:listjobs">databrew:ListJobs</a></td>
+<td style="text-align: center;"><a href="/services/databrew">databrew</a></td>
+</tr>
+<tr>
+<td><a href="/actions/databrew:listprojects">databrew:ListProjects</a></td>
+<td style="text-align: center;"><a href="/services/databrew">databrew</a></td>
+</tr>
+<tr>
+<td><a href="/actions/dataexchange:listdatasets">dataexchange:ListDataSets</a></td>
+<td style="text-align: center;"><a href="/services/dataexchange">dataexchange</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datapipeline:describeobjects">datapipeline:DescribeObjects</a></td>
+<td style="text-align: center;"><a href="/services/datapipeline">datapipeline</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datapipeline:describepipelines">datapipeline:DescribePipelines</a></td>
+<td style="text-align: center;"><a href="/services/datapipeline">datapipeline</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datapipeline:evaluateexpression">datapipeline:EvaluateExpression</a></td>
+<td style="text-align: center;"><a href="/services/datapipeline">datapipeline</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datapipeline:getpipelinedefinition">datapipeline:GetPipelineDefinition</a></td>
+<td style="text-align: center;"><a href="/services/datapipeline">datapipeline</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datapipeline:listpipelines">datapipeline:ListPipelines</a></td>
+<td style="text-align: center;"><a href="/services/datapipeline">datapipeline</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datapipeline:queryobjects">datapipeline:QueryObjects</a></td>
+<td style="text-align: center;"><a href="/services/datapipeline">datapipeline</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datapipeline:validatepipelinedefinition">datapipeline:ValidatePipelineDefinition</a></td>
+<td style="text-align: center;"><a href="/services/datapipeline">datapipeline</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datasync:describeall">datasync:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/datasync">datasync</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datasync:listall">datasync:List*</a></td>
+<td style="text-align: center;"><a href="/services/datasync">datasync</a></td>
+</tr>
+<tr>
+<td><a href="/actions/dax:describeall">dax:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/dax">dax</a></td>
+</tr>
+<tr>
+<td><a href="/actions/dax:listtags">dax:ListTags</a></td>
+<td style="text-align: center;"><a href="/services/dax">dax</a></td>
+</tr>
+<tr>
+<td><a href="/actions/deepracer:listmodels">deepracer:ListModels</a></td>
+<td style="text-align: center;"><a href="/services/deepracer">deepracer</a></td>
+</tr>
+<tr>
+<td><a href="/actions/detective:getgraphingeststate">detective:GetGraphIngestState</a></td>
+<td style="text-align: center;"><a href="/services/detective">detective</a></td>
+</tr>
+<tr>
+<td><a href="/actions/detective:listgraphs">detective:ListGraphs</a></td>
+<td style="text-align: center;"><a href="/services/detective">detective</a></td>
+</tr>
+<tr>
+<td><a href="/actions/detective:listmembers">detective:ListMembers</a></td>
+<td style="text-align: center;"><a href="/services/detective">detective</a></td>
+</tr>
+<tr>
+<td><a href="/actions/devicefarm:listprojects">devicefarm:ListProjects</a></td>
+<td style="text-align: center;"><a href="/services/devicefarm">devicefarm</a></td>
+</tr>
+<tr>
+<td><a href="/actions/directconnect:describeall">directconnect:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/directconnect">directconnect</a></td>
+</tr>
+<tr>
+<td><a href="/actions/discovery:describeagents">discovery:DescribeAgents</a></td>
+<td style="text-align: center;"><a href="/services/discovery">discovery</a></td>
+</tr>
+<tr>
+<td><a href="/actions/discovery:describeconfigurations">discovery:DescribeConfigurations</a></td>
+<td style="text-align: center;"><a href="/services/discovery">discovery</a></td>
+</tr>
+<tr>
+<td><a href="/actions/discovery:describecontinuousexports">discovery:DescribeContinuousExports</a></td>
+<td style="text-align: center;"><a href="/services/discovery">discovery</a></td>
+</tr>
+<tr>
+<td><a href="/actions/discovery:describeexportconfigurations">discovery:DescribeExportConfigurations</a></td>
+<td style="text-align: center;"><a href="/services/discovery">discovery</a></td>
+</tr>
+<tr>
+<td><a href="/actions/discovery:describeexporttasks">discovery:DescribeExportTasks</a></td>
+<td style="text-align: center;"><a href="/services/discovery">discovery</a></td>
+</tr>
+<tr>
+<td><a href="/actions/discovery:describeimporttasks">discovery:DescribeImportTasks</a></td>
+<td style="text-align: center;"><a href="/services/discovery">discovery</a></td>
+</tr>
+<tr>
+<td><a href="/actions/dms:describeall">dms:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/dms">dms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/dms:listtagsforresource">dms:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/dms">dms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/docdb-elastic:listclusters">docdb-elastic:ListClusters</a></td>
+<td style="text-align: center;"><a href="/services/docdb-elastic">docdb-elastic</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ds:describedirectories">ds:DescribeDirectories</a></td>
+<td style="text-align: center;"><a href="/services/ds">ds</a></td>
+</tr>
+<tr>
+<td><a href="/actions/dynamodb:describecontinuousbackups">dynamodb:DescribeContinuousBackups</a></td>
+<td style="text-align: center;"><a href="/services/dynamodb">dynamodb</a></td>
+</tr>
+<tr>
+<td><a href="/actions/dynamodb:describeexport">dynamodb:DescribeExport</a></td>
+<td style="text-align: center;"><a href="/services/dynamodb">dynamodb</a></td>
+</tr>
+<tr>
+<td><a href="/actions/dynamodb:describeglobaltable">dynamodb:DescribeGlobalTable</a></td>
+<td style="text-align: center;"><a href="/services/dynamodb">dynamodb</a></td>
+</tr>
+<tr>
+<td><a href="/actions/dynamodb:describekinesisstreamingdestination">dynamodb:DescribeKinesisStreamingDestination</a></td>
+<td style="text-align: center;"><a href="/services/dynamodb">dynamodb</a></td>
+</tr>
+<tr>
+<td><a href="/actions/dynamodb:describetable">dynamodb:DescribeTable</a></td>
+<td style="text-align: center;"><a href="/services/dynamodb">dynamodb</a></td>
+</tr>
+<tr>
+<td><a href="/actions/dynamodb:describetimetolive">dynamodb:DescribeTimeToLive</a></td>
+<td style="text-align: center;"><a href="/services/dynamodb">dynamodb</a></td>
+</tr>
+<tr>
+<td><a href="/actions/dynamodb:listbackups">dynamodb:ListBackups</a></td>
+<td style="text-align: center;"><a href="/services/dynamodb">dynamodb</a></td>
+</tr>
+<tr>
+<td><a href="/actions/dynamodb:listexports">dynamodb:ListExports</a></td>
+<td style="text-align: center;"><a href="/services/dynamodb">dynamodb</a></td>
+</tr>
+<tr>
+<td><a href="/actions/dynamodb:listglobaltables">dynamodb:ListGlobalTables</a></td>
+<td style="text-align: center;"><a href="/services/dynamodb">dynamodb</a></td>
+</tr>
+<tr>
+<td><a href="/actions/dynamodb:liststreams">dynamodb:ListStreams</a></td>
+<td style="text-align: center;"><a href="/services/dynamodb">dynamodb</a></td>
+</tr>
+<tr>
+<td><a href="/actions/dynamodb:listtables">dynamodb:ListTables</a></td>
+<td style="text-align: center;"><a href="/services/dynamodb">dynamodb</a></td>
+</tr>
+<tr>
+<td><a href="/actions/dynamodb:listtagsofresource">dynamodb:ListTagsOfResource</a></td>
+<td style="text-align: center;"><a href="/services/dynamodb">dynamodb</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:describeall">ec2:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:getebsencryptionbydefault">ec2:GetEbsEncryptionByDefault</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:getimageblockpublicaccessstate">ec2:GetImageBlockPublicAccessState</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:getmanagedprefixlistassociations">ec2:GetManagedPrefixListAssociations</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:getmanagedprefixlistentries">ec2:GetManagedPrefixListEntries</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:getnetworkinsightsaccessscopeanalysisfindings">ec2:GetNetworkInsightsAccessScopeAnalysisFindings</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:getnetworkinsightsaccessscopecontent">ec2:GetNetworkInsightsAccessScopeContent</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:gettransitgatewayattachmentpropagations">ec2:GetTransitGatewayAttachmentPropagations</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:gettransitgatewaymulticastdomainassociations">ec2:GetTransitGatewayMulticastDomainAssociations</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:gettransitgatewayprefixlistreferences">ec2:GetTransitGatewayPrefixListReferences</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:gettransitgatewayroutetableassociations">ec2:GetTransitGatewayRouteTableAssociations</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:gettransitgatewayroutetablepropagations">ec2:GetTransitGatewayRouteTablePropagations</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ec2:searchtransitgatewayroutes">ec2:SearchTransitGatewayRoutes</a></td>
+<td style="text-align: center;"><a href="/services/ec2">ec2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ecr:batchgetrepositoryscanningconfiguration">ecr:BatchGetRepositoryScanningConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/ecr">ecr</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ecr:describeimagescanfindings">ecr:DescribeImageScanFindings</a></td>
+<td style="text-align: center;"><a href="/services/ecr">ecr</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ecr:describeimages">ecr:DescribeImages</a></td>
+<td style="text-align: center;"><a href="/services/ecr">ecr</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ecr:describeregistry">ecr:DescribeRegistry</a></td>
+<td style="text-align: center;"><a href="/services/ecr">ecr</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ecr:describerepositories">ecr:DescribeRepositories</a></td>
+<td style="text-align: center;"><a href="/services/ecr">ecr</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ecr:getlifecyclepolicy">ecr:GetLifecyclePolicy</a></td>
+<td style="text-align: center;"><a href="/services/ecr">ecr</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ecr:getregistrypolicy">ecr:GetRegistryPolicy</a></td>
+<td style="text-align: center;"><a href="/services/ecr">ecr</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ecr:getregistryscanningconfiguration">ecr:GetRegistryScanningConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/ecr">ecr</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ecr:getrepositorypolicy">ecr:GetRepositoryPolicy</a></td>
+<td style="text-align: center;"><a href="/services/ecr">ecr</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ecr:listimages">ecr:ListImages</a></td>
+<td style="text-align: center;"><a href="/services/ecr">ecr</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ecr:listtagsforresource">ecr:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/ecr">ecr</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ecr-public:describeimagetags">ecr-public:DescribeImageTags</a></td>
+<td style="text-align: center;"><a href="/services/ecr-public">ecr-public</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ecr-public:describeimages">ecr-public:DescribeImages</a></td>
+<td style="text-align: center;"><a href="/services/ecr-public">ecr-public</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ecr-public:describeregistries">ecr-public:DescribeRegistries</a></td>
+<td style="text-align: center;"><a href="/services/ecr-public">ecr-public</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ecr-public:describerepositories">ecr-public:DescribeRepositories</a></td>
+<td style="text-align: center;"><a href="/services/ecr-public">ecr-public</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ecr-public:getregistrycatalogdata">ecr-public:GetRegistryCatalogData</a></td>
+<td style="text-align: center;"><a href="/services/ecr-public">ecr-public</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ecr-public:getrepositorycatalogdata">ecr-public:GetRepositoryCatalogData</a></td>
+<td style="text-align: center;"><a href="/services/ecr-public">ecr-public</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ecr-public:getrepositorypolicy">ecr-public:GetRepositoryPolicy</a></td>
+<td style="text-align: center;"><a href="/services/ecr-public">ecr-public</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ecr-public:listtagsforresource">ecr-public:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/ecr-public">ecr-public</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ecs:describeall">ecs:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/ecs">ecs</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ecs:listall">ecs:List*</a></td>
+<td style="text-align: center;"><a href="/services/ecs">ecs</a></td>
+</tr>
+<tr>
+<td><a href="/actions/eks:describecluster">eks:DescribeCluster</a></td>
+<td style="text-align: center;"><a href="/services/eks">eks</a></td>
+</tr>
+<tr>
+<td><a href="/actions/eks:describefargateprofile">eks:DescribeFargateProfile</a></td>
+<td style="text-align: center;"><a href="/services/eks">eks</a></td>
+</tr>
+<tr>
+<td><a href="/actions/eks:describenodegroup">eks:DescribeNodeGroup</a></td>
+<td style="text-align: center;"><a href="/services/eks">eks</a></td>
+</tr>
+<tr>
+<td><a href="/actions/eks:listclusters">eks:ListClusters</a></td>
+<td style="text-align: center;"><a href="/services/eks">eks</a></td>
+</tr>
+<tr>
+<td><a href="/actions/eks:listfargateprofiles">eks:ListFargateProfiles</a></td>
+<td style="text-align: center;"><a href="/services/eks">eks</a></td>
+</tr>
+<tr>
+<td><a href="/actions/eks:listnodegroups">eks:ListNodeGroups</a></td>
+<td style="text-align: center;"><a href="/services/eks">eks</a></td>
+</tr>
+<tr>
+<td><a href="/actions/eks:listtagsforresource">eks:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/eks">eks</a></td>
+</tr>
+<tr>
+<td><a href="/actions/eks:listupdates">eks:ListUpdates</a></td>
+<td style="text-align: center;"><a href="/services/eks">eks</a></td>
+</tr>
+<tr>
+<td><a href="/actions/elastic-inference:describeaccelerators">elastic-inference:DescribeAccelerators</a></td>
+<td style="text-align: center;"><a href="/services/elastic-inference">elastic-inference</a></td>
+</tr>
+<tr>
+<td><a href="/actions/elasticache:describeall">elasticache:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/elasticache">elasticache</a></td>
+</tr>
+<tr>
+<td><a href="/actions/elasticache:listtagsforresource">elasticache:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/elasticache">elasticache</a></td>
+</tr>
+<tr>
+<td><a href="/actions/elasticbeanstalk:describeall">elasticbeanstalk:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/elasticbeanstalk">elasticbeanstalk</a></td>
+</tr>
+<tr>
+<td><a href="/actions/elasticbeanstalk:listtagsforresource">elasticbeanstalk:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/elasticbeanstalk">elasticbeanstalk</a></td>
+</tr>
+<tr>
+<td><a href="/actions/elasticfilesystem:describeaccesspoints">elasticfilesystem:DescribeAccessPoints</a></td>
+<td style="text-align: center;"><a href="/services/elasticfilesystem">elasticfilesystem</a></td>
+</tr>
+<tr>
+<td><a href="/actions/elasticfilesystem:describeaccountpreferences">elasticfilesystem:DescribeAccountPreferences</a></td>
+<td style="text-align: center;"><a href="/services/elasticfilesystem">elasticfilesystem</a></td>
+</tr>
+<tr>
+<td><a href="/actions/elasticfilesystem:describebackuppolicy">elasticfilesystem:DescribeBackupPolicy</a></td>
+<td style="text-align: center;"><a href="/services/elasticfilesystem">elasticfilesystem</a></td>
+</tr>
+<tr>
+<td><a href="/actions/elasticfilesystem:describefilesystempolicy">elasticfilesystem:DescribeFileSystemPolicy</a></td>
+<td style="text-align: center;"><a href="/services/elasticfilesystem">elasticfilesystem</a></td>
+</tr>
+<tr>
+<td><a href="/actions/elasticfilesystem:describefilesystems">elasticfilesystem:DescribeFileSystems</a></td>
+<td style="text-align: center;"><a href="/services/elasticfilesystem">elasticfilesystem</a></td>
+</tr>
+<tr>
+<td><a href="/actions/elasticfilesystem:describelifecycleconfiguration">elasticfilesystem:DescribeLifecycleConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/elasticfilesystem">elasticfilesystem</a></td>
+</tr>
+<tr>
+<td><a href="/actions/elasticfilesystem:describemounttargetsecuritygroups">elasticfilesystem:DescribeMountTargetSecurityGroups</a></td>
+<td style="text-align: center;"><a href="/services/elasticfilesystem">elasticfilesystem</a></td>
+</tr>
+<tr>
+<td><a href="/actions/elasticfilesystem:describemounttargets">elasticfilesystem:DescribeMountTargets</a></td>
+<td style="text-align: center;"><a href="/services/elasticfilesystem">elasticfilesystem</a></td>
+</tr>
+<tr>
+<td><a href="/actions/elasticfilesystem:describereplicationconfigurations">elasticfilesystem:DescribeReplicationConfigurations</a></td>
+<td style="text-align: center;"><a href="/services/elasticfilesystem">elasticfilesystem</a></td>
+</tr>
+<tr>
+<td><a href="/actions/elasticfilesystem:describetags">elasticfilesystem:DescribeTags</a></td>
+<td style="text-align: center;"><a href="/services/elasticfilesystem">elasticfilesystem</a></td>
+</tr>
+<tr>
+<td><a href="/actions/elasticloadbalancing:describeall">elasticloadbalancing:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/elasticloadbalancing">elasticloadbalancing</a></td>
+</tr>
+<tr>
+<td><a href="/actions/elasticmapreduce:describeall">elasticmapreduce:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/elasticmapreduce">elasticmapreduce</a></td>
+</tr>
+<tr>
+<td><a href="/actions/elasticmapreduce:getautoterminationpolicy">elasticmapreduce:GetAutoTerminationPolicy</a></td>
+<td style="text-align: center;"><a href="/services/elasticmapreduce">elasticmapreduce</a></td>
+</tr>
+<tr>
+<td><a href="/actions/elasticmapreduce:getblockpublicaccessconfiguration">elasticmapreduce:GetBlockPublicAccessConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/elasticmapreduce">elasticmapreduce</a></td>
+</tr>
+<tr>
+<td><a href="/actions/elasticmapreduce:getmanagedscalingpolicy">elasticmapreduce:GetManagedScalingPolicy</a></td>
+<td style="text-align: center;"><a href="/services/elasticmapreduce">elasticmapreduce</a></td>
+</tr>
+<tr>
+<td><a href="/actions/elasticmapreduce:listclusters">elasticmapreduce:ListClusters</a></td>
+<td style="text-align: center;"><a href="/services/elasticmapreduce">elasticmapreduce</a></td>
+</tr>
+<tr>
+<td><a href="/actions/elasticmapreduce:listinstances">elasticmapreduce:ListInstances</a></td>
+<td style="text-align: center;"><a href="/services/elasticmapreduce">elasticmapreduce</a></td>
+</tr>
+<tr>
+<td><a href="/actions/elasticmapreduce:listsecurityconfigurations">elasticmapreduce:ListSecurityConfigurations</a></td>
+<td style="text-align: center;"><a href="/services/elasticmapreduce">elasticmapreduce</a></td>
+</tr>
+<tr>
+<td><a href="/actions/elastictranscoder:listpipelines">elastictranscoder:ListPipelines</a></td>
+<td style="text-align: center;"><a href="/services/elastictranscoder">elastictranscoder</a></td>
+</tr>
+<tr>
+<td><a href="/actions/emr-serverless:getapplication">emr-serverless:GetApplication</a></td>
+<td style="text-align: center;"><a href="/services/emr-serverless">emr-serverless</a></td>
+</tr>
+<tr>
+<td><a href="/actions/emr-serverless:listapplications">emr-serverless:ListApplications</a></td>
+<td style="text-align: center;"><a href="/services/emr-serverless">emr-serverless</a></td>
+</tr>
+<tr>
+<td><a href="/actions/emr-serverless:listjobruns">emr-serverless:ListJobRuns</a></td>
+<td style="text-align: center;"><a href="/services/emr-serverless">emr-serverless</a></td>
+</tr>
+<tr>
+<td><a href="/actions/entityresolution:getidnamespace">entityresolution:GetIdNamespace</a></td>
+<td style="text-align: center;"><a href="/services/entityresolution">entityresolution</a></td>
+</tr>
+<tr>
+<td><a href="/actions/es:describeall">es:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/es">es</a></td>
+</tr>
+<tr>
+<td><a href="/actions/es:getcompatibleversions">es:GetCompatibleVersions</a></td>
+<td style="text-align: center;"><a href="/services/es">es</a></td>
+</tr>
+<tr>
+<td><a href="/actions/es:listdomainnames">es:ListDomainNames</a></td>
+<td style="text-align: center;"><a href="/services/es">es</a></td>
+</tr>
+<tr>
+<td><a href="/actions/es:listelasticsearchinstancetypedetails">es:ListElasticsearchInstanceTypeDetails</a></td>
+<td style="text-align: center;"><a href="/services/es">es</a></td>
+</tr>
+<tr>
+<td><a href="/actions/es:listelasticsearchversions">es:ListElasticsearchVersions</a></td>
+<td style="text-align: center;"><a href="/services/es">es</a></td>
+</tr>
+<tr>
+<td><a href="/actions/es:listtags">es:ListTags</a></td>
+<td style="text-align: center;"><a href="/services/es">es</a></td>
+</tr>
+<tr>
+<td><a href="/actions/events:describeall">events:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/events">events</a></td>
+</tr>
+<tr>
+<td><a href="/actions/events:listall">events:List*</a></td>
+<td style="text-align: center;"><a href="/services/events">events</a></td>
+</tr>
+<tr>
+<td><a href="/actions/events:testeventpattern">events:TestEventPattern</a></td>
+<td style="text-align: center;"><a href="/services/events">events</a></td>
+</tr>
+<tr>
+<td><a href="/actions/finspace:listenvironments">finspace:ListEnvironments</a></td>
+<td style="text-align: center;"><a href="/services/finspace">finspace</a></td>
+</tr>
+<tr>
+<td><a href="/actions/finspace:listkxenvironments">finspace:ListKxEnvironments</a></td>
+<td style="text-align: center;"><a href="/services/finspace">finspace</a></td>
+</tr>
+<tr>
+<td><a href="/actions/firehose:describeall">firehose:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/firehose">firehose</a></td>
+</tr>
+<tr>
+<td><a href="/actions/firehose:listall">firehose:List*</a></td>
+<td style="text-align: center;"><a href="/services/firehose">firehose</a></td>
+</tr>
+<tr>
+<td><a href="/actions/fms:listcompliancestatus">fms:ListComplianceStatus</a></td>
+<td style="text-align: center;"><a href="/services/fms">fms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/fms:listpolicies">fms:ListPolicies</a></td>
+<td style="text-align: center;"><a href="/services/fms">fms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/forecast:listdatasets">forecast:ListDatasets</a></td>
+<td style="text-align: center;"><a href="/services/forecast">forecast</a></td>
+</tr>
+<tr>
+<td><a href="/actions/frauddetector:getdetectors">frauddetector:GetDetectors</a></td>
+<td style="text-align: center;"><a href="/services/frauddetector">frauddetector</a></td>
+</tr>
+<tr>
+<td><a href="/actions/fsx:describeall">fsx:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/fsx">fsx</a></td>
+</tr>
+<tr>
+<td><a href="/actions/fsx:listall">fsx:List*</a></td>
+<td style="text-align: center;"><a href="/services/fsx">fsx</a></td>
+</tr>
+<tr>
+<td><a href="/actions/gamelift:listbuilds">gamelift:ListBuilds</a></td>
+<td style="text-align: center;"><a href="/services/gamelift">gamelift</a></td>
+</tr>
+<tr>
+<td><a href="/actions/gamelift:listfleets">gamelift:ListFleets</a></td>
+<td style="text-align: center;"><a href="/services/gamelift">gamelift</a></td>
+</tr>
+<tr>
+<td><a href="/actions/geo:listmaps">geo:ListMaps</a></td>
+<td style="text-align: center;"><a href="/services/geo">geo</a></td>
+</tr>
+<tr>
+<td><a href="/actions/glacier:describevault">glacier:DescribeVault</a></td>
+<td style="text-align: center;"><a href="/services/glacier">glacier</a></td>
+</tr>
+<tr>
+<td><a href="/actions/glacier:getdataretrievalpolicy">glacier:GetDataRetrievalPolicy</a></td>
+<td style="text-align: center;"><a href="/services/glacier">glacier</a></td>
+</tr>
+<tr>
+<td><a href="/actions/glacier:getvaultaccesspolicy">glacier:GetVaultAccessPolicy</a></td>
+<td style="text-align: center;"><a href="/services/glacier">glacier</a></td>
+</tr>
+<tr>
+<td><a href="/actions/glacier:getvaultlock">glacier:GetVaultLock</a></td>
+<td style="text-align: center;"><a href="/services/glacier">glacier</a></td>
+</tr>
+<tr>
+<td><a href="/actions/glacier:listvaults">glacier:ListVaults</a></td>
+<td style="text-align: center;"><a href="/services/glacier">glacier</a></td>
+</tr>
+<tr>
+<td><a href="/actions/globalaccelerator:describeall">globalaccelerator:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/globalaccelerator">globalaccelerator</a></td>
+</tr>
+<tr>
+<td><a href="/actions/globalaccelerator:listall">globalaccelerator:List*</a></td>
+<td style="text-align: center;"><a href="/services/globalaccelerator">globalaccelerator</a></td>
+</tr>
+<tr>
+<td><a href="/actions/glue:getcrawlers">glue:GetCrawlers</a></td>
+<td style="text-align: center;"><a href="/services/glue">glue</a></td>
+</tr>
+<tr>
+<td><a href="/actions/glue:getdatacatalogencryptionsettings">glue:GetDataCatalogEncryptionSettings</a></td>
+<td style="text-align: center;"><a href="/services/glue">glue</a></td>
+</tr>
+<tr>
+<td><a href="/actions/glue:getdatabases">glue:GetDatabases</a></td>
+<td style="text-align: center;"><a href="/services/glue">glue</a></td>
+</tr>
+<tr>
+<td><a href="/actions/glue:getdevendpoints">glue:GetDevEndpoints</a></td>
+<td style="text-align: center;"><a href="/services/glue">glue</a></td>
+</tr>
+<tr>
+<td><a href="/actions/glue:getjobs">glue:GetJobs</a></td>
+<td style="text-align: center;"><a href="/services/glue">glue</a></td>
+</tr>
+<tr>
+<td><a href="/actions/glue:getresourcepolicy">glue:GetResourcePolicy</a></td>
+<td style="text-align: center;"><a href="/services/glue">glue</a></td>
+</tr>
+<tr>
+<td><a href="/actions/glue:getsecurityconfiguration">glue:GetSecurityConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/glue">glue</a></td>
+</tr>
+<tr>
+<td><a href="/actions/glue:getsecurityconfigurations">glue:GetSecurityConfigurations</a></td>
+<td style="text-align: center;"><a href="/services/glue">glue</a></td>
+</tr>
+<tr>
+<td><a href="/actions/glue:gettags">glue:GetTags</a></td>
+<td style="text-align: center;"><a href="/services/glue">glue</a></td>
+</tr>
+<tr>
+<td><a href="/actions/grafana:listworkspaces">grafana:ListWorkspaces</a></td>
+<td style="text-align: center;"><a href="/services/grafana">grafana</a></td>
+</tr>
+<tr>
+<td><a href="/actions/greengrass:listall">greengrass:List*</a></td>
+<td style="text-align: center;"><a href="/services/greengrass">greengrass</a></td>
+</tr>
+<tr>
+<td><a href="/actions/guardduty:describepublishingdestination">guardduty:DescribePublishingDestination</a></td>
+<td style="text-align: center;"><a href="/services/guardduty">guardduty</a></td>
+</tr>
+<tr>
+<td><a href="/actions/guardduty:getall">guardduty:Get*</a></td>
+<td style="text-align: center;"><a href="/services/guardduty">guardduty</a></td>
+</tr>
+<tr>
+<td><a href="/actions/guardduty:listall">guardduty:List*</a></td>
+<td style="text-align: center;"><a href="/services/guardduty">guardduty</a></td>
+</tr>
+<tr>
+<td><a href="/actions/health:describeaffectedaccountsfororganization">health:DescribeAffectedAccountsForOrganization</a></td>
+<td style="text-align: center;"><a href="/services/health">health</a></td>
+</tr>
+<tr>
+<td><a href="/actions/health:describeaffectedentities">health:DescribeAffectedEntities</a></td>
+<td style="text-align: center;"><a href="/services/health">health</a></td>
+</tr>
+<tr>
+<td><a href="/actions/health:describeaffectedentitiesfororganization">health:DescribeAffectedEntitiesForOrganization</a></td>
+<td style="text-align: center;"><a href="/services/health">health</a></td>
+</tr>
+<tr>
+<td><a href="/actions/health:describeentityaggregates">health:DescribeEntityAggregates</a></td>
+<td style="text-align: center;"><a href="/services/health">health</a></td>
+</tr>
+<tr>
+<td><a href="/actions/health:describeeventaggregates">health:DescribeEventAggregates</a></td>
+<td style="text-align: center;"><a href="/services/health">health</a></td>
+</tr>
+<tr>
+<td><a href="/actions/health:describeeventdetails">health:DescribeEventDetails</a></td>
+<td style="text-align: center;"><a href="/services/health">health</a></td>
+</tr>
+<tr>
+<td><a href="/actions/health:describeeventdetailsfororganization">health:DescribeEventDetailsForOrganization</a></td>
+<td style="text-align: center;"><a href="/services/health">health</a></td>
+</tr>
+<tr>
+<td><a href="/actions/health:describeeventtypes">health:DescribeEventTypes</a></td>
+<td style="text-align: center;"><a href="/services/health">health</a></td>
+</tr>
+<tr>
+<td><a href="/actions/health:describeevents">health:DescribeEvents</a></td>
+<td style="text-align: center;"><a href="/services/health">health</a></td>
+</tr>
+<tr>
+<td><a href="/actions/health:describeeventsfororganization">health:DescribeEventsForOrganization</a></td>
+<td style="text-align: center;"><a href="/services/health">health</a></td>
+</tr>
+<tr>
+<td><a href="/actions/health:describehealthservicestatusfororganization">health:DescribeHealthServiceStatusForOrganization</a></td>
+<td style="text-align: center;"><a href="/services/health">health</a></td>
+</tr>
+<tr>
+<td><a href="/actions/healthlake:listfhirdatastores">healthlake:ListFHIRDatastores</a></td>
+<td style="text-align: center;"><a href="/services/healthlake">healthlake</a></td>
+</tr>
+<tr>
+<td><a href="/actions/honeycode:listtables">honeycode:ListTables</a></td>
+<td style="text-align: center;"><a href="/services/honeycode">honeycode</a></td>
+</tr>
+<tr>
+<td><a href="/actions/iam:generatecredentialreport">iam:GenerateCredentialReport</a></td>
+<td style="text-align: center;"><a href="/services/iam">iam</a></td>
+</tr>
+<tr>
+<td><a href="/actions/iam:generateservicelastaccesseddetails">iam:GenerateServiceLastAccessedDetails</a></td>
+<td style="text-align: center;"><a href="/services/iam">iam</a></td>
+</tr>
+<tr>
+<td><a href="/actions/iam:getall">iam:Get*</a></td>
+<td style="text-align: center;"><a href="/services/iam">iam</a></td>
+</tr>
+<tr>
+<td><a href="/actions/iam:listall">iam:List*</a></td>
+<td style="text-align: center;"><a href="/services/iam">iam</a></td>
+</tr>
+<tr>
+<td><a href="/actions/iam:simulatecustompolicy">iam:SimulateCustomPolicy</a></td>
+<td style="text-align: center;"><a href="/services/iam">iam</a></td>
+</tr>
+<tr>
+<td><a href="/actions/iam:simulateprincipalpolicy">iam:SimulatePrincipalPolicy</a></td>
+<td style="text-align: center;"><a href="/services/iam">iam</a></td>
+</tr>
+<tr>
+<td><a href="/actions/identitystore:listgroupmemberships">identitystore:ListGroupMemberships</a></td>
+<td style="text-align: center;"><a href="/services/identitystore">identitystore</a></td>
+</tr>
+<tr>
+<td><a href="/actions/identitystore:listgroupmembershipsformember">identitystore:ListGroupMembershipsForMember</a></td>
+<td style="text-align: center;"><a href="/services/identitystore">identitystore</a></td>
+</tr>
+<tr>
+<td><a href="/actions/identitystore:listgroups">identitystore:ListGroups</a></td>
+<td style="text-align: center;"><a href="/services/identitystore">identitystore</a></td>
+</tr>
+<tr>
+<td><a href="/actions/identitystore:listusers">identitystore:ListUsers</a></td>
+<td style="text-align: center;"><a href="/services/identitystore">identitystore</a></td>
+</tr>
+<tr>
+<td><a href="/actions/inspector:describeall">inspector:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/inspector">inspector</a></td>
+</tr>
+<tr>
+<td><a href="/actions/inspector:getall">inspector:Get*</a></td>
+<td style="text-align: center;"><a href="/services/inspector">inspector</a></td>
+</tr>
+<tr>
+<td><a href="/actions/inspector:listall">inspector:List*</a></td>
+<td style="text-align: center;"><a href="/services/inspector">inspector</a></td>
+</tr>
+<tr>
+<td><a href="/actions/inspector:previewall">inspector:Preview*</a></td>
+<td style="text-align: center;"><a href="/services/inspector">inspector</a></td>
+</tr>
+<tr>
+<td><a href="/actions/inspector2:batchgetaccountstatus">inspector2:BatchGetAccountStatus</a></td>
+<td style="text-align: center;"><a href="/services/inspector2">inspector2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/inspector2:batchgetfreetrialinfo">inspector2:BatchGetFreeTrialInfo</a></td>
+<td style="text-align: center;"><a href="/services/inspector2">inspector2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/inspector2:describeorganizationconfiguration">inspector2:DescribeOrganizationConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/inspector2">inspector2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/inspector2:getconfiguration">inspector2:GetConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/inspector2">inspector2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/inspector2:getdelegatedadminaccount">inspector2:GetDelegatedAdminAccount</a></td>
+<td style="text-align: center;"><a href="/services/inspector2">inspector2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/inspector2:getfindingsreportstatus">inspector2:GetFindingsReportStatus</a></td>
+<td style="text-align: center;"><a href="/services/inspector2">inspector2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/inspector2:getmember">inspector2:GetMember</a></td>
+<td style="text-align: center;"><a href="/services/inspector2">inspector2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/inspector2:listaccountpermissions">inspector2:ListAccountPermissions</a></td>
+<td style="text-align: center;"><a href="/services/inspector2">inspector2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/inspector2:listcoverage">inspector2:ListCoverage</a></td>
+<td style="text-align: center;"><a href="/services/inspector2">inspector2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/inspector2:listcoveragestatistics">inspector2:ListCoverageStatistics</a></td>
+<td style="text-align: center;"><a href="/services/inspector2">inspector2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/inspector2:listdelegatedadminaccounts">inspector2:ListDelegatedAdminAccounts</a></td>
+<td style="text-align: center;"><a href="/services/inspector2">inspector2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/inspector2:listfilters">inspector2:ListFilters</a></td>
+<td style="text-align: center;"><a href="/services/inspector2">inspector2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/inspector2:listfindingaggregations">inspector2:ListFindingAggregations</a></td>
+<td style="text-align: center;"><a href="/services/inspector2">inspector2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/inspector2:listfindings">inspector2:ListFindings</a></td>
+<td style="text-align: center;"><a href="/services/inspector2">inspector2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/inspector2:listtagsforresource">inspector2:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/inspector2">inspector2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/inspector2:listusagetotals">inspector2:ListUsageTotals</a></td>
+<td style="text-align: center;"><a href="/services/inspector2">inspector2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/iot:describeall">iot:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/iot">iot</a></td>
+</tr>
+<tr>
+<td><a href="/actions/iot:getpolicy">iot:GetPolicy</a></td>
+<td style="text-align: center;"><a href="/services/iot">iot</a></td>
+</tr>
+<tr>
+<td><a href="/actions/iot:getpolicyversion">iot:GetPolicyVersion</a></td>
+<td style="text-align: center;"><a href="/services/iot">iot</a></td>
+</tr>
+<tr>
+<td><a href="/actions/iot:listall">iot:List*</a></td>
+<td style="text-align: center;"><a href="/services/iot">iot</a></td>
+</tr>
+<tr>
+<td><a href="/actions/iotanalytics:listchannels">iotanalytics:ListChannels</a></td>
+<td style="text-align: center;"><a href="/services/iotanalytics">iotanalytics</a></td>
+</tr>
+<tr>
+<td><a href="/actions/iotevents:listinputs">iotevents:ListInputs</a></td>
+<td style="text-align: center;"><a href="/services/iotevents">iotevents</a></td>
+</tr>
+<tr>
+<td><a href="/actions/iotfleetwise:listmodelmanifests">iotfleetwise:ListModelManifests</a></td>
+<td style="text-align: center;"><a href="/services/iotfleetwise">iotfleetwise</a></td>
+</tr>
+<tr>
+<td><a href="/actions/iotsitewise:describegatewaycapabilityconfiguration">iotsitewise:DescribeGatewayCapabilityConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/iotsitewise">iotsitewise</a></td>
+</tr>
+<tr>
+<td><a href="/actions/iotsitewise:listassetmodels">iotsitewise:ListAssetModels</a></td>
+<td style="text-align: center;"><a href="/services/iotsitewise">iotsitewise</a></td>
+</tr>
+<tr>
+<td><a href="/actions/iotsitewise:listgateways">iotsitewise:ListGateways</a></td>
+<td style="text-align: center;"><a href="/services/iotsitewise">iotsitewise</a></td>
+</tr>
+<tr>
+<td><a href="/actions/iottwinmaker:listworkspaces">iottwinmaker:ListWorkspaces</a></td>
+<td style="text-align: center;"><a href="/services/iottwinmaker">iottwinmaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kafka:describeall">kafka:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/kafka">kafka</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kafka:getbootstrapbrokers">kafka:GetBootstrapBrokers</a></td>
+<td style="text-align: center;"><a href="/services/kafka">kafka</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kafka:getcompatiblekafkaversions">kafka:GetCompatibleKafkaVersions</a></td>
+<td style="text-align: center;"><a href="/services/kafka">kafka</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kafka:listall">kafka:List*</a></td>
+<td style="text-align: center;"><a href="/services/kafka">kafka</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kafka-cluster:describeall">kafka-cluster:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/kafka-cluster">kafka-cluster</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kafkaconnect:describeall">kafkaconnect:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/kafkaconnect">kafkaconnect</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kafkaconnect:listall">kafkaconnect:List*</a></td>
+<td style="text-align: center;"><a href="/services/kafkaconnect">kafkaconnect</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kendra:describeindex">kendra:DescribeIndex</a></td>
+<td style="text-align: center;"><a href="/services/kendra">kendra</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kendra:listdatasources">kendra:ListDataSources</a></td>
+<td style="text-align: center;"><a href="/services/kendra">kendra</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kendra:listindices">kendra:ListIndices</a></td>
+<td style="text-align: center;"><a href="/services/kendra">kendra</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kendra:listtagsforresource">kendra:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/kendra">kendra</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kinesis:describelimits">kinesis:DescribeLimits</a></td>
+<td style="text-align: center;"><a href="/services/kinesis">kinesis</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kinesis:describestream">kinesis:DescribeStream</a></td>
+<td style="text-align: center;"><a href="/services/kinesis">kinesis</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kinesis:describestreamconsumer">kinesis:DescribeStreamConsumer</a></td>
+<td style="text-align: center;"><a href="/services/kinesis">kinesis</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kinesis:describestreamsummary">kinesis:DescribeStreamSummary</a></td>
+<td style="text-align: center;"><a href="/services/kinesis">kinesis</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kinesis:listshards">kinesis:ListShards</a></td>
+<td style="text-align: center;"><a href="/services/kinesis">kinesis</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kinesis:liststreamconsumers">kinesis:ListStreamConsumers</a></td>
+<td style="text-align: center;"><a href="/services/kinesis">kinesis</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kinesis:liststreams">kinesis:ListStreams</a></td>
+<td style="text-align: center;"><a href="/services/kinesis">kinesis</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kinesis:listtagsforstream">kinesis:ListTagsForStream</a></td>
+<td style="text-align: center;"><a href="/services/kinesis">kinesis</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kinesisanalytics:listapplications">kinesisanalytics:ListApplications</a></td>
+<td style="text-align: center;"><a href="/services/kinesisanalytics">kinesisanalytics</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kinesisanalytics:listtagsforresource">kinesisanalytics:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/kinesisanalytics">kinesisanalytics</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kinesisvideo:describeedgeconfiguration">kinesisvideo:DescribeEdgeConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/kinesisvideo">kinesisvideo</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kinesisvideo:describemappedresourceconfiguration">kinesisvideo:DescribeMappedResourceConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/kinesisvideo">kinesisvideo</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kinesisvideo:describemediastorageconfiguration">kinesisvideo:DescribeMediaStorageConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/kinesisvideo">kinesisvideo</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kinesisvideo:describenotificationconfiguration">kinesisvideo:DescribeNotificationConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/kinesisvideo">kinesisvideo</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kinesisvideo:describesignalingchannel">kinesisvideo:DescribeSignalingChannel</a></td>
+<td style="text-align: center;"><a href="/services/kinesisvideo">kinesisvideo</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kinesisvideo:describestream">kinesisvideo:DescribeStream</a></td>
+<td style="text-align: center;"><a href="/services/kinesisvideo">kinesisvideo</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kinesisvideo:listsignalingchannels">kinesisvideo:ListSignalingChannels</a></td>
+<td style="text-align: center;"><a href="/services/kinesisvideo">kinesisvideo</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kinesisvideo:liststreams">kinesisvideo:ListStreams</a></td>
+<td style="text-align: center;"><a href="/services/kinesisvideo">kinesisvideo</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kinesisvideo:listtagsforresource">kinesisvideo:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/kinesisvideo">kinesisvideo</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kinesisvideo:listtagsforstream">kinesisvideo:ListTagsForStream</a></td>
+<td style="text-align: center;"><a href="/services/kinesisvideo">kinesisvideo</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kms:describeall">kms:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/kms">kms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kms:getall">kms:Get*</a></td>
+<td style="text-align: center;"><a href="/services/kms">kms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/kms:listall">kms:List*</a></td>
+<td style="text-align: center;"><a href="/services/kms">kms</a></td>
+</tr>
+<tr>
+<td><a href="/actions/lambda:getaccountsettings">lambda:GetAccountSettings</a></td>
+<td style="text-align: center;"><a href="/services/lambda">lambda</a></td>
+</tr>
+<tr>
+<td><a href="/actions/lambda:getfunctionconfiguration">lambda:GetFunctionConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/lambda">lambda</a></td>
+</tr>
+<tr>
+<td><a href="/actions/lambda:getfunctioneventinvokeconfig">lambda:GetFunctionEventInvokeConfig</a></td>
+<td style="text-align: center;"><a href="/services/lambda">lambda</a></td>
+</tr>
+<tr>
+<td><a href="/actions/lambda:getlayerversionpolicy">lambda:GetLayerVersionPolicy</a></td>
+<td style="text-align: center;"><a href="/services/lambda">lambda</a></td>
+</tr>
+<tr>
+<td><a href="/actions/lambda:getpolicy">lambda:GetPolicy</a></td>
+<td style="text-align: center;"><a href="/services/lambda">lambda</a></td>
+</tr>
+<tr>
+<td><a href="/actions/lambda:listall">lambda:List*</a></td>
+<td style="text-align: center;"><a href="/services/lambda">lambda</a></td>
+</tr>
+<tr>
+<td><a href="/actions/lex:describebot">lex:DescribeBot</a></td>
+<td style="text-align: center;"><a href="/services/lex">lex</a></td>
+</tr>
+<tr>
+<td><a href="/actions/lex:describeresourcepolicy">lex:DescribeResourcePolicy</a></td>
+<td style="text-align: center;"><a href="/services/lex">lex</a></td>
+</tr>
+<tr>
+<td><a href="/actions/lex:listbots">lex:ListBots</a></td>
+<td style="text-align: center;"><a href="/services/lex">lex</a></td>
+</tr>
+<tr>
+<td><a href="/actions/license-manager:listall">license-manager:List*</a></td>
+<td style="text-align: center;"><a href="/services/license-manager">license-manager</a></td>
+</tr>
+<tr>
+<td><a href="/actions/lightsail:getbuckets">lightsail:GetBuckets</a></td>
+<td style="text-align: center;"><a href="/services/lightsail">lightsail</a></td>
+</tr>
+<tr>
+<td><a href="/actions/lightsail:getcontainerservices">lightsail:GetContainerServices</a></td>
+<td style="text-align: center;"><a href="/services/lightsail">lightsail</a></td>
+</tr>
+<tr>
+<td><a href="/actions/lightsail:getdisksnapshots">lightsail:GetDiskSnapshots</a></td>
+<td style="text-align: center;"><a href="/services/lightsail">lightsail</a></td>
+</tr>
+<tr>
+<td><a href="/actions/lightsail:getdisks">lightsail:GetDisks</a></td>
+<td style="text-align: center;"><a href="/services/lightsail">lightsail</a></td>
+</tr>
+<tr>
+<td><a href="/actions/lightsail:getinstances">lightsail:GetInstances</a></td>
+<td style="text-align: center;"><a href="/services/lightsail">lightsail</a></td>
+</tr>
+<tr>
+<td><a href="/actions/lightsail:getloadbalancers">lightsail:GetLoadBalancers</a></td>
+<td style="text-align: center;"><a href="/services/lightsail">lightsail</a></td>
+</tr>
+<tr>
+<td><a href="/actions/logs:describeall">logs:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/logs">logs</a></td>
+</tr>
+<tr>
+<td><a href="/actions/logs:getlogdelivery">logs:GetLogDelivery</a></td>
+<td style="text-align: center;"><a href="/services/logs">logs</a></td>
+</tr>
+<tr>
+<td><a href="/actions/logs:listlogdeliveries">logs:ListLogDeliveries</a></td>
+<td style="text-align: center;"><a href="/services/logs">logs</a></td>
+</tr>
+<tr>
+<td><a href="/actions/logs:listtagsforresource">logs:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/logs">logs</a></td>
+</tr>
+<tr>
+<td><a href="/actions/logs:listtagsloggroup">logs:ListTagsLogGroup</a></td>
+<td style="text-align: center;"><a href="/services/logs">logs</a></td>
+</tr>
+<tr>
+<td><a href="/actions/lookoutequipment:listdatasets">lookoutequipment:ListDatasets</a></td>
+<td style="text-align: center;"><a href="/services/lookoutequipment">lookoutequipment</a></td>
+</tr>
+<tr>
+<td><a href="/actions/lookoutmetrics:listanomalydetectors">lookoutmetrics:ListAnomalyDetectors</a></td>
+<td style="text-align: center;"><a href="/services/lookoutmetrics">lookoutmetrics</a></td>
+</tr>
+<tr>
+<td><a href="/actions/lookoutvision:listprojects">lookoutvision:ListProjects</a></td>
+<td style="text-align: center;"><a href="/services/lookoutvision">lookoutvision</a></td>
+</tr>
+<tr>
+<td><a href="/actions/m2:getapplication">m2:GetApplication</a></td>
+<td style="text-align: center;"><a href="/services/m2">m2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/m2:getenvironment">m2:GetEnvironment</a></td>
+<td style="text-align: center;"><a href="/services/m2">m2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/m2:listapplications">m2:ListApplications</a></td>
+<td style="text-align: center;"><a href="/services/m2">m2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/m2:listenvironments">m2:ListEnvironments</a></td>
+<td style="text-align: center;"><a href="/services/m2">m2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/m2:listtagsforresource">m2:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/m2">m2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/machinelearning:describemlmodels">machinelearning:DescribeMLModels</a></td>
+<td style="text-align: center;"><a href="/services/machinelearning">machinelearning</a></td>
+</tr>
+<tr>
+<td><a href="/actions/macie2:listfindings">macie2:ListFindings</a></td>
+<td style="text-align: center;"><a href="/services/macie2">macie2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/managedblockchain:listnetworks">managedblockchain:ListNetworks</a></td>
+<td style="text-align: center;"><a href="/services/managedblockchain">managedblockchain</a></td>
+</tr>
+<tr>
+<td><a href="/actions/mechanicalturk:listhits">mechanicalturk:ListHITs</a></td>
+<td style="text-align: center;"><a href="/services/mechanicalturk">mechanicalturk</a></td>
+</tr>
+<tr>
+<td><a href="/actions/mediaconnect:describeall">mediaconnect:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/mediaconnect">mediaconnect</a></td>
+</tr>
+<tr>
+<td><a href="/actions/mediaconnect:listall">mediaconnect:List*</a></td>
+<td style="text-align: center;"><a href="/services/mediaconnect">mediaconnect</a></td>
+</tr>
+<tr>
+<td><a href="/actions/medialive:listchannels">medialive:ListChannels</a></td>
+<td style="text-align: center;"><a href="/services/medialive">medialive</a></td>
+</tr>
+<tr>
+<td><a href="/actions/mediapackage:describeoriginendpoint">mediapackage:DescribeOriginEndpoint</a></td>
+<td style="text-align: center;"><a href="/services/mediapackage">mediapackage</a></td>
+</tr>
+<tr>
+<td><a href="/actions/mediapackage:listoriginendpoints">mediapackage:ListOriginEndpoints</a></td>
+<td style="text-align: center;"><a href="/services/mediapackage">mediapackage</a></td>
+</tr>
+<tr>
+<td><a href="/actions/mediapackage-vod:describepackaginggroup">mediapackage-vod:DescribePackagingGroup</a></td>
+<td style="text-align: center;"><a href="/services/mediapackage-vod">mediapackage-vod</a></td>
+</tr>
+<tr>
+<td><a href="/actions/mediapackage-vod:listpackaginggroups">mediapackage-vod:ListPackagingGroups</a></td>
+<td style="text-align: center;"><a href="/services/mediapackage-vod">mediapackage-vod</a></td>
+</tr>
+<tr>
+<td><a href="/actions/mediastore:getcontainerpolicy">mediastore:GetContainerPolicy</a></td>
+<td style="text-align: center;"><a href="/services/mediastore">mediastore</a></td>
+</tr>
+<tr>
+<td><a href="/actions/mediastore:getcorspolicy">mediastore:GetCorsPolicy</a></td>
+<td style="text-align: center;"><a href="/services/mediastore">mediastore</a></td>
+</tr>
+<tr>
+<td><a href="/actions/mediastore:listcontainers">mediastore:ListContainers</a></td>
+<td style="text-align: center;"><a href="/services/mediastore">mediastore</a></td>
+</tr>
+<tr>
+<td><a href="/actions/memorydb:describeclusters">memorydb:DescribeClusters</a></td>
+<td style="text-align: center;"><a href="/services/memorydb">memorydb</a></td>
+</tr>
+<tr>
+<td><a href="/actions/mq:describebroker">mq:DescribeBroker</a></td>
+<td style="text-align: center;"><a href="/services/mq">mq</a></td>
+</tr>
+<tr>
+<td><a href="/actions/mq:describebrokerenginetypes">mq:DescribeBrokerEngineTypes</a></td>
+<td style="text-align: center;"><a href="/services/mq">mq</a></td>
+</tr>
+<tr>
+<td><a href="/actions/mq:describebrokerinstanceoptions">mq:DescribeBrokerInstanceOptions</a></td>
+<td style="text-align: center;"><a href="/services/mq">mq</a></td>
+</tr>
+<tr>
+<td><a href="/actions/mq:describeconfiguration">mq:DescribeConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/mq">mq</a></td>
+</tr>
+<tr>
+<td><a href="/actions/mq:describeconfigurationrevision">mq:DescribeConfigurationRevision</a></td>
+<td style="text-align: center;"><a href="/services/mq">mq</a></td>
+</tr>
+<tr>
+<td><a href="/actions/mq:describeuser">mq:DescribeUser</a></td>
+<td style="text-align: center;"><a href="/services/mq">mq</a></td>
+</tr>
+<tr>
+<td><a href="/actions/mq:listbrokers">mq:ListBrokers</a></td>
+<td style="text-align: center;"><a href="/services/mq">mq</a></td>
+</tr>
+<tr>
+<td><a href="/actions/mq:listconfigurationrevisions">mq:ListConfigurationRevisions</a></td>
+<td style="text-align: center;"><a href="/services/mq">mq</a></td>
+</tr>
+<tr>
+<td><a href="/actions/mq:listconfigurations">mq:ListConfigurations</a></td>
+<td style="text-align: center;"><a href="/services/mq">mq</a></td>
+</tr>
+<tr>
+<td><a href="/actions/mq:listtags">mq:ListTags</a></td>
+<td style="text-align: center;"><a href="/services/mq">mq</a></td>
+</tr>
+<tr>
+<td><a href="/actions/mq:listusers">mq:ListUsers</a></td>
+<td style="text-align: center;"><a href="/services/mq">mq</a></td>
+</tr>
+<tr>
+<td><a href="/actions/network-firewall:describefirewall">network-firewall:DescribeFirewall</a></td>
+<td style="text-align: center;"><a href="/services/network-firewall">network-firewall</a></td>
+</tr>
+<tr>
+<td><a href="/actions/network-firewall:describefirewallpolicy">network-firewall:DescribeFirewallPolicy</a></td>
+<td style="text-align: center;"><a href="/services/network-firewall">network-firewall</a></td>
+</tr>
+<tr>
+<td><a href="/actions/network-firewall:describeloggingconfiguration">network-firewall:DescribeLoggingConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/network-firewall">network-firewall</a></td>
+</tr>
+<tr>
+<td><a href="/actions/network-firewall:describeresourcepolicy">network-firewall:DescribeResourcePolicy</a></td>
+<td style="text-align: center;"><a href="/services/network-firewall">network-firewall</a></td>
+</tr>
+<tr>
+<td><a href="/actions/network-firewall:describerulegroup">network-firewall:DescribeRuleGroup</a></td>
+<td style="text-align: center;"><a href="/services/network-firewall">network-firewall</a></td>
+</tr>
+<tr>
+<td><a href="/actions/network-firewall:listfirewallpolicies">network-firewall:ListFirewallPolicies</a></td>
+<td style="text-align: center;"><a href="/services/network-firewall">network-firewall</a></td>
+</tr>
+<tr>
+<td><a href="/actions/network-firewall:listfirewalls">network-firewall:ListFirewalls</a></td>
+<td style="text-align: center;"><a href="/services/network-firewall">network-firewall</a></td>
+</tr>
+<tr>
+<td><a href="/actions/network-firewall:listrulegroups">network-firewall:ListRuleGroups</a></td>
+<td style="text-align: center;"><a href="/services/network-firewall">network-firewall</a></td>
+</tr>
+<tr>
+<td><a href="/actions/networkmanager:describeglobalnetworks">networkmanager:DescribeGlobalNetworks</a></td>
+<td style="text-align: center;"><a href="/services/networkmanager">networkmanager</a></td>
+</tr>
+<tr>
+<td><a href="/actions/nimble:liststudios">nimble:ListStudios</a></td>
+<td style="text-align: center;"><a href="/services/nimble">nimble</a></td>
+</tr>
+<tr>
+<td><a href="/actions/opsworks:describestacks">opsworks:DescribeStacks</a></td>
+<td style="text-align: center;"><a href="/services/opsworks">opsworks</a></td>
+</tr>
+<tr>
+<td><a href="/actions/opsworks-cm:describeservers">opsworks-cm:DescribeServers</a></td>
+<td style="text-align: center;"><a href="/services/opsworks-cm">opsworks-cm</a></td>
+</tr>
+<tr>
+<td><a href="/actions/organizations:describeall">organizations:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/organizations">organizations</a></td>
+</tr>
+<tr>
+<td><a href="/actions/organizations:listall">organizations:List*</a></td>
+<td style="text-align: center;"><a href="/services/organizations">organizations</a></td>
+</tr>
+<tr>
+<td><a href="/actions/pcs:getcluster">pcs:GetCluster</a></td>
+<td style="text-align: center;"><a href="/services/pcs">pcs</a></td>
+</tr>
+<tr>
+<td><a href="/actions/pcs:getcomputenodegroup">pcs:GetComputeNodeGroup</a></td>
+<td style="text-align: center;"><a href="/services/pcs">pcs</a></td>
+</tr>
+<tr>
+<td><a href="/actions/pcs:getqueue">pcs:GetQueue</a></td>
+<td style="text-align: center;"><a href="/services/pcs">pcs</a></td>
+</tr>
+<tr>
+<td><a href="/actions/pcs:listclusters">pcs:ListClusters</a></td>
+<td style="text-align: center;"><a href="/services/pcs">pcs</a></td>
+</tr>
+<tr>
+<td><a href="/actions/pcs:listcomputenodegroups">pcs:ListComputeNodeGroups</a></td>
+<td style="text-align: center;"><a href="/services/pcs">pcs</a></td>
+</tr>
+<tr>
+<td><a href="/actions/pcs:listqueues">pcs:ListQueues</a></td>
+<td style="text-align: center;"><a href="/services/pcs">pcs</a></td>
+</tr>
+<tr>
+<td><a href="/actions/pcs:listtagsforresource">pcs:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/pcs">pcs</a></td>
+</tr>
+<tr>
+<td><a href="/actions/personalize:describedatasetgroup">personalize:DescribeDatasetGroup</a></td>
+<td style="text-align: center;"><a href="/services/personalize">personalize</a></td>
+</tr>
+<tr>
+<td><a href="/actions/personalize:listdatasetgroups">personalize:ListDatasetGroups</a></td>
+<td style="text-align: center;"><a href="/services/personalize">personalize</a></td>
+</tr>
+<tr>
+<td><a href="/actions/private-networks:listnetworks">private-networks:ListNetworks</a></td>
+<td style="text-align: center;"><a href="/services/private-networks">private-networks</a></td>
+</tr>
+<tr>
+<td><a href="/actions/profile:getdomain">profile:GetDomain</a></td>
+<td style="text-align: center;"><a href="/services/profile">profile</a></td>
+</tr>
+<tr>
+<td><a href="/actions/profile:listdomains">profile:ListDomains</a></td>
+<td style="text-align: center;"><a href="/services/profile">profile</a></td>
+</tr>
+<tr>
+<td><a href="/actions/profile:listintegrations">profile:ListIntegrations</a></td>
+<td style="text-align: center;"><a href="/services/profile">profile</a></td>
+</tr>
+<tr>
+<td><a href="/actions/qbusiness:listapplications">qbusiness:ListApplications</a></td>
+<td style="text-align: center;"><a href="/services/qbusiness">qbusiness</a></td>
+</tr>
+<tr>
+<td><a href="/actions/qbusiness:listdatasourcesyncjobs">qbusiness:ListDataSourceSyncJobs</a></td>
+<td style="text-align: center;"><a href="/services/qbusiness">qbusiness</a></td>
+</tr>
+<tr>
+<td><a href="/actions/qbusiness:listdatasources">qbusiness:ListDataSources</a></td>
+<td style="text-align: center;"><a href="/services/qbusiness">qbusiness</a></td>
+</tr>
+<tr>
+<td><a href="/actions/qbusiness:listdocuments">qbusiness:ListDocuments</a></td>
+<td style="text-align: center;"><a href="/services/qbusiness">qbusiness</a></td>
+</tr>
+<tr>
+<td><a href="/actions/qbusiness:listgroups">qbusiness:ListGroups</a></td>
+<td style="text-align: center;"><a href="/services/qbusiness">qbusiness</a></td>
+</tr>
+<tr>
+<td><a href="/actions/qbusiness:listindices">qbusiness:ListIndices</a></td>
+<td style="text-align: center;"><a href="/services/qbusiness">qbusiness</a></td>
+</tr>
+<tr>
+<td><a href="/actions/qbusiness:listplugins">qbusiness:ListPlugins</a></td>
+<td style="text-align: center;"><a href="/services/qbusiness">qbusiness</a></td>
+</tr>
+<tr>
+<td><a href="/actions/qbusiness:listretrievers">qbusiness:ListRetrievers</a></td>
+<td style="text-align: center;"><a href="/services/qbusiness">qbusiness</a></td>
+</tr>
+<tr>
+<td><a href="/actions/qbusiness:listsubscriptions">qbusiness:ListSubscriptions</a></td>
+<td style="text-align: center;"><a href="/services/qbusiness">qbusiness</a></td>
+</tr>
+<tr>
+<td><a href="/actions/qbusiness:listtagsforresource">qbusiness:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/qbusiness">qbusiness</a></td>
+</tr>
+<tr>
+<td><a href="/actions/qbusiness:listwebexperiences">qbusiness:ListWebExperiences</a></td>
+<td style="text-align: center;"><a href="/services/qbusiness">qbusiness</a></td>
+</tr>
+<tr>
+<td><a href="/actions/qldb:describejournals3export">qldb:DescribeJournalS3Export</a></td>
+<td style="text-align: center;"><a href="/services/qldb">qldb</a></td>
+</tr>
+<tr>
+<td><a href="/actions/qldb:describeledger">qldb:DescribeLedger</a></td>
+<td style="text-align: center;"><a href="/services/qldb">qldb</a></td>
+</tr>
+<tr>
+<td><a href="/actions/qldb:listjournals3exports">qldb:ListJournalS3Exports</a></td>
+<td style="text-align: center;"><a href="/services/qldb">qldb</a></td>
+</tr>
+<tr>
+<td><a href="/actions/qldb:listjournals3exportsforledger">qldb:ListJournalS3ExportsForLedger</a></td>
+<td style="text-align: center;"><a href="/services/qldb">qldb</a></td>
+</tr>
+<tr>
+<td><a href="/actions/qldb:listledgers">qldb:ListLedgers</a></td>
+<td style="text-align: center;"><a href="/services/qldb">qldb</a></td>
+</tr>
+<tr>
+<td><a href="/actions/quicksight:describeall">quicksight:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/quicksight">quicksight</a></td>
+</tr>
+<tr>
+<td><a href="/actions/quicksight:listall">quicksight:List*</a></td>
+<td style="text-align: center;"><a href="/services/quicksight">quicksight</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ram:getresourceshares">ram:GetResourceShares</a></td>
+<td style="text-align: center;"><a href="/services/ram">ram</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ram:listall">ram:List*</a></td>
+<td style="text-align: center;"><a href="/services/ram">ram</a></td>
+</tr>
+<tr>
+<td><a href="/actions/rds:describeall">rds:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/rds">rds</a></td>
+</tr>
+<tr>
+<td><a href="/actions/rds:downloaddblogfileportion">rds:DownloadDBLogFilePortion</a></td>
+<td style="text-align: center;"><a href="/services/rds">rds</a></td>
+</tr>
+<tr>
+<td><a href="/actions/rds:listtagsforresource">rds:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/rds">rds</a></td>
+</tr>
+<tr>
+<td><a href="/actions/redshift:describeall">redshift:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/redshift">redshift</a></td>
+</tr>
+<tr>
+<td><a href="/actions/redshift-serverless:getnamespace">redshift-serverless:GetNamespace</a></td>
+<td style="text-align: center;"><a href="/services/redshift-serverless">redshift-serverless</a></td>
+</tr>
+<tr>
+<td><a href="/actions/redshift-serverless:listtagsforresource">redshift-serverless:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/redshift-serverless">redshift-serverless</a></td>
+</tr>
+<tr>
+<td><a href="/actions/redshift-serverless:listworkgroups">redshift-serverless:ListWorkgroups</a></td>
+<td style="text-align: center;"><a href="/services/redshift-serverless">redshift-serverless</a></td>
+</tr>
+<tr>
+<td><a href="/actions/rekognition:describeall">rekognition:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/rekognition">rekognition</a></td>
+</tr>
+<tr>
+<td><a href="/actions/rekognition:listall">rekognition:List*</a></td>
+<td style="text-align: center;"><a href="/services/rekognition">rekognition</a></td>
+</tr>
+<tr>
+<td><a href="/actions/resource-groups:listgroupresources">resource-groups:ListGroupResources</a></td>
+<td style="text-align: center;"><a href="/services/resource-groups">resource-groups</a></td>
+</tr>
+<tr>
+<td><a href="/actions/robomaker:describeall">robomaker:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/robomaker">robomaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/robomaker:listall">robomaker:List*</a></td>
+<td style="text-align: center;"><a href="/services/robomaker">robomaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/route53:getall">route53:Get*</a></td>
+<td style="text-align: center;"><a href="/services/route53">route53</a></td>
+</tr>
+<tr>
+<td><a href="/actions/route53:listall">route53:List*</a></td>
+<td style="text-align: center;"><a href="/services/route53">route53</a></td>
+</tr>
+<tr>
+<td><a href="/actions/route53domains:getdomaindetail">route53domains:GetDomainDetail</a></td>
+<td style="text-align: center;"><a href="/services/route53domains">route53domains</a></td>
+</tr>
+<tr>
+<td><a href="/actions/route53domains:getoperationdetail">route53domains:GetOperationDetail</a></td>
+<td style="text-align: center;"><a href="/services/route53domains">route53domains</a></td>
+</tr>
+<tr>
+<td><a href="/actions/route53domains:listdomains">route53domains:ListDomains</a></td>
+<td style="text-align: center;"><a href="/services/route53domains">route53domains</a></td>
+</tr>
+<tr>
+<td><a href="/actions/route53domains:listoperations">route53domains:ListOperations</a></td>
+<td style="text-align: center;"><a href="/services/route53domains">route53domains</a></td>
+</tr>
+<tr>
+<td><a href="/actions/route53domains:listtagsfordomain">route53domains:ListTagsForDomain</a></td>
+<td style="text-align: center;"><a href="/services/route53domains">route53domains</a></td>
+</tr>
+<tr>
+<td><a href="/actions/route53resolver:getall">route53resolver:Get*</a></td>
+<td style="text-align: center;"><a href="/services/route53resolver">route53resolver</a></td>
+</tr>
+<tr>
+<td><a href="/actions/route53resolver:listall">route53resolver:List*</a></td>
+<td style="text-align: center;"><a href="/services/route53resolver">route53resolver</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:describejob">s3:DescribeJob</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:getaccelerateconfiguration">s3:GetAccelerateConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:getaccessgrantsinstanceresourcepolicy">s3:GetAccessGrantsInstanceResourcePolicy</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:getaccesspoint">s3:GetAccessPoint</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:getaccesspointconfigurationforobjectlambda">s3:GetAccessPointConfigurationForObjectLambda</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:getaccesspointforobjectlambda">s3:GetAccessPointForObjectLambda</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:getaccesspointpolicy">s3:GetAccessPointPolicy</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:getaccesspointpolicyforobjectlambda">s3:GetAccessPointPolicyForObjectLambda</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:getaccesspointpolicystatus">s3:GetAccessPointPolicyStatus</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:getaccesspointpolicystatusforobjectlambda">s3:GetAccessPointPolicyStatusForObjectLambda</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:getaccountpublicaccessblock">s3:GetAccountPublicAccessBlock</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:getanalyticsconfiguration">s3:GetAnalyticsConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:getbucketall">s3:GetBucket*</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:getencryptionconfiguration">s3:GetEncryptionConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:getinventoryconfiguration">s3:GetInventoryConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:getlifecycleconfiguration">s3:GetLifecycleConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:getmetricsconfiguration">s3:GetMetricsConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:getmultiregionaccesspoint">s3:GetMultiRegionAccessPoint</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:getmultiregionaccesspointpolicy">s3:GetMultiRegionAccessPointPolicy</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:getmultiregionaccesspointpolicystatus">s3:GetMultiRegionAccessPointPolicyStatus</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:getobjectacl">s3:GetObjectAcl</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:getobjectversionacl">s3:GetObjectVersionAcl</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:getreplicationconfiguration">s3:GetReplicationConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:getstoragelensconfiguration">s3:GetStorageLensConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:getstoragelensgroup">s3:GetStorageLensGroup</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:listaccessgrants">s3:ListAccessGrants</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:listaccessgrantsinstances">s3:ListAccessGrantsInstances</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:listaccesspoints">s3:ListAccessPoints</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:listaccesspointsforobjectlambda">s3:ListAccessPointsForObjectLambda</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:listallmybuckets">s3:ListAllMyBuckets</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:listcalleraccessgrants">s3:ListCallerAccessGrants</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:listjobs">s3:ListJobs</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:listmultiregionaccesspoints">s3:ListMultiRegionAccessPoints</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:liststoragelensconfigurations">s3:ListStorageLensConfigurations</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3:liststoragelensgroups">s3:ListStorageLensGroups</a></td>
+<td style="text-align: center;"><a href="/services/s3">s3</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3-object-lambda:getobjectacl">s3-object-lambda:GetObjectAcl</a></td>
+<td style="text-align: center;"><a href="/services/s3-object-lambda">s3-object-lambda</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3-object-lambda:getobjectversionacl">s3-object-lambda:GetObjectVersionAcl</a></td>
+<td style="text-align: center;"><a href="/services/s3-object-lambda">s3-object-lambda</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3-outposts:listendpoints">s3-outposts:ListEndpoints</a></td>
+<td style="text-align: center;"><a href="/services/s3-outposts">s3-outposts</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3-outposts:listoutpostswiths3">s3-outposts:ListOutpostsWithS3</a></td>
+<td style="text-align: center;"><a href="/services/s3-outposts">s3-outposts</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3-outposts:listsharedendpoints">s3-outposts:ListSharedEndpoints</a></td>
+<td style="text-align: center;"><a href="/services/s3-outposts">s3-outposts</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3express:getbucketpolicy">s3express:GetBucketPolicy</a></td>
+<td style="text-align: center;"><a href="/services/s3express">s3express</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3express:getencryptionconfiguration">s3express:GetEncryptionConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/s3express">s3express</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3express:listallmydirectorybuckets">s3express:ListAllMyDirectoryBuckets</a></td>
+<td style="text-align: center;"><a href="/services/s3express">s3express</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3tables:getnamespace">s3tables:GetNamespace</a></td>
+<td style="text-align: center;"><a href="/services/s3tables">s3tables</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3tables:gettablebucketmaintenanceconfiguration">s3tables:GetTableBucketMaintenanceConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/s3tables">s3tables</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3tables:gettablebucketpolicy">s3tables:GetTableBucketPolicy</a></td>
+<td style="text-align: center;"><a href="/services/s3tables">s3tables</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3tables:gettablemaintenanceconfiguration">s3tables:GetTableMaintenanceConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/s3tables">s3tables</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3tables:gettablepolicy">s3tables:GetTablePolicy</a></td>
+<td style="text-align: center;"><a href="/services/s3tables">s3tables</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3tables:listnamespaces">s3tables:ListNamespaces</a></td>
+<td style="text-align: center;"><a href="/services/s3tables">s3tables</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3tables:listtablebuckets">s3tables:ListTableBuckets</a></td>
+<td style="text-align: center;"><a href="/services/s3tables">s3tables</a></td>
+</tr>
+<tr>
+<td><a href="/actions/s3tables:listtables">s3tables:ListTables</a></td>
+<td style="text-align: center;"><a href="/services/s3tables">s3tables</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:describeall">sagemaker:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sagemaker:listall">sagemaker:List*</a></td>
+<td style="text-align: center;"><a href="/services/sagemaker">sagemaker</a></td>
+</tr>
+<tr>
+<td><a href="/actions/schemas:describecodebinding">schemas:DescribeCodeBinding</a></td>
+<td style="text-align: center;"><a href="/services/schemas">schemas</a></td>
+</tr>
+<tr>
+<td><a href="/actions/schemas:describediscoverer">schemas:DescribeDiscoverer</a></td>
+<td style="text-align: center;"><a href="/services/schemas">schemas</a></td>
+</tr>
+<tr>
+<td><a href="/actions/schemas:describeregistry">schemas:DescribeRegistry</a></td>
+<td style="text-align: center;"><a href="/services/schemas">schemas</a></td>
+</tr>
+<tr>
+<td><a href="/actions/schemas:describeschema">schemas:DescribeSchema</a></td>
+<td style="text-align: center;"><a href="/services/schemas">schemas</a></td>
+</tr>
+<tr>
+<td><a href="/actions/schemas:getresourcepolicy">schemas:GetResourcePolicy</a></td>
+<td style="text-align: center;"><a href="/services/schemas">schemas</a></td>
+</tr>
+<tr>
+<td><a href="/actions/schemas:listdiscoverers">schemas:ListDiscoverers</a></td>
+<td style="text-align: center;"><a href="/services/schemas">schemas</a></td>
+</tr>
+<tr>
+<td><a href="/actions/schemas:listregistries">schemas:ListRegistries</a></td>
+<td style="text-align: center;"><a href="/services/schemas">schemas</a></td>
+</tr>
+<tr>
+<td><a href="/actions/schemas:listschemaversions">schemas:ListSchemaVersions</a></td>
+<td style="text-align: center;"><a href="/services/schemas">schemas</a></td>
+</tr>
+<tr>
+<td><a href="/actions/schemas:listschemas">schemas:ListSchemas</a></td>
+<td style="text-align: center;"><a href="/services/schemas">schemas</a></td>
+</tr>
+<tr>
+<td><a href="/actions/schemas:listtagsforresource">schemas:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/schemas">schemas</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sdb:domainmetadata">sdb:DomainMetadata</a></td>
+<td style="text-align: center;"><a href="/services/sdb">sdb</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sdb:listdomains">sdb:ListDomains</a></td>
+<td style="text-align: center;"><a href="/services/sdb">sdb</a></td>
+</tr>
+<tr>
+<td><a href="/actions/secretsmanager:describesecret">secretsmanager:DescribeSecret</a></td>
+<td style="text-align: center;"><a href="/services/secretsmanager">secretsmanager</a></td>
+</tr>
+<tr>
+<td><a href="/actions/secretsmanager:getresourcepolicy">secretsmanager:GetResourcePolicy</a></td>
+<td style="text-align: center;"><a href="/services/secretsmanager">secretsmanager</a></td>
+</tr>
+<tr>
+<td><a href="/actions/secretsmanager:listsecretversionids">secretsmanager:ListSecretVersionIds</a></td>
+<td style="text-align: center;"><a href="/services/secretsmanager">secretsmanager</a></td>
+</tr>
+<tr>
+<td><a href="/actions/secretsmanager:listsecrets">secretsmanager:ListSecrets</a></td>
+<td style="text-align: center;"><a href="/services/secretsmanager">secretsmanager</a></td>
+</tr>
+<tr>
+<td><a href="/actions/securityhub:batchgetautomationrules">securityhub:BatchGetAutomationRules</a></td>
+<td style="text-align: center;"><a href="/services/securityhub">securityhub</a></td>
+</tr>
+<tr>
+<td><a href="/actions/securityhub:batchgetconfigurationpolicyassociations">securityhub:BatchGetConfigurationPolicyAssociations</a></td>
+<td style="text-align: center;"><a href="/services/securityhub">securityhub</a></td>
+</tr>
+<tr>
+<td><a href="/actions/securityhub:batchgetcontrolevaluations">securityhub:BatchGetControlEvaluations</a></td>
+<td style="text-align: center;"><a href="/services/securityhub">securityhub</a></td>
+</tr>
+<tr>
+<td><a href="/actions/securityhub:batchgetsecuritycontrols">securityhub:BatchGetSecurityControls</a></td>
+<td style="text-align: center;"><a href="/services/securityhub">securityhub</a></td>
+</tr>
+<tr>
+<td><a href="/actions/securityhub:batchgetstandardscontrolassociations">securityhub:BatchGetStandardsControlAssociations</a></td>
+<td style="text-align: center;"><a href="/services/securityhub">securityhub</a></td>
+</tr>
+<tr>
+<td><a href="/actions/securityhub:describeall">securityhub:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/securityhub">securityhub</a></td>
+</tr>
+<tr>
+<td><a href="/actions/securityhub:getall">securityhub:Get*</a></td>
+<td style="text-align: center;"><a href="/services/securityhub">securityhub</a></td>
+</tr>
+<tr>
+<td><a href="/actions/securityhub:listall">securityhub:List*</a></td>
+<td style="text-align: center;"><a href="/services/securityhub">securityhub</a></td>
+</tr>
+<tr>
+<td><a href="/actions/serverlessrepo:getapplicationpolicy">serverlessrepo:GetApplicationPolicy</a></td>
+<td style="text-align: center;"><a href="/services/serverlessrepo">serverlessrepo</a></td>
+</tr>
+<tr>
+<td><a href="/actions/serverlessrepo:listall">serverlessrepo:List*</a></td>
+<td style="text-align: center;"><a href="/services/serverlessrepo">serverlessrepo</a></td>
+</tr>
+<tr>
+<td><a href="/actions/servicequotas:getawsdefaultservicequota">servicequotas:GetAWSDefaultServiceQuota</a></td>
+<td style="text-align: center;"><a href="/services/servicequotas">servicequotas</a></td>
+</tr>
+<tr>
+<td><a href="/actions/servicequotas:getassociationforservicequotatemplate">servicequotas:GetAssociationForServiceQuotaTemplate</a></td>
+<td style="text-align: center;"><a href="/services/servicequotas">servicequotas</a></td>
+</tr>
+<tr>
+<td><a href="/actions/servicequotas:getrequestedservicequotachange">servicequotas:GetRequestedServiceQuotaChange</a></td>
+<td style="text-align: center;"><a href="/services/servicequotas">servicequotas</a></td>
+</tr>
+<tr>
+<td><a href="/actions/servicequotas:getservicequota">servicequotas:GetServiceQuota</a></td>
+<td style="text-align: center;"><a href="/services/servicequotas">servicequotas</a></td>
+</tr>
+<tr>
+<td><a href="/actions/servicequotas:getservicequotaincreaserequestfromtemplate">servicequotas:GetServiceQuotaIncreaseRequestFromTemplate</a></td>
+<td style="text-align: center;"><a href="/services/servicequotas">servicequotas</a></td>
+</tr>
+<tr>
+<td><a href="/actions/servicequotas:listawsdefaultservicequotas">servicequotas:ListAWSDefaultServiceQuotas</a></td>
+<td style="text-align: center;"><a href="/services/servicequotas">servicequotas</a></td>
+</tr>
+<tr>
+<td><a href="/actions/servicequotas:listrequestedservicequotachangehistory">servicequotas:ListRequestedServiceQuotaChangeHistory</a></td>
+<td style="text-align: center;"><a href="/services/servicequotas">servicequotas</a></td>
+</tr>
+<tr>
+<td><a href="/actions/servicequotas:listrequestedservicequotachangehistorybyquota">servicequotas:ListRequestedServiceQuotaChangeHistoryByQuota</a></td>
+<td style="text-align: center;"><a href="/services/servicequotas">servicequotas</a></td>
+</tr>
+<tr>
+<td><a href="/actions/servicequotas:listservicequotaincreaserequestsintemplate">servicequotas:ListServiceQuotaIncreaseRequestsInTemplate</a></td>
+<td style="text-align: center;"><a href="/services/servicequotas">servicequotas</a></td>
+</tr>
+<tr>
+<td><a href="/actions/servicequotas:listservicequotas">servicequotas:ListServiceQuotas</a></td>
+<td style="text-align: center;"><a href="/services/servicequotas">servicequotas</a></td>
+</tr>
+<tr>
+<td><a href="/actions/servicequotas:listservices">servicequotas:ListServices</a></td>
+<td style="text-align: center;"><a href="/services/servicequotas">servicequotas</a></td>
+</tr>
+<tr>
+<td><a href="/actions/servicequotas:listtagsforresource">servicequotas:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/servicequotas">servicequotas</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ses:describeall">ses:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/ses">ses</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ses:getaccount">ses:GetAccount</a></td>
+<td style="text-align: center;"><a href="/services/ses">ses</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ses:getaccountsendingenabled">ses:GetAccountSendingEnabled</a></td>
+<td style="text-align: center;"><a href="/services/ses">ses</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ses:getconfigurationset">ses:GetConfigurationSet</a></td>
+<td style="text-align: center;"><a href="/services/ses">ses</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ses:getconfigurationseteventdestinations">ses:GetConfigurationSetEventDestinations</a></td>
+<td style="text-align: center;"><a href="/services/ses">ses</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ses:getdedicatedips">ses:GetDedicatedIps</a></td>
+<td style="text-align: center;"><a href="/services/ses">ses</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ses:getemailidentity">ses:GetEmailIdentity</a></td>
+<td style="text-align: center;"><a href="/services/ses">ses</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ses:getidentitydkimattributes">ses:GetIdentityDkimAttributes</a></td>
+<td style="text-align: center;"><a href="/services/ses">ses</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ses:getidentitypolicies">ses:GetIdentityPolicies</a></td>
+<td style="text-align: center;"><a href="/services/ses">ses</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ses:getidentityverificationattributes">ses:GetIdentityVerificationAttributes</a></td>
+<td style="text-align: center;"><a href="/services/ses">ses</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ses:listconfigurationsets">ses:ListConfigurationSets</a></td>
+<td style="text-align: center;"><a href="/services/ses">ses</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ses:listdedicatedippools">ses:ListDedicatedIpPools</a></td>
+<td style="text-align: center;"><a href="/services/ses">ses</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ses:listidentities">ses:ListIdentities</a></td>
+<td style="text-align: center;"><a href="/services/ses">ses</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ses:listidentitypolicies">ses:ListIdentityPolicies</a></td>
+<td style="text-align: center;"><a href="/services/ses">ses</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ses:listreceiptfilters">ses:ListReceiptFilters</a></td>
+<td style="text-align: center;"><a href="/services/ses">ses</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ses:listreceiptrulesets">ses:ListReceiptRuleSets</a></td>
+<td style="text-align: center;"><a href="/services/ses">ses</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ses:listverifiedemailaddresses">ses:ListVerifiedEmailAddresses</a></td>
+<td style="text-align: center;"><a href="/services/ses">ses</a></td>
+</tr>
+<tr>
+<td><a href="/actions/shield:describeall">shield:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/shield">shield</a></td>
+</tr>
+<tr>
+<td><a href="/actions/shield:getsubscriptionstate">shield:GetSubscriptionState</a></td>
+<td style="text-align: center;"><a href="/services/shield">shield</a></td>
+</tr>
+<tr>
+<td><a href="/actions/shield:listall">shield:List*</a></td>
+<td style="text-align: center;"><a href="/services/shield">shield</a></td>
+</tr>
+<tr>
+<td><a href="/actions/snowball:listclusters">snowball:ListClusters</a></td>
+<td style="text-align: center;"><a href="/services/snowball">snowball</a></td>
+</tr>
+<tr>
+<td><a href="/actions/snowball:listjobs">snowball:ListJobs</a></td>
+<td style="text-align: center;"><a href="/services/snowball">snowball</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sns:getplatformapplicationattributes">sns:GetPlatformApplicationAttributes</a></td>
+<td style="text-align: center;"><a href="/services/sns">sns</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sns:gettopicattributes">sns:GetTopicAttributes</a></td>
+<td style="text-align: center;"><a href="/services/sns">sns</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sns:listsubscriptions">sns:ListSubscriptions</a></td>
+<td style="text-align: center;"><a href="/services/sns">sns</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sns:listsubscriptionsbytopic">sns:ListSubscriptionsByTopic</a></td>
+<td style="text-align: center;"><a href="/services/sns">sns</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sns:listtagsforresource">sns:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/sns">sns</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sns:listtopics">sns:ListTopics</a></td>
+<td style="text-align: center;"><a href="/services/sns">sns</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sqs:getqueueattributes">sqs:GetQueueAttributes</a></td>
+<td style="text-align: center;"><a href="/services/sqs">sqs</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sqs:listdeadlettersourcequeues">sqs:ListDeadLetterSourceQueues</a></td>
+<td style="text-align: center;"><a href="/services/sqs">sqs</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sqs:listqueuetags">sqs:ListQueueTags</a></td>
+<td style="text-align: center;"><a href="/services/sqs">sqs</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sqs:listqueues">sqs:ListQueues</a></td>
+<td style="text-align: center;"><a href="/services/sqs">sqs</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ssm:describeall">ssm:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/ssm">ssm</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ssm:getautomationexecution">ssm:GetAutomationExecution</a></td>
+<td style="text-align: center;"><a href="/services/ssm">ssm</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ssm:getservicesetting">ssm:GetServiceSetting</a></td>
+<td style="text-align: center;"><a href="/services/ssm">ssm</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ssm:listassociationversions">ssm:ListAssociationVersions</a></td>
+<td style="text-align: center;"><a href="/services/ssm">ssm</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ssm:listassociations">ssm:ListAssociations</a></td>
+<td style="text-align: center;"><a href="/services/ssm">ssm</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ssm:listcommands">ssm:ListCommands</a></td>
+<td style="text-align: center;"><a href="/services/ssm">ssm</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ssm:listcomplianceitems">ssm:ListComplianceItems</a></td>
+<td style="text-align: center;"><a href="/services/ssm">ssm</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ssm:listcompliancesummaries">ssm:ListComplianceSummaries</a></td>
+<td style="text-align: center;"><a href="/services/ssm">ssm</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ssm:listdocumentmetadatahistory">ssm:ListDocumentMetadataHistory</a></td>
+<td style="text-align: center;"><a href="/services/ssm">ssm</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ssm:listdocumentversions">ssm:ListDocumentVersions</a></td>
+<td style="text-align: center;"><a href="/services/ssm">ssm</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ssm:listdocuments">ssm:ListDocuments</a></td>
+<td style="text-align: center;"><a href="/services/ssm">ssm</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ssm:listinventoryentries">ssm:ListInventoryEntries</a></td>
+<td style="text-align: center;"><a href="/services/ssm">ssm</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ssm:listopsmetadata">ssm:ListOpsMetadata</a></td>
+<td style="text-align: center;"><a href="/services/ssm">ssm</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ssm:listresourcecompliancesummaries">ssm:ListResourceComplianceSummaries</a></td>
+<td style="text-align: center;"><a href="/services/ssm">ssm</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ssm:listresourcedatasync">ssm:ListResourceDataSync</a></td>
+<td style="text-align: center;"><a href="/services/ssm">ssm</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ssm:listtagsforresource">ssm:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/ssm">ssm</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sso:describeaccountassignmentcreationstatus">sso:DescribeAccountAssignmentCreationStatus</a></td>
+<td style="text-align: center;"><a href="/services/sso">sso</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sso:describepermissionset">sso:DescribePermissionSet</a></td>
+<td style="text-align: center;"><a href="/services/sso">sso</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sso:describepermissionspolicies">sso:DescribePermissionsPolicies</a></td>
+<td style="text-align: center;"><a href="/services/sso">sso</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sso:listall">sso:List*</a></td>
+<td style="text-align: center;"><a href="/services/sso">sso</a></td>
+</tr>
+<tr>
+<td><a href="/actions/states:describestatemachine">states:DescribeStateMachine</a></td>
+<td style="text-align: center;"><a href="/services/states">states</a></td>
+</tr>
+<tr>
+<td><a href="/actions/states:liststatemachines">states:ListStateMachines</a></td>
+<td style="text-align: center;"><a href="/services/states">states</a></td>
+</tr>
+<tr>
+<td><a href="/actions/storagegateway:describebandwidthratelimit">storagegateway:DescribeBandwidthRateLimit</a></td>
+<td style="text-align: center;"><a href="/services/storagegateway">storagegateway</a></td>
+</tr>
+<tr>
+<td><a href="/actions/storagegateway:describecache">storagegateway:DescribeCache</a></td>
+<td style="text-align: center;"><a href="/services/storagegateway">storagegateway</a></td>
+</tr>
+<tr>
+<td><a href="/actions/storagegateway:describecachediscsivolumes">storagegateway:DescribeCachediSCSIVolumes</a></td>
+<td style="text-align: center;"><a href="/services/storagegateway">storagegateway</a></td>
+</tr>
+<tr>
+<td><a href="/actions/storagegateway:describegatewayinformation">storagegateway:DescribeGatewayInformation</a></td>
+<td style="text-align: center;"><a href="/services/storagegateway">storagegateway</a></td>
+</tr>
+<tr>
+<td><a href="/actions/storagegateway:describemaintenancestarttime">storagegateway:DescribeMaintenanceStartTime</a></td>
+<td style="text-align: center;"><a href="/services/storagegateway">storagegateway</a></td>
+</tr>
+<tr>
+<td><a href="/actions/storagegateway:describenfsfileshares">storagegateway:DescribeNFSFileShares</a></td>
+<td style="text-align: center;"><a href="/services/storagegateway">storagegateway</a></td>
+</tr>
+<tr>
+<td><a href="/actions/storagegateway:describesnapshotschedule">storagegateway:DescribeSnapshotSchedule</a></td>
+<td style="text-align: center;"><a href="/services/storagegateway">storagegateway</a></td>
+</tr>
+<tr>
+<td><a href="/actions/storagegateway:describestorediscsivolumes">storagegateway:DescribeStorediSCSIVolumes</a></td>
+<td style="text-align: center;"><a href="/services/storagegateway">storagegateway</a></td>
+</tr>
+<tr>
+<td><a href="/actions/storagegateway:describetapearchives">storagegateway:DescribeTapeArchives</a></td>
+<td style="text-align: center;"><a href="/services/storagegateway">storagegateway</a></td>
+</tr>
+<tr>
+<td><a href="/actions/storagegateway:describetaperecoverypoints">storagegateway:DescribeTapeRecoveryPoints</a></td>
+<td style="text-align: center;"><a href="/services/storagegateway">storagegateway</a></td>
+</tr>
+<tr>
+<td><a href="/actions/storagegateway:describetapes">storagegateway:DescribeTapes</a></td>
+<td style="text-align: center;"><a href="/services/storagegateway">storagegateway</a></td>
+</tr>
+<tr>
+<td><a href="/actions/storagegateway:describeuploadbuffer">storagegateway:DescribeUploadBuffer</a></td>
+<td style="text-align: center;"><a href="/services/storagegateway">storagegateway</a></td>
+</tr>
+<tr>
+<td><a href="/actions/storagegateway:describevtldevices">storagegateway:DescribeVTLDevices</a></td>
+<td style="text-align: center;"><a href="/services/storagegateway">storagegateway</a></td>
+</tr>
+<tr>
+<td><a href="/actions/storagegateway:describeworkingstorage">storagegateway:DescribeWorkingStorage</a></td>
+<td style="text-align: center;"><a href="/services/storagegateway">storagegateway</a></td>
+</tr>
+<tr>
+<td><a href="/actions/storagegateway:listall">storagegateway:List*</a></td>
+<td style="text-align: center;"><a href="/services/storagegateway">storagegateway</a></td>
+</tr>
+<tr>
+<td><a href="/actions/sts:getaccesskeyinfo">sts:GetAccessKeyInfo</a></td>
+<td style="text-align: center;"><a href="/services/sts">sts</a></td>
+</tr>
+<tr>
+<td><a href="/actions/support:describetrustedadvisorcheckrefreshstatuses">support:DescribeTrustedAdvisorCheckRefreshStatuses</a></td>
+<td style="text-align: center;"><a href="/services/support">support</a></td>
+</tr>
+<tr>
+<td><a href="/actions/support:describetrustedadvisorcheckresult">support:DescribeTrustedAdvisorCheckResult</a></td>
+<td style="text-align: center;"><a href="/services/support">support</a></td>
+</tr>
+<tr>
+<td><a href="/actions/support:describetrustedadvisorchecksummaries">support:DescribeTrustedAdvisorCheckSummaries</a></td>
+<td style="text-align: center;"><a href="/services/support">support</a></td>
+</tr>
+<tr>
+<td><a href="/actions/support:describetrustedadvisorchecks">support:DescribeTrustedAdvisorChecks</a></td>
+<td style="text-align: center;"><a href="/services/support">support</a></td>
+</tr>
+<tr>
+<td><a href="/actions/synthetics:describecanaries">synthetics:DescribeCanaries</a></td>
+<td style="text-align: center;"><a href="/services/synthetics">synthetics</a></td>
+</tr>
+<tr>
+<td><a href="/actions/synthetics:describecanarieslastrun">synthetics:DescribeCanariesLastRun</a></td>
+<td style="text-align: center;"><a href="/services/synthetics">synthetics</a></td>
+</tr>
+<tr>
+<td><a href="/actions/synthetics:describeruntimeversions">synthetics:DescribeRuntimeVersions</a></td>
+<td style="text-align: center;"><a href="/services/synthetics">synthetics</a></td>
+</tr>
+<tr>
+<td><a href="/actions/synthetics:getcanary">synthetics:GetCanary</a></td>
+<td style="text-align: center;"><a href="/services/synthetics">synthetics</a></td>
+</tr>
+<tr>
+<td><a href="/actions/synthetics:getcanaryruns">synthetics:GetCanaryRuns</a></td>
+<td style="text-align: center;"><a href="/services/synthetics">synthetics</a></td>
+</tr>
+<tr>
+<td><a href="/actions/synthetics:getgroup">synthetics:GetGroup</a></td>
+<td style="text-align: center;"><a href="/services/synthetics">synthetics</a></td>
+</tr>
+<tr>
+<td><a href="/actions/synthetics:listassociatedgroups">synthetics:ListAssociatedGroups</a></td>
+<td style="text-align: center;"><a href="/services/synthetics">synthetics</a></td>
+</tr>
+<tr>
+<td><a href="/actions/synthetics:listgroupresources">synthetics:ListGroupResources</a></td>
+<td style="text-align: center;"><a href="/services/synthetics">synthetics</a></td>
+</tr>
+<tr>
+<td><a href="/actions/synthetics:listgroups">synthetics:ListGroups</a></td>
+<td style="text-align: center;"><a href="/services/synthetics">synthetics</a></td>
+</tr>
+<tr>
+<td><a href="/actions/synthetics:listtagsforresource">synthetics:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/synthetics">synthetics</a></td>
+</tr>
+<tr>
+<td><a href="/actions/tag:getresources">tag:GetResources</a></td>
+<td style="text-align: center;"><a href="/services/tag">tag</a></td>
+</tr>
+<tr>
+<td><a href="/actions/tag:gettagkeys">tag:GetTagKeys</a></td>
+<td style="text-align: center;"><a href="/services/tag">tag</a></td>
+</tr>
+<tr>
+<td><a href="/actions/transcribe:getcallanalyticscategory">transcribe:GetCallAnalyticsCategory</a></td>
+<td style="text-align: center;"><a href="/services/transcribe">transcribe</a></td>
+</tr>
+<tr>
+<td><a href="/actions/transcribe:getmedicalvocabulary">transcribe:GetMedicalVocabulary</a></td>
+<td style="text-align: center;"><a href="/services/transcribe">transcribe</a></td>
+</tr>
+<tr>
+<td><a href="/actions/transcribe:getvocabulary">transcribe:GetVocabulary</a></td>
+<td style="text-align: center;"><a href="/services/transcribe">transcribe</a></td>
+</tr>
+<tr>
+<td><a href="/actions/transcribe:getvocabularyfilter">transcribe:GetVocabularyFilter</a></td>
+<td style="text-align: center;"><a href="/services/transcribe">transcribe</a></td>
+</tr>
+<tr>
+<td><a href="/actions/transcribe:listcallanalyticscategories">transcribe:ListCallAnalyticsCategories</a></td>
+<td style="text-align: center;"><a href="/services/transcribe">transcribe</a></td>
+</tr>
+<tr>
+<td><a href="/actions/transcribe:listcallanalyticsjobs">transcribe:ListCallAnalyticsJobs</a></td>
+<td style="text-align: center;"><a href="/services/transcribe">transcribe</a></td>
+</tr>
+<tr>
+<td><a href="/actions/transcribe:listlanguagemodels">transcribe:ListLanguageModels</a></td>
+<td style="text-align: center;"><a href="/services/transcribe">transcribe</a></td>
+</tr>
+<tr>
+<td><a href="/actions/transcribe:listmedicaltranscriptionjobs">transcribe:ListMedicalTranscriptionJobs</a></td>
+<td style="text-align: center;"><a href="/services/transcribe">transcribe</a></td>
+</tr>
+<tr>
+<td><a href="/actions/transcribe:listmedicalvocabularies">transcribe:ListMedicalVocabularies</a></td>
+<td style="text-align: center;"><a href="/services/transcribe">transcribe</a></td>
+</tr>
+<tr>
+<td><a href="/actions/transcribe:listtagsforresource">transcribe:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/transcribe">transcribe</a></td>
+</tr>
+<tr>
+<td><a href="/actions/transcribe:listtranscriptionjobs">transcribe:ListTranscriptionJobs</a></td>
+<td style="text-align: center;"><a href="/services/transcribe">transcribe</a></td>
+</tr>
+<tr>
+<td><a href="/actions/transcribe:listvocabularies">transcribe:ListVocabularies</a></td>
+<td style="text-align: center;"><a href="/services/transcribe">transcribe</a></td>
+</tr>
+<tr>
+<td><a href="/actions/transcribe:listvocabularyfilters">transcribe:ListVocabularyFilters</a></td>
+<td style="text-align: center;"><a href="/services/transcribe">transcribe</a></td>
+</tr>
+<tr>
+<td><a href="/actions/transfer:describeall">transfer:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/transfer">transfer</a></td>
+</tr>
+<tr>
+<td><a href="/actions/transfer:listall">transfer:List*</a></td>
+<td style="text-align: center;"><a href="/services/transfer">transfer</a></td>
+</tr>
+<tr>
+<td><a href="/actions/translate:listall">translate:List*</a></td>
+<td style="text-align: center;"><a href="/services/translate">translate</a></td>
+</tr>
+<tr>
+<td><a href="/actions/trustedadvisor:describeall">trustedadvisor:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/trustedadvisor">trustedadvisor</a></td>
+</tr>
+<tr>
+<td><a href="/actions/voiceid:describedomain">voiceid:DescribeDomain</a></td>
+<td style="text-align: center;"><a href="/services/voiceid">voiceid</a></td>
+</tr>
+<tr>
+<td><a href="/actions/waf:getwebacl">waf:GetWebACL</a></td>
+<td style="text-align: center;"><a href="/services/waf">waf</a></td>
+</tr>
+<tr>
+<td><a href="/actions/waf:listtagsforresource">waf:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/waf">waf</a></td>
+</tr>
+<tr>
+<td><a href="/actions/waf:listwebacls">waf:ListWebACLs</a></td>
+<td style="text-align: center;"><a href="/services/waf">waf</a></td>
+</tr>
+<tr>
+<td><a href="/actions/waf-regional:getwebacl">waf-regional:GetWebACL</a></td>
+<td style="text-align: center;"><a href="/services/waf-regional">waf-regional</a></td>
+</tr>
+<tr>
+<td><a href="/actions/waf-regional:listresourcesforwebacl">waf-regional:ListResourcesForWebACL</a></td>
+<td style="text-align: center;"><a href="/services/waf-regional">waf-regional</a></td>
+</tr>
+<tr>
+<td><a href="/actions/waf-regional:listtagsforresource">waf-regional:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/waf-regional">waf-regional</a></td>
+</tr>
+<tr>
+<td><a href="/actions/waf-regional:listwebacls">waf-regional:ListWebACLs</a></td>
+<td style="text-align: center;"><a href="/services/waf-regional">waf-regional</a></td>
+</tr>
+<tr>
+<td><a href="/actions/wafv2:getloggingconfiguration">wafv2:GetLoggingConfiguration</a></td>
+<td style="text-align: center;"><a href="/services/wafv2">wafv2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/wafv2:getwebacl">wafv2:GetWebACL</a></td>
+<td style="text-align: center;"><a href="/services/wafv2">wafv2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/wafv2:getwebaclforresource">wafv2:GetWebACLForResource</a></td>
+<td style="text-align: center;"><a href="/services/wafv2">wafv2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/wafv2:listavailablemanagedrulegroups">wafv2:ListAvailableManagedRuleGroups</a></td>
+<td style="text-align: center;"><a href="/services/wafv2">wafv2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/wafv2:listipsets">wafv2:ListIPSets</a></td>
+<td style="text-align: center;"><a href="/services/wafv2">wafv2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/wafv2:listloggingconfigurations">wafv2:ListLoggingConfigurations</a></td>
+<td style="text-align: center;"><a href="/services/wafv2">wafv2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/wafv2:listregexpatternsets">wafv2:ListRegexPatternSets</a></td>
+<td style="text-align: center;"><a href="/services/wafv2">wafv2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/wafv2:listresourcesforwebacl">wafv2:ListResourcesForWebACL</a></td>
+<td style="text-align: center;"><a href="/services/wafv2">wafv2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/wafv2:listrulegroups">wafv2:ListRuleGroups</a></td>
+<td style="text-align: center;"><a href="/services/wafv2">wafv2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/wafv2:listtagsforresource">wafv2:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/wafv2">wafv2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/wafv2:listwebacls">wafv2:ListWebACLs</a></td>
+<td style="text-align: center;"><a href="/services/wafv2">wafv2</a></td>
+</tr>
+<tr>
+<td><a href="/actions/wisdom:getassistant">wisdom:GetAssistant</a></td>
+<td style="text-align: center;"><a href="/services/wisdom">wisdom</a></td>
+</tr>
+<tr>
+<td><a href="/actions/workdocs:describeresourcepermissions">workdocs:DescribeResourcePermissions</a></td>
+<td style="text-align: center;"><a href="/services/workdocs">workdocs</a></td>
+</tr>
+<tr>
+<td><a href="/actions/workspaces:describeall">workspaces:Describe*</a></td>
+<td style="text-align: center;"><a href="/services/workspaces">workspaces</a></td>
+</tr>
+<tr>
+<td><a href="/actions/xray:getencryptionconfig">xray:GetEncryptionConfig</a></td>
+<td style="text-align: center;"><a href="/services/xray">xray</a></td>
+</tr>
+<tr>
+<td><a href="/actions/xray:getgroup">xray:GetGroup</a></td>
+<td style="text-align: center;"><a href="/services/xray">xray</a></td>
+</tr>
+<tr>
+<td><a href="/actions/xray:getgroups">xray:GetGroups</a></td>
+<td style="text-align: center;"><a href="/services/xray">xray</a></td>
+</tr>
+<tr>
+<td><a href="/actions/xray:getsamplingrules">xray:GetSamplingRules</a></td>
+<td style="text-align: center;"><a href="/services/xray">xray</a></td>
+</tr>
+<tr>
+<td><a href="/actions/xray:getsamplingtargets">xray:GetSamplingTargets</a></td>
+<td style="text-align: center;"><a href="/services/xray">xray</a></td>
+</tr>
+<tr>
+<td><a href="/actions/xray:gettracesummaries">xray:GetTraceSummaries</a></td>
+<td style="text-align: center;"><a href="/services/xray">xray</a></td>
+</tr>
+<tr>
+<td><a href="/actions/xray:listtagsforresource">xray:ListTagsForResource</a></td>
+<td style="text-align: center;"><a href="/services/xray">xray</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

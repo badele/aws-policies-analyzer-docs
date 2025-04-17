@@ -1,0 +1,880 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://badele.github.io/aws-policies-analyzer-docs/policies/amazondatazonefulluseraccess/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Policy: AmazonDataZoneFullUserAccess - AWS Policies Analyzer Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#policy-amazondatazonefulluseraccess" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AWS Policies Analyzer Docs" class="md-header__button md-logo" aria-label="AWS Policies Analyzer Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AWS Policies Analyzer Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Policy: AmazonDataZoneFullUserAccess
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/badele/aws-policies-analyzer-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AWS Policies Analyzer Docs" class="md-nav__button md-logo" aria-label="AWS Policies Analyzer Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AWS Policies Analyzer Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/badele/aws-policies-analyzer-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accueil
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#allowed-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allowed Actions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="policy-amazondatazonefulluseraccess">Policy: AmazonDataZoneFullUserAccess</h1>
+<p>ARN: <code>arn:aws:iam::aws:policy/AmazonDataZoneFullUserAccess</code></p>
+<h2 id="allowed-actions">Allowed Actions</h2>
+<table>
+<thead>
+<tr>
+<th>Actions</th>
+<th style="text-align: center;">Services</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/actions/datazone:acceptpredictions">datazone:AcceptPredictions</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:acceptsubscriptionrequest">datazone:AcceptSubscriptionRequest</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:addentityowner">datazone:AddEntityOwner</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:addpolicygrant">datazone:AddPolicyGrant</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:cancelmetadatagenerationrun">datazone:CancelMetadataGenerationRun</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:cancelsubscription">datazone:CancelSubscription</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:createasset">datazone:CreateAsset</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:createassetfilter">datazone:CreateAssetFilter</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:createassetrevision">datazone:CreateAssetRevision</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:createassettype">datazone:CreateAssetType</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:createdataproduct">datazone:CreateDataProduct</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:createdataproductrevision">datazone:CreateDataProductRevision</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:createdatasource">datazone:CreateDataSource</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:createdomainunit">datazone:CreateDomainUnit</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:createenvironment">datazone:CreateEnvironment</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:createenvironmentblueprint">datazone:CreateEnvironmentBlueprint</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:createenvironmentprofile">datazone:CreateEnvironmentProfile</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:createformtype">datazone:CreateFormType</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:createglossary">datazone:CreateGlossary</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:createglossaryterm">datazone:CreateGlossaryTerm</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:createlistingchangeset">datazone:CreateListingChangeSet</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:createproject">datazone:CreateProject</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:createprojectmembership">datazone:CreateProjectMembership</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:createrule">datazone:CreateRule</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:createsubscriptiongrant">datazone:CreateSubscriptionGrant</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:createsubscriptionrequest">datazone:CreateSubscriptionRequest</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:deleteasset">datazone:DeleteAsset</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:deleteassetfilter">datazone:DeleteAssetFilter</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:deleteassettype">datazone:DeleteAssetType</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:deletedataproduct">datazone:DeleteDataProduct</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:deletedatasource">datazone:DeleteDataSource</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:deletedomainunit">datazone:DeleteDomainUnit</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:deleteenvironment">datazone:DeleteEnvironment</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:deleteenvironmentblueprint">datazone:DeleteEnvironmentBlueprint</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:deleteenvironmentprofile">datazone:DeleteEnvironmentProfile</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:deleteformtype">datazone:DeleteFormType</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:deleteglossary">datazone:DeleteGlossary</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:deleteglossaryterm">datazone:DeleteGlossaryTerm</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:deletelisting">datazone:DeleteListing</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:deleteproject">datazone:DeleteProject</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:deleteprojectmembership">datazone:DeleteProjectMembership</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:deleterule">datazone:DeleteRule</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:deletesubscriptiongrant">datazone:DeleteSubscriptionGrant</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:deletesubscriptionrequest">datazone:DeleteSubscriptionRequest</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:deletesubscriptiontarget">datazone:DeleteSubscriptionTarget</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:deletetimeseriesdatapoints">datazone:DeleteTimeSeriesDataPoints</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getasset">datazone:GetAsset</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getassetfilter">datazone:GetAssetFilter</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getassettype">datazone:GetAssetType</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getdataproduct">datazone:GetDataProduct</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getdatasource">datazone:GetDataSource</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getdatasourcerun">datazone:GetDataSourceRun</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getdomain">datazone:GetDomain</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getdomainunit">datazone:GetDomainUnit</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getenvironment">datazone:GetEnvironment</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getenvironmentactionlink">datazone:GetEnvironmentActionLink</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getenvironmentblueprint">datazone:GetEnvironmentBlueprint</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getenvironmentcredentials">datazone:GetEnvironmentCredentials</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getenvironmentprofile">datazone:GetEnvironmentProfile</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getformtype">datazone:GetFormType</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getglossary">datazone:GetGlossary</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getglossaryterm">datazone:GetGlossaryTerm</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getgroupprofile">datazone:GetGroupProfile</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getiamportalloginurl">datazone:GetIamPortalLoginUrl</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getlineagenode">datazone:GetLineageNode</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getlisting">datazone:GetListing</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getmetadatagenerationrun">datazone:GetMetadataGenerationRun</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getproject">datazone:GetProject</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getrule">datazone:GetRule</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getsubscription">datazone:GetSubscription</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getsubscriptioneligibility">datazone:GetSubscriptionEligibility</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getsubscriptiongrant">datazone:GetSubscriptionGrant</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getsubscriptionrequestdetails">datazone:GetSubscriptionRequestDetails</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getsubscriptiontarget">datazone:GetSubscriptionTarget</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:gettimeseriesdatapoint">datazone:GetTimeSeriesDataPoint</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:getuserprofile">datazone:GetUserProfile</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listaccountenvironments">datazone:ListAccountEnvironments</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listassetfilters">datazone:ListAssetFilters</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listassetrevisions">datazone:ListAssetRevisions</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listdataproductrevisions">datazone:ListDataProductRevisions</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listdatasourcerunactivities">datazone:ListDataSourceRunActivities</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listdatasourceruns">datazone:ListDataSourceRuns</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listdatasources">datazone:ListDataSources</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listdomainunitsforparent">datazone:ListDomainUnitsForParent</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listentityowners">datazone:ListEntityOwners</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listenvironmentblueprintconfigurations">datazone:ListEnvironmentBlueprintConfigurations</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listenvironmentblueprints">datazone:ListEnvironmentBlueprints</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listenvironmentprofiles">datazone:ListEnvironmentProfiles</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listenvironments">datazone:ListEnvironments</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listgroupsforuser">datazone:ListGroupsForUser</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listlineagenodehistory">datazone:ListLineageNodeHistory</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listmetadatagenerationruns">datazone:ListMetadataGenerationRuns</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listnotifications">datazone:ListNotifications</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listpolicygrants">datazone:ListPolicyGrants</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listprojectmemberships">datazone:ListProjectMemberships</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listprojects">datazone:ListProjects</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listrules">datazone:ListRules</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listsubscriptiongrants">datazone:ListSubscriptionGrants</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listsubscriptionrequests">datazone:ListSubscriptionRequests</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listsubscriptiontargets">datazone:ListSubscriptionTargets</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listsubscriptions">datazone:ListSubscriptions</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listtimeseriesdatapoints">datazone:ListTimeSeriesDataPoints</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:listwarehousemetadata">datazone:ListWarehouseMetadata</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:posttimeseriesdatapoints">datazone:PostTimeSeriesDataPoints</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:rejectpredictions">datazone:RejectPredictions</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:rejectsubscriptionrequest">datazone:RejectSubscriptionRequest</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:removeentityowner">datazone:RemoveEntityOwner</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:removepolicygrant">datazone:RemovePolicyGrant</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:revokesubscription">datazone:RevokeSubscription</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:search">datazone:Search</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:searchgroupprofiles">datazone:SearchGroupProfiles</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:searchlistings">datazone:SearchListings</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:searchrules">datazone:SearchRules</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:searchtypes">datazone:SearchTypes</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:searchuserprofiles">datazone:SearchUserProfiles</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:startdatasourcerun">datazone:StartDataSourceRun</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:startmetadatagenerationrun">datazone:StartMetadataGenerationRun</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:updateassetfilter">datazone:UpdateAssetFilter</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:updatedatasource">datazone:UpdateDataSource</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:updatedomainunit">datazone:UpdateDomainUnit</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:updateenvironment">datazone:UpdateEnvironment</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:updateenvironmentblueprint">datazone:UpdateEnvironmentBlueprint</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:updateenvironmentdeploymentstatus">datazone:UpdateEnvironmentDeploymentStatus</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:updateenvironmentprofile">datazone:UpdateEnvironmentProfile</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:updateglossary">datazone:UpdateGlossary</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:updateglossaryterm">datazone:UpdateGlossaryTerm</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:updateproject">datazone:UpdateProject</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:updaterule">datazone:UpdateRule</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:updatesubscriptiongrantstatus">datazone:UpdateSubscriptionGrantStatus</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/datazone:updatesubscriptionrequest">datazone:UpdateSubscriptionRequest</a></td>
+<td style="text-align: center;"><a href="/services/datazone">datazone</a></td>
+</tr>
+<tr>
+<td><a href="/actions/ram:getresourceshareassociations">ram:GetResourceShareAssociations</a></td>
+<td style="text-align: center;"><a href="/services/ram">ram</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
