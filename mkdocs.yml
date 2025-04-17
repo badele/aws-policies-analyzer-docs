@@ -1,0 +1,8 @@
+site_name: AWS Policies Analyzer Docs  # Remplacez par le nom de votre site
+repo_url: https://github.com/badele/aws-policies-analyzer-docs
+site_url: https://badele.github.io/aws-policies-analyzer-docs/
+
+theme:
+  name: material
+nav:
+  - Accueil: /
