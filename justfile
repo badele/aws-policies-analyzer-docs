@@ -13,4 +13,14 @@
 # generate the documentation
 @gendocs:
   poetry run python generate_docs.py --only-managed-by-aws
+
+
+# generate the documentation
+@github-pages: gendocs
+  git fetch
   poetry run mkdocs gh-deploy --force
+
+# serve the documentation
+@serve: gendocs
+  poetry run mkdocs serve
+

@@ -56,7 +56,7 @@ search:
             str(len(role_data["actions"])) if len(role_data["actions"]) > 0 else ""
         )
 
-        content += f"| [{role_name}](./roles/{role_filename}.md) | {nb_policies} | {nb_services} | {nb_actions}\n"
+        content += f"| [{role_name}]({role_filename}.md) | {nb_policies} | {nb_services} | {nb_actions}\n"
 
     return content
 
@@ -95,7 +95,7 @@ def generate_single_role_markdown(
             if policy_arn in cross_ref["policies"]:
                 policy_name = cross_ref["policies"][policy_arn]["name"]
                 policy_link = (
-                    f"[{policy_name}](/policies/{slugify(policy_name.lower())})"
+                    f"[{policy_name}](../../policies/{slugify(policy_name.lower())})"
                 )
 
                 nb_services = len(cross_ref["policies"][policy_arn]["services"])
@@ -123,8 +123,8 @@ def generate_single_role_markdown(
         # List actions by service
         for service in sorted(actions_by_service.keys()):
             for action in sorted(actions_by_service[service]):
-                service_link = f"[{service}](/services/{slugify(service)})"
-                action_link = f"[{action}](/actions/{slugify(action)})"
+                service_link = f"[{service}](../../services/{slugify(service)})"
+                action_link = f"[{action}](../../actions/{slugify(action)})"
                 content += f"| {action_link} | {service_link} |\n"
         content += "\n"
 
@@ -176,7 +176,7 @@ search:
             str(len(policy_data["actions"])) if len(policy_data["actions"]) > 0 else ""
         )
 
-        content += f"| [{policy_name}](/policies/{policy_filename}) | {nb_roles} | {nb_services} | {nb_actions}\n"
+        content += f"| [{policy_name}]({policy_filename}) | {nb_roles} | {nb_services} | {nb_actions}\n"
 
     return content
 
@@ -215,7 +215,9 @@ def generate_single_policy_markdown(
             for role_arn in policy_data["roles"]:
                 if role_arn in cross_ref["roles"]:
                     role_name = cross_ref["roles"][role_arn]["name"]
-                    role_link = f"[{role_name}](/roles/{slugify(role_name.lower())})"
+                    role_link = (
+                        f"[{role_name}](../../roles/{slugify(role_name.lower())})"
+                    )
                     content += f"| {role_link} |\n"
             content += "\n"
 
@@ -238,8 +240,8 @@ def generate_single_policy_markdown(
         # List actions by service
         for service in sorted(actions_by_service.keys()):
             for action in sorted(actions_by_service[service]):
-                service_link = f"[{service}](/services/{slugify(service)})"
-                action_link = f"[{action}](/actions/{slugify(action)})"
+                service_link = f"[{service}](../../services/{slugify(service)})"
+                action_link = f"[{action}](../../actions/{slugify(action)})"
                 content += f"| {action_link} | {service_link} |\n"
         content += "\n"
 
@@ -340,7 +342,9 @@ search:
             else ""
         )
 
-        content += f"| [{action_name}](/actions/{action_filename}) | {nb_roles} | {nb_policies}\n"
+        content += (
+            f"| [{action_name}]({action_filename}) | {nb_roles} | {nb_policies}\n"
+        )
 
     return content
 
@@ -378,7 +382,7 @@ def generate_single_service_markdown(
                     continue
 
                 role_name = cross_ref["roles"][role_arn]["name"]
-                role_link = f"[{role_name}](/roles/{slugify(role_name.lower())})"
+                role_link = f"[{role_name}](../../roles/{slugify(role_name.lower())})"
                 content += f"| `{role_arn}` | {role_link} |\n"
             content += "\n"
 
@@ -392,7 +396,9 @@ def generate_single_service_markdown(
                 continue
 
             policy_name = cross_ref["policies"][policy_arn]["name"]
-            policy_link = f"[{policy_name}](/policies/{slugify(policy_name.lower())})"
+            policy_link = (
+                f"[{policy_name}](../../policies/{slugify(policy_name.lower())})"
+            )
             content += f"| `{policy_arn}` | {policy_link} |\n"
         content += "\n"
 
@@ -415,7 +421,7 @@ def generate_single_service_markdown(
         # List actions by service
         for service in sorted(actions_by_service.keys()):
             for action in sorted(actions_by_service[service]):
-                action_link = f"[{action}](/actions/{slugify(action)})"
+                action_link = f"[{action}](../../actions/{slugify(action)})"
                 content += f"\n| {action_link} | {service} |"
         content += "\n"
 
@@ -455,7 +461,7 @@ def generate_single_action_markdown(
                     continue
 
                 role_name = cross_ref["roles"][role_arn]["name"]
-                role_link = f"[{role_name}](/roles/{slugify(role_name.lower())})"
+                role_link = f"[{role_name}](../../roles/{slugify(role_name.lower())})"
                 content += f"| `{role_arn}` | {role_link} |\n"
 
     # Policies section
@@ -468,14 +474,16 @@ def generate_single_action_markdown(
                 continue
 
             policy_name = cross_ref["policies"][policy_arn]["name"]
-            policy_link = f"[{policy_name}](/policies/{slugify(policy_name.lower())})"
+            policy_link = (
+                f"[{policy_name}](../../policies/{slugify(policy_name.lower())})"
+            )
             content += f"| `{policy_arn}` | {policy_link} |\n"
 
     # Services section
     content += "\n## Associated Services\n\n"
 
     service = extract_service_from_action(action)
-    content += f"[{service}](/services/{service})"
+    content += f"[{service}](../../services/{service})"
 
     return content
 
