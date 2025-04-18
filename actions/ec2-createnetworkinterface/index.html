@@ -1,0 +1,738 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://badele.github.io/aws-policies-analyzer-docs/actions/ec2-createnetworkinterface/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Action: ec2:CreateNetworkInterface - AWS Policies Analyzer Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#action-ec2createnetworkinterface" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AWS Policies Analyzer Docs" class="md-header__button md-logo" aria-label="AWS Policies Analyzer Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AWS Policies Analyzer Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Action: ec2:CreateNetworkInterface
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/badele/aws-policies-analyzer-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AWS Policies Analyzer Docs" class="md-nav__button md-logo" aria-label="AWS Policies Analyzer Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AWS Policies Analyzer Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/badele/aws-policies-analyzer-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accueil
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attached-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attached Policies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#associated-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Associated Services
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="action-ec2createnetworkinterface">Action: ec2:CreateNetworkInterface</h1>
+<h2 id="attached-policies">Attached Policies</h2>
+<table>
+<thead>
+<tr>
+<th>Policy ARN</th>
+<th>Policy Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AmazonWorkMailFullAccess</code></td>
+<td><a href="../../policies/amazonworkmailfullaccess">AmazonWorkMailFullAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AWSDirectoryServiceFullAccess</code></td>
+<td><a href="../../policies/awsdirectoryservicefullaccess">AWSDirectoryServiceFullAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AmazonZocaloFullAccess</code></td>
+<td><a href="../../policies/amazonzocalofullaccess">AmazonZocaloFullAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AmazonVPCFullAccess</code></td>
+<td><a href="../../policies/amazonvpcfullaccess">AmazonVPCFullAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceRole</code></td>
+<td><a href="../../policies/amazonelasticmapreducerole">AmazonElasticMapReduceRole</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AWSCloudHSMRole</code></td>
+<td><a href="../../policies/awscloudhsmrole">AWSCloudHSMRole</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AmazonElasticFileSystemFullAccess</code></td>
+<td><a href="../../policies/amazonelasticfilesystemfullaccess">AmazonElasticFileSystemFullAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AmazonDRSVPCManagement</code></td>
+<td><a href="../../policies/amazondrsvpcmanagement">AmazonDRSVPCManagement</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AmazonDMSVPCManagementRole</code></td>
+<td><a href="../../policies/amazondmsvpcmanagementrole">AmazonDMSVPCManagementRole</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole</code></td>
+<td><a href="../../policies/awslambdavpcaccessexecutionrole">AWSLambdaVPCAccessExecutionRole</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/job-function/SystemAdministrator</code></td>
+<td><a href="../../policies/systemadministrator">SystemAdministrator</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/job-function/NetworkAdministrator</code></td>
+<td><a href="../../policies/networkadministrator">NetworkAdministrator</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AmazonAppStreamServiceAccess</code></td>
+<td><a href="../../policies/amazonappstreamserviceaccess">AmazonAppStreamServiceAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AWSLambdaENIManagementAccess</code></td>
+<td><a href="../../policies/awslambdaenimanagementaccess">AWSLambdaENIManagementAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AmazonElasticsearchServiceRolePolicy</code></td>
+<td><a href="../../policies/amazonelasticsearchservicerolepolicy">AmazonElasticsearchServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AmazonVPCCrossAccountNetworkInterfaceOperations</code></td>
+<td><a href="../../policies/amazonvpccrossaccountnetworkinterfaceoperations">AmazonVPCCrossAccountNetworkInterfaceOperations</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole</code></td>
+<td><a href="../../policies/awsglueservicerole">AWSGlueServiceRole</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AmazonRedshiftServiceLinkedRolePolicy</code></td>
+<td><a href="../../policies/amazonredshiftservicelinkedrolepolicy">AmazonRedshiftServiceLinkedRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AWSElasticLoadBalancingServiceRolePolicy</code></td>
+<td><a href="../../policies/awselasticloadbalancingservicerolepolicy">AWSElasticLoadBalancingServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AWSElasticLoadBalancingClassicServiceRolePolicy</code></td>
+<td><a href="../../policies/awselasticloadbalancingclassicservicerolepolicy">AWSElasticLoadBalancingClassicServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AmazonECSServiceRolePolicy</code></td>
+<td><a href="../../policies/amazonecsservicerolepolicy">AmazonECSServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/APIGatewayServiceRolePolicy</code></td>
+<td><a href="../../policies/apigatewayservicerolepolicy">APIGatewayServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AmazonMQFullAccess</code></td>
+<td><a href="../../policies/amazonmqfullaccess">AmazonMQFullAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AmazonSageMakerFullAccess</code></td>
+<td><a href="../../policies/amazonsagemakerfullaccess">AmazonSageMakerFullAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/ElastiCacheServiceRolePolicy</code></td>
+<td><a href="../../policies/elasticacheservicerolepolicy">ElastiCacheServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AmazonRDSServiceRolePolicy</code></td>
+<td><a href="../../policies/amazonrdsservicerolepolicy">AmazonRDSServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/DAXServiceRolePolicy</code></td>
+<td><a href="../../policies/daxservicerolepolicy">DAXServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AmazonRDSBetaServiceRolePolicy</code></td>
+<td><a href="../../policies/amazonrdsbetaservicerolepolicy">AmazonRDSBetaServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy</code></td>
+<td><a href="../../policies/amazoneks_cni_policy">AmazonEKS_CNI_Policy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AmazonEKSServicePolicy</code></td>
+<td><a href="../../policies/amazoneksservicepolicy">AmazonEKSServicePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AmazonRDSPreviewServiceRolePolicy</code></td>
+<td><a href="../../policies/amazonrdspreviewservicerolepolicy">AmazonRDSPreviewServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/NeptuneConsoleFullAccess</code></td>
+<td><a href="../../policies/neptuneconsolefullaccess">NeptuneConsoleFullAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AWSGlueConsoleSageMakerNotebookFullAccess</code></td>
+<td><a href="../../policies/awsglueconsolesagemakernotebookfullaccess">AWSGlueConsoleSageMakerNotebookFullAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AWSKeyManagementServiceCustomKeyStoresServiceRolePolicy</code></td>
+<td><a href="../../policies/awskeymanagementservicecustomkeystoresservicerolepolicy">AWSKeyManagementServiceCustomKeyStoresServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/KafkaServiceRolePolicy</code></td>
+<td><a href="../../policies/kafkaservicerolepolicy">KafkaServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceEditorsRole</code></td>
+<td><a href="../../policies/amazonelasticmapreduceeditorsrole">AmazonElasticMapReduceEditorsRole</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AWSVPCTransitGatewayServiceRolePolicy</code></td>
+<td><a href="../../policies/awsvpctransitgatewayservicerolepolicy">AWSVPCTransitGatewayServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AmazonFSxServiceRolePolicy</code></td>
+<td><a href="../../policies/amazonfsxservicerolepolicy">AmazonFSxServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/ClientVPNServiceRolePolicy</code></td>
+<td><a href="../../policies/clientvpnservicerolepolicy">ClientVPNServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AmazonMQApiFullAccess</code></td>
+<td><a href="../../policies/amazonmqapifullaccess">AmazonMQApiFullAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AmazonDocDBConsoleFullAccess</code></td>
+<td><a href="../../policies/amazondocdbconsolefullaccess">AmazonDocDBConsoleFullAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AWSDataSyncFullAccess</code></td>
+<td><a href="../../policies/awsdatasyncfullaccess">AWSDataSyncFullAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/WorkLinkServiceRolePolicy</code></td>
+<td><a href="../../policies/worklinkservicerolepolicy">WorkLinkServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AWSGlobalAcceleratorSLRPolicy</code></td>
+<td><a href="../../policies/awsglobalacceleratorslrpolicy">AWSGlobalAcceleratorSLRPolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AmazonRoute53ResolverFullAccess</code></td>
+<td><a href="../../policies/amazonroute53resolverfullaccess">AmazonRoute53ResolverFullAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AmazonWorkSpacesServiceAccess</code></td>
+<td><a href="../../policies/amazonworkspacesserviceaccess">AmazonWorkSpacesServiceAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AmazonSageMakerNotebooksServiceRolePolicy</code></td>
+<td><a href="../../policies/amazonsagemakernotebooksservicerolepolicy">AmazonSageMakerNotebooksServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AmazonElasticFileSystemServiceRolePolicy</code></td>
+<td><a href="../../policies/amazonelasticfilesystemservicerolepolicy">AmazonElasticFileSystemServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AmazonEKSForFargateServiceRolePolicy</code></td>
+<td><a href="../../policies/amazoneksforfargateservicerolepolicy">AmazonEKSForFargateServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AmazonEKSServiceRolePolicy</code></td>
+<td><a href="../../policies/amazoneksservicerolepolicy">AmazonEKSServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AWSLambdaMSKExecutionRole</code></td>
+<td><a href="../../policies/awslambdamskexecutionrole">AWSLambdaMSKExecutionRole</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AmazonEKSVPCResourceController</code></td>
+<td><a href="../../policies/amazoneksvpcresourcecontroller">AmazonEKSVPCResourceController</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AWSOutpostsServiceRolePolicy</code></td>
+<td><a href="../../policies/awsoutpostsservicerolepolicy">AWSOutpostsServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AmazonMWAAServiceRolePolicy</code></td>
+<td><a href="../../policies/amazonmwaaservicerolepolicy">AmazonMWAAServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AWSGlueDataBrewServiceRole</code></td>
+<td><a href="../../policies/awsgluedatabrewservicerole">AWSGlueDataBrewServiceRole</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AmazonSageMakerCoreServiceRolePolicy</code></td>
+<td><a href="../../policies/amazonsagemakercoreservicerolepolicy">AmazonSageMakerCoreServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AmazonEMRServicePolicy_v2</code></td>
+<td><a href="../../policies/amazonemrservicepolicy_v2">AmazonEMRServicePolicy_v2</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AmazonNimbleStudio-StudioAdmin</code></td>
+<td><a href="../../policies/amazonnimblestudio-studioadmin">AmazonNimbleStudio-StudioAdmin</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AmazonNimbleStudio-StudioUser</code></td>
+<td><a href="../../policies/amazonnimblestudio-studiouser">AmazonNimbleStudio-StudioUser</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AWSDeviceFarmTestGridServiceRolePolicy</code></td>
+<td><a href="../../policies/awsdevicefarmtestgridservicerolepolicy">AWSDeviceFarmTestGridServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/MemoryDBServiceRolePolicy</code></td>
+<td><a href="../../policies/memorydbservicerolepolicy">MemoryDBServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AmazonOpenSearchServiceRolePolicy</code></td>
+<td><a href="../../policies/amazonopensearchservicerolepolicy">AmazonOpenSearchServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/KafkaConnectServiceRolePolicy</code></td>
+<td><a href="../../policies/kafkaconnectservicerolepolicy">KafkaConnectServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AmazonRDSCustomServiceRolePolicy</code></td>
+<td><a href="../../policies/amazonrdscustomservicerolepolicy">AmazonRDSCustomServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AmazonRDSCustomPreviewServiceRolePolicy</code></td>
+<td><a href="../../policies/amazonrdscustompreviewservicerolepolicy">AmazonRDSCustomPreviewServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AWSElasticDisasterRecoveryServiceRolePolicy</code></td>
+<td><a href="../../policies/awselasticdisasterrecoveryservicerolepolicy">AWSElasticDisasterRecoveryServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AmazonWorkSpacesWebServiceRolePolicy</code></td>
+<td><a href="../../policies/amazonworkspaceswebservicerolepolicy">AmazonWorkSpacesWebServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AppRunnerNetworkingServiceRolePolicy</code></td>
+<td><a href="../../policies/apprunnernetworkingservicerolepolicy">AppRunnerNetworkingServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AmazonEMRServerlessServiceRolePolicy</code></td>
+<td><a href="../../policies/amazonemrserverlessservicerolepolicy">AmazonEMRServerlessServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AWSM2ServicePolicy</code></td>
+<td><a href="../../policies/awsm2servicepolicy">AWSM2ServicePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AmazonEKSLocalOutpostServiceRolePolicy</code></td>
+<td><a href="../../policies/amazonekslocaloutpostservicerolepolicy">AmazonEKSLocalOutpostServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AWSDeviceFarmServiceRolePolicy</code></td>
+<td><a href="../../policies/awsdevicefarmservicerolepolicy">AWSDeviceFarmServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/AWSFaultInjectionSimulatorNetworkAccess</code></td>
+<td><a href="../../policies/awsfaultinjectionsimulatornetworkaccess">AWSFaultInjectionSimulatorNetworkAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AmazonGrafanaServiceLinkedRolePolicy</code></td>
+<td><a href="../../policies/amazongrafanaservicelinkedrolepolicy">AmazonGrafanaServiceLinkedRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AWSVPCVerifiedAccessServiceRolePolicy</code></td>
+<td><a href="../../policies/awsvpcverifiedaccessservicerolepolicy">AWSVPCVerifiedAccessServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AWSVpcLatticeServiceRolePolicy</code></td>
+<td><a href="../../policies/awsvpclatticeservicerolepolicy">AWSVpcLatticeServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/Ec2InstanceConnectEndpoint</code></td>
+<td><a href="../../policies/ec2instanceconnectendpoint">Ec2InstanceConnectEndpoint</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AmazonLaunchWizardFullAccessV2</code></td>
+<td><a href="../../policies/amazonlaunchwizardfullaccessv2">AmazonLaunchWizardFullAccessV2</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AmazonDataZoneEnvironmentRolePermissionsBoundary</code></td>
+<td><a href="../../policies/amazondatazoneenvironmentrolepermissionsboundary">AmazonDataZoneEnvironmentRolePermissionsBoundary</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AWSS3OnOutpostsServiceRolePolicy</code></td>
+<td><a href="../../policies/awss3onoutpostsservicerolepolicy">AWSS3OnOutpostsServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AmazonPrometheusScraperServiceRolePolicy</code></td>
+<td><a href="../../policies/amazonprometheusscraperservicerolepolicy">AmazonPrometheusScraperServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AWSElasticDisasterRecoveryConsoleFullAccess_v2</code></td>
+<td><a href="../../policies/awselasticdisasterrecoveryconsolefullaccess_v2">AWSElasticDisasterRecoveryConsoleFullAccess_v2</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AmazonTimestreamInfluxDBServiceRolePolicy</code></td>
+<td><a href="../../policies/amazontimestreaminfluxdbservicerolepolicy">AmazonTimestreamInfluxDBServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AmazonTimestreamInfluxDBFullAccess</code></td>
+<td><a href="../../policies/amazontimestreaminfluxdbfullaccess">AmazonTimestreamInfluxDBFullAccess</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AmazonDataZoneSageMakerEnvironmentRolePermissionsBoundary</code></td>
+<td><a href="../../policies/amazondatazonesagemakerenvironmentrolepermissionsboundary">AmazonDataZoneSageMakerEnvironmentRolePermissionsBoundary</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AWSPCSServiceRolePolicy</code></td>
+<td><a href="../../policies/awspcsservicerolepolicy">AWSPCSServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/aws-service-role/AWSCloudFrontVPCOriginServiceRolePolicy</code></td>
+<td><a href="../../policies/awscloudfrontvpcoriginservicerolepolicy">AWSCloudFrontVPCOriginServiceRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/AmazonEKSNetworkingPolicy</code></td>
+<td><a href="../../policies/amazoneksnetworkingpolicy">AmazonEKSNetworkingPolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/SageMakerStudioProjectRoleMachineLearningPolicy</code></td>
+<td><a href="../../policies/sagemakerstudioprojectrolemachinelearningpolicy">SageMakerStudioProjectRoleMachineLearningPolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePermissionsBoundary</code></td>
+<td><a href="../../policies/sagemakerstudioprojectuserrolepermissionsboundary">SageMakerStudioProjectUserRolePermissionsBoundary</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/SageMakerStudioProjectProvisioningRolePolicy</code></td>
+<td><a href="../../policies/sagemakerstudioprojectprovisioningrolepolicy">SageMakerStudioProjectProvisioningRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/SageMakerStudioProjectUserRolePolicy</code></td>
+<td><a href="../../policies/sagemakerstudioprojectuserrolepolicy">SageMakerStudioProjectUserRolePolicy</a></td>
+</tr>
+<tr>
+<td><code>arn:aws:iam::aws:policy/service-role/SageMakerStudioEMRServiceRolePolicy</code></td>
+<td><a href="../../policies/sagemakerstudioemrservicerolepolicy">SageMakerStudioEMRServiceRolePolicy</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="associated-services">Associated Services</h2>
+<p><a href="../../services/ec2">ec2</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
